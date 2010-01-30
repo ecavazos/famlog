@@ -1,0 +1,12 @@
+%h2 All Messages
+= link_to "New", new_message_path
+
+%ul
+- @messages.each do |m|
+  %li
+    %h3
+      = m.title
+    %p
+      = m.message
+    %div
+      = link_to "Edit", edit_message_path(m)

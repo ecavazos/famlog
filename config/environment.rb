@@ -19,7 +19,7 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem "mongomapper", :version => ">= 0.4.2"
+  config.gem "mongo_mapper", :version => ">= 0.6.10"
   config.gem "haml"
 
   config.frameworks -= [:active_record]
@@ -44,5 +44,4 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
-MongoMapper.database = "famlog-#{Rails.env}"
 Haml::Template.options[:format] = :html5

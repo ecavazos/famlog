@@ -1,25 +1,57 @@
-!bg_color = #292929
+!bg_color = #fff
+!f_color = #000
 
 body
-  background-color: !bg_color
+  background-color = !bg_color
   font: 100%
   font-family: "Helvetica Neue", Helvetica, Arial,sans-serif
   line-height: 1.125em
 
 h1
-  float: left
-  font-size: 1.625em
-  width: 200px
+  border-bottom: solid 1px #333
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif
+  font-size: 1.25em
+  margin: 0 0 20px 0
+  padding: 0 0 10px 0
+
+  a
+    color = !f_color
+    text-decoration: none
 
 #root
   margin: 30px auto 10px auto
-  width: 800px
+  width: 640px
+
+#header
+  text-align: center
+  margin: 0 0 20px 0
 
 #main
   background-color: #fff
-  border-top: solid 1px #222
-  border-bottom: solid 1px #222
   clear: both
-  padding: 20px
   margin: 0 0 10px 0
+  overflow: hidden
 
+#messages
+
+  li
+    background-color: #efefef
+    border-radius: 5px
+    -moz-border-radius: 5px
+    -webkit-border-radius: 5px
+    margin: 0 0 10px 0
+    padding: 10px
+    overflow: hidden
+
+    .message-body
+      float: left
+
+      p
+        margin-bottom: 10px
+
+      .message-meta
+        color: #666
+        font-size: 0.6875em
+
+    .action
+      float: right

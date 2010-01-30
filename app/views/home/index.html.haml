@@ -1,0 +1,16 @@
+%ul#messages
+  - @messages.each do |m|
+    %li
+      .message-body
+        %h3
+          = m.title
+        %p
+          = link_to m.username
+          = m.message
+        .message-meta
+          = created_at m 
+          \-
+          = link_to "Delete", message_path(m), :method => :delete
+      .action
+        = link_to "Edit", edit_message_path(m)
+

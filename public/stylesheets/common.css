@@ -1,22 +1,47 @@
 body {
-  background-color: !bg_color;
+  background-color: white;
   font: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial,sans-serif;
   line-height: 1.125em; }
 
 h1 {
-  float: left;
-  font-size: 1.625em;
-  width: 200px; }
+  border-bottom: solid 1px #333;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  font-size: 1.25em;
+  margin: 0 0 20px 0;
+  padding: 0 0 10px 0; }
+  h1 a {
+    color: black;
+    text-decoration: none; }
 
 #root {
   margin: 30px auto 10px auto;
-  width: 800px; }
+  width: 640px; }
+
+#header {
+  text-align: center;
+  margin: 0 0 20px 0; }
 
 #main {
   background-color: #fff;
-  border-top: solid 1px #222;
-  border-bottom: solid 1px #222;
   clear: both;
-  padding: 20px;
-  margin: 0 0 10px 0; }
+  margin: 0 0 10px 0;
+  overflow: hidden; }
+
+#messages li {
+  background-color: #efefef;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  overflow: hidden; }
+  #messages li .message-body {
+    float: left; }
+    #messages li .message-body p {
+      margin-bottom: 10px; }
+    #messages li .message-body .message-meta {
+      color: #666;
+      font-size: 0.6875em; }
+  #messages li .action {
+    float: right; }
