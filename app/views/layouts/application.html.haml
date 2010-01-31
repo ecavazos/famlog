@@ -5,10 +5,24 @@
     = javascript_include_tag "jquery-1.3.2.min","jquery-ui.min.js", "underscore-min.js", "application"
     = stylesheet_link_tag "reset", "common"
   %body
+    #header
+      #hdr-group
+        %h1 
+          = link_to "famlog", root_path
     #root
-      %h1 
-        = link_to "famlog", root_path
-      #header
+      #top
         = today
+        #add
+          = link_to "New Message", new_message_path
+        #tabs
+          %ul
+            %li.active
+              Today
+            %li
+              Latest
+            %li
+              Upcoming
+            %li
+              Past
       #main
         = yield

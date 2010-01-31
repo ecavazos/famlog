@@ -8,6 +8,9 @@
           = link_to m.username
           = m.message
         .message-meta
+          %strong(class="#{importance_to_css(m)}")
+            = m.importance
+          \-
           = created_at m 
           \-
           = link_to "Delete", message_path(m), :method => :delete

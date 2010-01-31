@@ -1,7 +1,8 @@
 class Message
   include MongoMapper::Document
 
-  key :title, String
+  key :title, String  # events have titles but messages do not
+
   key :start_date, Date
   key :end_date, Date
   key :message, String

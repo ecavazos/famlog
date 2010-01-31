@@ -5,22 +5,52 @@ body {
   line-height: 1.125em; }
 
 h1 {
-  border-bottom: solid 1px #333;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-  font-size: 1.25em;
-  margin: 0 0 20px 0;
-  padding: 0 0 10px 0; }
+  font-size: 1.25em; }
   h1 a {
-    color: black;
+    color: #fff;
     text-decoration: none; }
+  h1 a:hover {
+    text-decoration: none; }
+
+a {
+  color: #0000ff;
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: underline; }
+
+#header {
+  background-color: #222;
+  color: #fff; }
+  #header #hdr-group {
+    width: 640px;
+    margin: 0 auto;
+    padding: 10px 0 10px 0; }
 
 #root {
   margin: 30px auto 10px auto;
   width: 640px; }
 
-#header {
+#top {
   text-align: center;
   margin: 0 0 20px 0; }
+  #top #add {
+    font-size: 0.75em;
+    margin: 10px 0 10px 0; }
+  #top #tabs {
+    border-bottom: solid 1px #cacaca; }
+    #top #tabs li {
+      background-color: #efefef;
+      border: solid 1px #cacaca;
+      border-bottom: none;
+      display: inline-block;
+      font-size: 0.75em;
+      padding: 3px 10px; }
+    #top #tabs li.active {
+      background-color: white;
+      padding: 5px 10px 4px 10px;
+      margin-bottom: -1px; }
 
 #main {
   background-color: #fff;
@@ -44,4 +74,20 @@ h1 {
       color: #666;
       font-size: 0.6875em; }
   #messages li .action {
-    float: right; }
+    background-color: #ddd;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    float: right;
+    font-size: 0.6875em;
+    padding: 2px 5px; }
+
+.super-high {
+  color: #ff0000;
+  font-weight: bold; }
+
+.high {
+  color: #ff6600; }
+
+.medium {
+  color: #80cc66; }
