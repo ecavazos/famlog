@@ -2,7 +2,7 @@
 %html
   %head
     %title famlog
-    = javascript_include_tag "jquery-1.3.2.min","jquery-ui.min.js", "underscore-min.js", "application"
+    = javascript_include_tag "jquery.js", "home/index.js"
     = stylesheet_link_tag "reset", "common"
   %body
     #header
@@ -13,16 +13,19 @@
       #top
         = today
         #add
-          = link_to "New Message", new_message_path
+          New
+          = link_to "Message", new_message_path
+          \/
+          = link_to "Event", new_message_path
         #tabs
           %ul
             %li.active
+              Home
+            %li
               Today
             %li
-              Latest
+              This Week
             %li
-              Upcoming
-            %li
-              Past
+              History
       #main
         = yield

@@ -8,7 +8,7 @@
           = link_to m.username
           = m.message
         .message-meta
-          %strong(class="#{importance_to_css(m)}")
+          %strong(class="#{to_css(m.importance)}")
             = m.importance
           \-
           = created_at m 

@@ -7,7 +7,7 @@ module HomeHelper
     model.created_at.strftime("%m/%d/%Y at %l:%M%p")
   end
 
-  def importance_to_css(message)
-    message.importance.downcase.gsub(" ", "-")
+  def to_css(val)
+    val.downcase.gsub(" ", "-")
   end
 end
