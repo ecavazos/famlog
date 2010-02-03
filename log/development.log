@@ -11711,3 +11711,877 @@ Processing HomeController#index (for 127.0.0.1 at 2010-02-02 06:46:28) [GET]
 Rendering template within layouts/application
 Rendering home/index
 Completed in 24ms (View: 9 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 07:17:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 36ms (View: 23 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 07:19:17) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 21ms (View: 7 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 07:19:35) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 28ms (View: 9 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 07:19:53) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 25ms (View: 10 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 07:20:47) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 21ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 18:42:28) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `to_sym' for nil:NilClass) on line #16 of app/views/home/index.html.haml:
+13:           \-
+14:           = created_at m 
+15:           \-
+16:           = link_to "Delete", message_path(m), :method => :delete
+17:       .action
+18:         = link_to "Edit", edit_message_path(m)
+
+    (eval):20:in `message_path'
+    app/views/home/index.html.haml:16:in `block in _run_haml_app47views47home47index46html46haml'
+    app/views/home/index.html.haml:2:in `each'
+    app/views/home/index.html.haml:2:in `_run_haml_app47views47home47index46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process'
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (98.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 18:43:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (undefined method `to_sym' for nil:NilClass) on line #16 of app/views/home/index.html.haml:
+13:           \-
+14:           = created_at m 
+15:           \-
+16:           = link_to "Delete", message_path(m), :method => :delete
+17:       .action
+18:         = link_to "Edit", edit_message_path(m)
+
+    (eval):20:in `message_path'
+    app/views/home/index.html.haml:16:in `block in _run_haml_app47views47home47index46html46haml'
+    app/views/home/index.html.haml:2:in `each'
+    app/views/home/index.html.haml:2:in `_run_haml_app47views47home47index46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process'
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (95.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 18:46:04) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 37ms (View: 24 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 18:46:08) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (6.0ms)
+Completed in 25ms (View: 9 | 200 OK [http://localhost/message]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 18:46:44) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (5.9ms)
+Completed in 21ms (View: 9 | 200 OK [http://localhost/message]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 18:59:54) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 34ms (View: 23 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 19:09:48) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 20ms (View: 7 | 200 OK [http://localhost/]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 19:09:50) [GET]
+Rendering template within layouts/application
+Rendering events/new
+Rendered events/_form (0.8ms)
+Completed in 100ms (View: 89 | 200 OK [http://localhost/events/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 19:10:20) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 25ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:10:22) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (7.7ms)
+Completed in 32ms (View: 21 | 200 OK [http://localhost/messages/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 19:10:27) [GET]
+Rendering template within layouts/application
+Rendering events/new
+Rendered events/_form (0.1ms)
+Completed in 84ms (View: 3 | 200 OK [http://localhost/events/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:10:39) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (6.1ms)
+Completed in 20ms (View: 9 | 200 OK [http://localhost/messages/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 19:11:49) [GET]
+Rendering template within layouts/application
+Rendering events/new
+Rendered events/_form (9.1ms)
+Completed in 31ms (View: 21 | 200 OK [http://localhost/events/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:11:54) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (5.2ms)
+Completed in 21ms (View: 8 | 200 OK [http://localhost/messages/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 19:11:57) [GET]
+Rendering template within layouts/application
+Rendering events/new
+Rendered events/_form (5.7ms)
+Completed in 18ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:12:06) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (5.2ms)
+Completed in 20ms (View: 8 | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:16:08) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (7.9ms)
+Completed in 33ms (View: 21 | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:16:56) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (5.7ms)
+Completed in 20ms (View: 9 | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:17:07) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (5.6ms)
+Completed in 20ms (View: 9 | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:17:22) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (5.2ms)
+Completed in 18ms (View: 8 | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:18:27) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (8.3ms)
+Completed in 32ms (View: 21 | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:18:37) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (10.3ms)
+Completed in 35ms (View: 25 | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:18:45) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (10.3ms)
+Completed in 50ms (View: 25 | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 19:35:00) [GET]
+Rendering template within layouts/application
+Rendering messages/new
+Rendered messages/_form (8.4ms)
+Completed in 126ms (View: 37 | 200 OK [http://localhost/messages/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 19:45:46) [GET]
+Rendering template within layouts/forms
+Rendering events/new
+Rendered events/_form (6.2ms)
+Completed in 35ms (View: 26 | 200 OK [http://localhost/events/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 19:53:11) [GET]
+Rendering template within layouts/application
+Rendering home/index
+
+ActionView::TemplateError (Missing template home/_header.erb in view path app/views) on line #9 of app/views/layouts/application.html.haml:
+6:     = stylesheet_link_tag "reset", "common"
+7:     = yield :head
+8:   %body
+9:     = render :partial => "header"
+10:     #root
+11:       #top
+12:         = today
+
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:11:in `block in render_with_haml'
+    haml (2.2.17) lib/haml/helpers.rb:96:in `non_haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:11:in `render_with_haml'
+    app/views/layouts/application.html.haml:9:in `_run_haml_app47views47layouts47application46html46haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (2.2.17) lib/haml/helpers/action_view_mods.rb:13:in `render_with_haml'
+    haml (2.2.17) lib/sass/plugin/rails.rb:19:in `process'
+    <internal:prelude>:8:in `synchronize'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+    /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+    /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+Rendered rescues/_trace (177.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 20:29:19) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (3.7ms)
+Completed in 47ms (View: 35 | 200 OK [http://localhost/]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:29:55) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (6.3ms)
+Rendered layouts/_header (0.4ms)
+Completed in 30ms (View: 21 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:30:00) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (6.2ms)
+Rendered layouts/_header (0.4ms)
+Completed in 19ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 20:31:16) [GET]
+Rendering template within layouts/post
+Rendering messages/new
+Rendered messages/_form (5.2ms)
+Rendered layouts/_header (0.4ms)
+Completed in 20ms (View: 8 | 200 OK [http://localhost/messages/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 20:36:31) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.3ms)
+Completed in 24ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:36:33) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (9.3ms)
+Rendered layouts/_header (0.4ms)
+Completed in 31ms (View: 21 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:49:30) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (8.8ms)
+Rendered layouts/_header (0.4ms)
+Completed in 36ms (View: 21 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:50:00) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (10.2ms)
+Rendered layouts/_header (0.4ms)
+Completed in 25ms (View: 14 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:50:18) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (5.9ms)
+Rendered layouts/_header (0.4ms)
+Completed in 27ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:51:02) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (5.9ms)
+Rendered layouts/_header (0.4ms)
+Completed in 29ms (View: 20 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:51:18) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (10.2ms)
+Rendered layouts/_header (0.4ms)
+Completed in 26ms (View: 14 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:51:31) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (6.2ms)
+Rendered layouts/_header (0.4ms)
+Completed in 21ms (View: 10 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:51:54) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (5.6ms)
+Rendered layouts/_header (0.4ms)
+Completed in 19ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:57:13) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (5.6ms)
+Rendered layouts/_header (0.4ms)
+Completed in 19ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:58:03) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (7.0ms)
+Rendered layouts/_header (0.4ms)
+Completed in 22ms (View: 11 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:58:12) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (5.8ms)
+Rendered layouts/_header (0.4ms)
+Completed in 25ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 20:58:36) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (5.9ms)
+Rendered layouts/_header (0.4ms)
+Completed in 22ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:00:38) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (6.2ms)
+Rendered layouts/_header (0.4ms)
+Completed in 19ms (View: 10 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:02:48) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (9.4ms)
+Rendered layouts/_header (0.4ms)
+Completed in 35ms (View: 22 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:02:52) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (5.8ms)
+Rendered layouts/_header (0.4ms)
+Completed in 18ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:03:19) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (5.6ms)
+Rendered layouts/_header (0.4ms)
+Completed in 22ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:04:04) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (8.2ms)
+Rendered layouts/_header (0.4ms)
+Completed in 127ms (View: 12 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:04:20) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (7.8ms)
+Rendered layouts/_header (0.4ms)
+Completed in 24ms (View: 11 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:05:11) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (5.7ms)
+Rendered layouts/_header (0.4ms)
+Completed in 19ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:05:21) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (8.1ms)
+Rendered layouts/_header (0.4ms)
+Completed in 25ms (View: 13 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:06:08) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (6.0ms)
+Rendered layouts/_header (0.4ms)
+Completed in 21ms (View: 10 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:06:32) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (6.5ms)
+Rendered layouts/_header (0.4ms)
+Completed in 23ms (View: 10 | 200 OK [http://localhost/events/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:06:55) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.3ms)
+Completed in 24ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 21:06:58) [GET]
+Rendering template within layouts/post
+Rendering messages/new
+Rendered messages/_form (8.7ms)
+Rendered layouts/_header (0.4ms)
+Completed in 45ms (View: 34 | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 21:11:20) [GET]
+Rendering template within layouts/post
+Rendering messages/new
+Rendered messages/_form (8.1ms)
+Rendered layouts/_header (0.4ms)
+Completed in 34ms (View: 22 | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-02-02 21:16:34) [GET]
+Rendering template within layouts/application
+Rendering messages/index
+Rendered layouts/_header (0.8ms)
+Completed in 23ms (View: 5 | 200 OK [http://localhost/messages]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:16:38) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.4ms)
+Completed in 22ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:16:38) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.4ms)
+Completed in 22ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:17:01) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.4ms)
+Completed in 26ms (View: 9 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 21:17:04) [GET]
+Rendering template within layouts/post
+Rendering messages/new
+Rendered messages/_form (7.9ms)
+Rendered layouts/_header (0.4ms)
+Completed in 32ms (View: 21 | 200 OK [http://localhost/messages/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:17:06) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.3ms)
+Completed in 26ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:17:08) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (9.4ms)
+Rendered layouts/_header (0.4ms)
+Completed in 44ms (View: 34 | 200 OK [http://localhost/events/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:17:11) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.3ms)
+Completed in 26ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 21:17:14) [GET]
+Rendering template within layouts/post
+Rendering messages/new
+Rendered messages/_form (5.5ms)
+Rendered layouts/_header (0.4ms)
+Completed in 22ms (View: 9 | 200 OK [http://localhost/messages/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:17:18) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.4ms)
+Completed in 113ms (View: 95 | 200 OK [http://localhost/]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:17:21) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (6.0ms)
+Rendered layouts/_header (0.4ms)
+Completed in 26ms (View: 9 | 200 OK [http://localhost/events/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:21:16) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (2.2ms)
+Completed in 24ms (View: 11 | 200 OK [http://localhost/]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:21:55) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (10.0ms)
+Rendered layouts/_header (0.4ms)
+Completed in 34ms (View: 23 | 200 OK [http://localhost/events/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:22:10) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.4ms)
+Completed in 24ms (View: 9 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:22:10) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.3ms)
+Completed in 22ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:22:11) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.4ms)
+Completed in 27ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:22:29) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (7.5ms)
+Rendered layouts/_header (0.9ms)
+Completed in 448ms (View: 12 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:23:25) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (5.9ms)
+Rendered layouts/_header (0.4ms)
+Completed in 33ms (View: 21 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:27:30) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (6.1ms)
+Rendered layouts/_header (0.4ms)
+Completed in 21ms (View: 10 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:28:19) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (5.9ms)
+Rendered layouts/_header (0.4ms)
+Completed in 22ms (View: 10 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:28:40) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (6.0ms)
+Rendered layouts/_header (0.5ms)
+Completed in 25ms (View: 10 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:29:05) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (7.2ms)
+Rendered layouts/_header (0.4ms)
+Completed in 28ms (View: 11 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:29:28) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (6.0ms)
+Rendered layouts/_header (0.5ms)
+Completed in 23ms (View: 10 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:30:03) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (5.9ms)
+Rendered layouts/_header (0.4ms)
+Completed in 21ms (View: 10 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:31:56) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (7.1ms)
+Rendered layouts/_header (4.9ms)
+Completed in 29ms (View: 17 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:33:12) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (5.9ms)
+Rendered layouts/_header (0.4ms)
+Completed in 21ms (View: 10 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:33:54) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/application
+Rendering messages/edit
+Rendered messages/_form (6.1ms)
+Rendered layouts/_header (0.4ms)
+Completed in 22ms (View: 11 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:34:08) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.3ms)
+Completed in 27ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 21:38:53) [GET]
+Rendering template within layouts/post
+Rendering messages/new
+Rendered messages/_form (5.2ms)
+Rendered layouts/_header (0.4ms)
+Completed in 20ms (View: 9 | 200 OK [http://localhost/messages/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:39:02) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (8.8ms)
+Rendered layouts/_header (0.4ms)
+Completed in 22ms (View: 12 | 200 OK [http://localhost/events/new]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:44:33) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (6.5ms)
+Rendered layouts/_header (0.4ms)
+Completed in 21ms (View: 10 | 200 OK [http://localhost/events/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:44:38) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.3ms)
+Completed in 103ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:44:42) [GET]
+  Parameters: {"id"=>"4b65f29acb66ec7112000003"}
+Rendering template within layouts/post
+Rendering messages/edit
+Rendered messages/_form (5.9ms)
+Rendered layouts/_header (0.5ms)
+Completed in 27ms (View: 9 | 200 OK [http://localhost/messages/4b65f29acb66ec7112000003/edit]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:44:47) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.4ms)
+Completed in 23ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 21:44:52) [GET]
+  Parameters: {"id"=>"4b649aefcb66ec7112000001"}
+Rendering template within layouts/post
+Rendering messages/edit
+Rendered messages/_form (5.8ms)
+Rendered layouts/_header (0.5ms)
+Completed in 22ms (View: 10 | 200 OK [http://localhost/messages/4b649aefcb66ec7112000001/edit]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:44:56) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.3ms)
+Completed in 25ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-02 21:52:54) [GET]
+Rendering template within layouts/post
+Rendering messages/new
+Rendered messages/_form (5.4ms)
+Rendered layouts/_header (0.4ms)
+Completed in 20ms (View: 9 | 200 OK [http://localhost/messages/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:52:57) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.4ms)
+Completed in 26ms (View: 9 | 200 OK [http://localhost/]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-02 21:52:59) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (7.5ms)
+Rendered layouts/_header (0.4ms)
+Completed in 114ms (View: 11 | 200 OK [http://localhost/events/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-02 21:53:03) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.3ms)
+Completed in 26ms (View: 8 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-02-02 22:00:21) [GET]
+  Parameters: {"id"=>"4b65f29acb66ec7112000003"}
+Rendering template within layouts/post
+Rendering messages/edit
+Rendered messages/_form (5.8ms)
+Rendered layouts/_header (0.4ms)
+Completed in 25ms (View: 9 | 200 OK [http://localhost/messages/4b65f29acb66ec7112000003/edit]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-03 06:48:40) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.5ms)
+Completed in 182ms (View: 59 | 200 OK [http://localhost/]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-02-03 06:48:43) [GET]
+Rendering template within layouts/post
+Rendering messages/new
+Rendered messages/_form (5.5ms)
+Rendered layouts/_header (0.4ms)
+Completed in 18ms (View: 9 | 200 OK [http://localhost/messages/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-03 06:48:49) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.4ms)
+Completed in 268ms (View: 10 | 200 OK [http://localhost/]
+
+
+Processing EventsController#new (for 127.0.0.1 at 2010-02-03 06:48:52) [GET]
+Rendering template within layouts/post
+Rendering events/new
+Rendered events/_form (6.1ms)
+Rendered layouts/_header (0.4ms)
+Completed in 22ms (View: 10 | 200 OK [http://localhost/events/new]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-02-03 06:48:55) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Rendered layouts/_header (0.4ms)
+Completed in 21ms (View: 9 | 200 OK [http://localhost/]

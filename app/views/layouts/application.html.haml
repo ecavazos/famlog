@@ -4,11 +4,9 @@
     %title famlog
     = javascript_include_tag "jquery.js", "home/index.js"
     = stylesheet_link_tag "reset", "common"
+    = yield :head
   %body
-    #header
-      #hdr-group
-        %h1 
-          = link_to "famlog", root_path
+    = render :partial => "layouts/header"
     #root
       #top
         = today
@@ -16,7 +14,7 @@
           New
           = link_to "Message", new_message_path
           \/
-          = link_to "Event", new_message_path
+          = link_to "Event", new_event_path
         #tabs
           %ul
             %li.active

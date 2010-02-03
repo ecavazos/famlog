@@ -13,6 +13,9 @@ h1 {
   h1 a:hover {
     text-decoration: none; }
 
+h2 {
+  margin: 0 0 10px; }
+
 a {
   color: #0000ff;
   text-decoration: none; }
@@ -22,22 +25,43 @@ a:hover {
 
 #header {
   background-color: #222;
-  color: #fff; }
+  color: #fff;
+  overflow: hidden; }
   #header #hdr-group {
     width: 640px;
     margin: 0 auto;
     padding: 10px 0 10px 0; }
+    #header #hdr-group h1 {
+      float: left; }
+    #header #hdr-group #hdr-util {
+      color: #999;
+      float: right;
+      font-size: 0.75em;
+      margin: 0 0 10px;
+      overflow: hidden; }
+      #header #hdr-group #hdr-util li {
+        list-style: none;
+        float: left;
+        margin: 0 0 0 8px; }
+        #header #hdr-group #hdr-util li a {
+          color: #fff; }
 
 #root {
-  margin: 30px auto 10px auto;
+  margin: 15px auto 10px auto;
   width: 640px; }
 
 #top {
   text-align: center;
   margin: 0 0 20px 0; }
   #top #add {
+    background-color: #efefef;
+    border-radius: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
     font-size: 0.75em;
-    margin: 10px 0 10px 0; }
+    margin: 10px auto 10px auto;
+    padding: 6px 8px;
+    width: 140px; }
   #top #tabs {
     border-bottom: solid 1px #cacaca; }
     #top #tabs li {

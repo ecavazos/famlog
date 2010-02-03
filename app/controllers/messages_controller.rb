@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
 
   def new
     @message = Message.new
+    render :layout => "post"
   end
 
   def create
@@ -23,6 +24,7 @@ class MessagesController < ApplicationController
 
   def edit
     @message = Message.find(params[:id])
+    render :layout => "post"
   end
 
   def update

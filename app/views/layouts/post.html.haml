@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title famlog
+    = javascript_include_tag "jquery.js", "home/index.js"
+    = stylesheet_link_tag "reset", "common"
+    = yield :head
+  %body
+    = render :partial => "layouts/header"
+    #root
+      #main
+        = yield
+
