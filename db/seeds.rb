@@ -5,3 +5,28 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+#
+
+ecni = User.create({
+  username: "ecni",
+  email: "ejcavazos@gmail.com",
+  first_name: "Emilio",
+  last_name: "Cavazos"
+})
+
+Message.create({
+  message: "First message ...",
+  user: ecni,
+  username: ecni.username
+})
+
+Message.create({
+  title: "First Event",
+  message: "Don't miss the first event ever.",
+  importance: Importance::SUPER_HIGH,
+  is_event: true,
+  user: ecni,
+  username: ecni.username,
+  start_date: Date.today
+})
+

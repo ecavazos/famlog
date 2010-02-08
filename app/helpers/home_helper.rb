@@ -8,6 +8,11 @@ module HomeHelper
   end
 
   def to_css(val)
-    val.downcase.gsub(" ", "-")
+    val.downcase.gsub(" ", "-") unless val.nil?
+  end
+
+  def to_edit(message)
+    type = message.is_event ? "event" : "message"
+    link_to "Edit", eval("edit_#{type}_path(message)")
   end
 end

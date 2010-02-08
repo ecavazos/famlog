@@ -1,21 +1,20 @@
-- form_for @message do |f|
-  %p
-    = f.label :title
-    = f.text_field :title
-  %p
-    = f.label :importance
-    = f.select :importance, Importance::ALL
-  %p
-    = f.label :message
-    = f.text_area :message, :cols => 77, :rows => 3
-  %p
-    = f.label :start_date
-    = f.text_field :start_date
-  %p
-    = f.label :end_date
-    = f.text_field :end_date
-  %p
-    = f.submit "Submit", :class => "submit"
-    or
-    = link_to "Cancel", root_path
+%p
+  = f.label :title
+  = f.text_field :title
+%p
+  = f.label :message
+  = f.text_area :message, :cols => 77, :rows => 3
+%p
+  = f.label :importance
+  = f.select :importance, Importance::ALL
+%p
+  = f.label :start_date
+  = f.text_field :start_date
+%p
+  = f.label :end_date
+  = f.text_field :end_date
+%p
+  = f.submit "Submit", :class => "submit"
+  or
+  = link_to "Cancel", root_path, :class => "cancel"
 

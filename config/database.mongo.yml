@@ -1,0 +1,14 @@
+defaults: &defaults
+  host: localhost
+
+development:
+  <<: *defaults
+  database: famlog_dev
+
+production:
+  <<: *defaults
+  host: db.mongohq.com
+  username: user
+  password: pass
+  database: famlog
+

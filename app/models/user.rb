@@ -1,13 +1,12 @@
 class User
-  include MongoMapper::Document
+  include Mongoid::Document
+  include Mongoid::Timestamps
 
-  key :username, String
-  key :email, String
-  key :first_name, String
-  key :last_name, String
-
-  timestamps!
+  field :username
+  field :email
+  field :first_name
+  field :last_name
 
   # relationships
-  many :messages
+  has_many_related :messages
 end

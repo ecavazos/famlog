@@ -1,0 +1,6 @@
+- content_for :head do
+  = stylesheet_link_tag "forms"
+%h2 Edit Event
+- form_for @message, :url => event_path(@message) do |f|
+  = render :partial => "form", :locals => { :f => f }
+

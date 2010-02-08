@@ -19,7 +19,7 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem "mongo_mapper", :version => ">= 0.6.10"
+  config.gem "mongoid", :lib => "mongoid", :version => "1.1.4"
   config.gem "haml"
 
   config.frameworks -= [:active_record]
