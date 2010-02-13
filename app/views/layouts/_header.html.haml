@@ -3,10 +3,18 @@
     %h1 
       = link_to "famlog", root_path
     %ul#hdr-util
-      %li
-        = link_to "Sign in"
-      %li
-        |
-      %li
-        = link_to "Sign up"
+      - if current_user
+        %li 
+          = link_to 'Profile', edit_user_path(current_user.username)
+        %li
+          |
+        %li
+          = link_to 'Sign out', user_session_path, :method => :delete
+      - else
+        %li
+          = link_to "Sign in", new_user_session_path
+        %li
+          |
+        %li
+          = link_to "Sign up", new_user_path
 

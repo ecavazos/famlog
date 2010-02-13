@@ -1,9 +1,3 @@
-class Poop
-  include Mongoid::Document
-  
-  field :name, :default => "Shit"
-end
-
 class Message
   include Mongoid::Document
   include Mongoid::Timestamps

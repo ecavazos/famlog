@@ -7,17 +7,28 @@
 #   Major.create(:name => 'Daley', :city => cities.first)
 #
 
-ecni = User.create({
-  username: "ecni",
-  email: "ejcavazos@gmail.com",
-  first_name: "Emilio",
-  last_name: "Cavazos"
+jack = User.create({
+  username: "jack",
+  email: "jack@famlog.com",
+  first_name: "Jack",
+  last_name: "Move",
+  password: "1234",
+  password_confirmation: "1234"
+})
+
+jill = User.create({
+  username: "jill",
+  email: "jill@famlog.com",
+  first_name: "Jill",
+  last_name: "Move",
+  password: "1234",
+  password_confirmation: "1234"
 })
 
 Message.create({
   message: "First message ...",
-  user: ecni,
-  username: ecni.username
+  user: jack,
+  username: jack.username
 })
 
 Message.create({
@@ -25,8 +36,8 @@ Message.create({
   message: "Don't miss the first event ever.",
   importance: Importance::SUPER_HIGH,
   is_event: true,
-  user: ecni,
-  username: ecni.username,
+  user: jill,
+  username: jill.username,
   start_date: Date.today
 })
 
