@@ -7,7 +7,10 @@ gem 'rails', '3.0.0.beta3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
-gem 'mongoid', :git => 'git://github.com/durran/mongoid.git', :branch => 'prerelease'
+#gem 'mongoid', :git => 'git://github.com/durran/mongoid.git', :branch => 'prerelease'
+gem "mongoid", "2.0.0.beta2"
+gem "bson_ext", "0.20.1"
+
 gem 'haml'
 
 # Authentication

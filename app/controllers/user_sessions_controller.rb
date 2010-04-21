@@ -16,6 +16,7 @@ class UserSessionsController < ApplicationController
   end
 
   def destroy
+    puts "blah"
     logout
 
     flash[:notice] = "Logout successful!"

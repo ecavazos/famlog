@@ -2,6 +2,7 @@ Famlog::Application.routes.draw do |map|
   root      :to => 'home#index'
   resources :users
   resource  :user_session
+  match 'logout' => 'user_sessions#destroy', :as => :logout
   resources :messages
   resources :events
   match ':controller(/:action(/:id(.:format)))'
