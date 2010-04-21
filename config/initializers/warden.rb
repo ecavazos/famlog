@@ -5,7 +5,7 @@ end
 
 class Warden::SessionSerializer
   def serialize(user)
-    user.id
+    [user.class, user.id]
   end
 
   def deserialize(key)
@@ -15,7 +15,7 @@ end
 
 ## Declare your strategies here
 Warden::Strategies.add(:password) do
-  
+
   def valid?
     params[:username] || params[:password]
   end
@@ -24,6 +24,6 @@ Warden::Strategies.add(:password) do
     u = User.authenticate(params[:username], params[:password])
     u.nil? ? fail!("Could not log in") : success!(u)
   end
-  
+
 end
 
