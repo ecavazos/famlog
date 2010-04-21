@@ -8,8 +8,9 @@ class Warden::SessionSerializer
     [user.class, user.id]
   end
 
-  def deserialize(key)
-    User.criteria.id(key).first
+  def deserialize(keys)
+    klass, id = keys
+    klass.criteria.id(id).first
   end
 end
 

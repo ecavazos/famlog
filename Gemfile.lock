@@ -1,5 +1,5 @@
 --- 
-hash: 86fbd68182d1d829380a9333ca60d58ef0aeecf8
+hash: 787008d3383715289c7b08103279361c938985cb
 sources: 
 - Git: 
     git: git://github.com/durran/mongoid.git
@@ -78,8 +78,6 @@ specs:
     version: 0.5.0
 - sqlite3-ruby: 
     version: 1.2.5
-- test-unit: 
-    version: 2.0.6
 - warden: 
     version: 0.10.3
 dependencies: 
@@ -106,10 +104,6 @@ dependencies:
     group: 
     - :default
   rails_warden: 
-    version: ">= 0"
-    group: 
-    - :default
-  test-unit: 
     version: ">= 0"
     group: 
     - :default

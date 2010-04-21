@@ -14,9 +14,6 @@ gem 'haml'
 gem 'warden'
 gem 'rails_warden'
 
-gem 'test-unit'
-#gem 'test-unit', '1.2.3'
-
 # Use unicorn as the web server
 # gem 'unicorn'
 

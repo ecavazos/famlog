@@ -8,7 +8,7 @@ class UserSessionsController < ApplicationController
 
   def create
     authenticate!
-    
+
     if logged_in?
       flash[:notice] = "Login successful!"
       redirect_to root_url
@@ -17,14 +17,14 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    
+
     flash[:notice] = "Logout successful!"
     redirect_to root_url
-  end  
+  end
 
   def unauthenticated
     flash[:error] = "Incorrect email/password combination"
-    
+
     redirect_to new_user_session_url
     return false
   end
