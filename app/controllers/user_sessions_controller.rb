@@ -3,7 +3,7 @@ class UserSessionsController < ApplicationController
   before_filter :require_user, :only => :destroy
 
   def new
-    render :layout => "post"
+    render :layout => "modal"
   end
 
   def create
@@ -16,7 +16,6 @@ class UserSessionsController < ApplicationController
   end
 
   def destroy
-    puts "blah"
     logout
 
     flash[:notice] = "Logout successful!"

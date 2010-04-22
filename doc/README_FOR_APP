@@ -8,5 +8,5 @@ TODO
   * signed in users see current index page
   * restrict all other pages from guests
 * Publish to heroku
-* Publish to githb
+* Publish to github
 * Make the data for the index tabs paged

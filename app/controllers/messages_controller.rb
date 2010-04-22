@@ -2,6 +2,7 @@ require "famlog/controllers"
 
 class MessagesController < ApplicationController
   include Famlog::Controllers::MessageMixin
+  before_filter :require_user
 
   private
 

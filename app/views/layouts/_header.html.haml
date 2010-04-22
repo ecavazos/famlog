@@ -5,7 +5,7 @@
     %ul#hdr-util
       - if current_user
         %li
-          = link_to 'Profile', edit_user_path(current_user.username)
+          = link_to current_user.username, edit_user_path(current_user.username)
         %li
           |
         %li
