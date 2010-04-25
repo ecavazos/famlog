@@ -2,7 +2,6 @@
 %html
   %head
     %title famlog
-    = javascript_include_tag "jquery.js", "home/index.js", "rails"
     = stylesheet_link_tag "reset", "common"
     = csrf_meta_tag
     = yield :head
@@ -18,13 +17,16 @@
           = link_to "Event", new_event_path
         #tabs
           %ul
-            %li.active
+            %li#home.active
               Home
-            %li
+            %li#today
               Today
-            %li
+            %li#week
               This Week
-            %li
+            %li#history
               History
       #main
         = yield
+
+    = javascript_include_tag "jquery", "rails"
+    = javascript_include_tag "application", "messages", "tabs"

@@ -6,6 +6,9 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
+User.destroy_all
+Message.destroy_all
+
 jack = User.create({
   username: "jack",
   email: "jack@famlog.com",

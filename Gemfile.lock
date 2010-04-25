@@ -1,5 +1,5 @@
 --- 
-hash: 6d471dc1ce81719f38a27fdf8e3617bb7065c8ab
+hash: 4e36938bb0c603b97beb3a86a34dc4fcd41cb0c2
 sources: 
 - Rubygems: 
     uri: http://rubygems.org
@@ -55,7 +55,7 @@ specs:
 - bson_ext: 
     version: 0.20.1
 - bundler: 
-    version: 0.9.23
+    version: 0.9.24
 - haml: 
     version: 2.2.23
 - mongo: 
@@ -64,6 +64,8 @@ specs:
     version: 3.0.pre
 - mongoid: 
     version: 2.0.0.beta2
+- nokogiri: 
+    version: 1.4.1
 - thor: 
     version: 0.13.4
 - railties: 
@@ -72,6 +74,18 @@ specs:
     version: 3.0.0.beta3
 - rails_warden: 
     version: 0.5.1
+- rspec-core: 
+    version: 2.0.0.beta.7
+- rspec-expectations: 
+    version: 2.0.0.beta.7
+- rspec-mocks: 
+    version: 2.0.0.beta.7
+- rspec: 
+    version: 2.0.0.beta.7
+- webrat: 
+    version: 0.7.0
+- rspec-rails: 
+    version: 2.0.0.beta.7
 - sqlite3-ruby: 
     version: 1.2.5
 - warden: 
@@ -107,3 +121,7 @@ dependencies:
     version: ">= 0"
     group: 
     - :default
+  rspec-rails: 
+    version: ">= 2.0.0.beta.7"
+    group: 
+    - :test

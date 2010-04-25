@@ -7,8 +7,7 @@ describe HomeController do
     controller.should be_an_instance_of(HomeController)
   end
 
-
-  describe "GET 'index'" do
+  describe "index" do
     it "should be successful" do
       get 'index'
       response.should be_success
