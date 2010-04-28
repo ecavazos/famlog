@@ -83,3 +83,88 @@ Rendered messages/_form.html.haml (22.5ms)
 Rendered layouts/_header.html.haml (5.0ms)
 Rendered messages/new.html.haml within layouts/post (110.0ms)
 Completed 200 OK in 127ms (Views: 126.0ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (52.0ms)
+Rendered layouts/_header.html.haml (5.4ms)
+Rendered messages/new.html.haml within layouts/post (143.1ms)
+Completed 200 OK in 181ms (Views: 181.0ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (11.1ms)
+Rendered layouts/_header.html.haml (6.0ms)
+Rendered messages/new.html.haml within layouts/post (112.8ms)
+Completed 200 OK in 130ms (Views: 129.6ms)
+  Processing by MessagesController#edit as HTML
+Rendered messages/_form.html.haml (21.6ms)
+Rendered layouts/_header.html.haml (6.1ms)
+Rendered messages/edit.html.haml within layouts/post (109.9ms)
+Completed 200 OK in 126ms (Views: 126.0ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.3ms)
+Rendered layouts/_header.html.haml (1.8ms)
+Rendered messages/new.html.haml within layouts/post (9.4ms)
+Completed 200 OK in 12ms (Views: 11.7ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (21.3ms)
+Rendered layouts/_header.html.haml (5.3ms)
+Rendered messages/edit.html.haml within layouts/post (107.3ms)
+Completed 200 OK in 123ms (Views: 123.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.3ms)
+Rendered layouts/_header.html.haml (2.4ms)
+Rendered messages/new.html.haml within layouts/post (10.0ms)
+Completed 200 OK in 13ms (Views: 12.3ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (21.0ms)
+Rendered layouts/_header.html.haml (5.4ms)
+Rendered messages/edit.html.haml within layouts/post (107.8ms)
+Completed 200 OK in 124ms (Views: 123.9ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.3ms)
+Rendered layouts/_header.html.haml (1.7ms)
+Rendered messages/new.html.haml within layouts/post (9.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms)
+  Processing by MessagesController#create as HTML
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (21.0ms)
+Rendered layouts/_header.html.haml (5.4ms)
+Rendered messages/edit.html.haml within layouts/post (109.8ms)
+Completed 200 OK in 126ms (Views: 126.0ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.2ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/new.html.haml within layouts/post (8.6ms)
+Completed 200 OK in 11ms (Views: 10.9ms)
+  Processing by MessagesController#create as HTML
+Redirected to http://test.host/
+Completed 302 Found in 28ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (9.6ms)
+Rendered layouts/_header.html.haml (4.3ms)
+Rendered messages/edit.html.haml within layouts/post (98.0ms)
+Completed 200 OK in 102ms (Views: 102.1ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.0ms)
+Rendered layouts/_header.html.haml (1.0ms)
+Rendered messages/new.html.haml within layouts/post (8.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms)
+  Processing by MessagesController#create as HTML
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (10.4ms)
+Rendered layouts/_header.html.haml (5.4ms)
+Rendered messages/edit.html.haml within layouts/post (95.7ms)
+Completed 200 OK in 101ms (Views: 100.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (3.9ms)
+Rendered layouts/_header.html.haml (0.9ms)
+Rendered messages/new.html.haml within layouts/post (8.0ms)
+Completed 200 OK in 11ms (Views: 10.4ms)
+  Processing by MessagesController#create as HTML
+Redirected to http://test.host/
+Completed 302 Found in 3ms
