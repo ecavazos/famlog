@@ -1,6 +1,18 @@
 --- 
-hash: 4e36938bb0c603b97beb3a86a34dc4fcd41cb0c2
+hash: 1f18119e5b1e8f4924fd9c6b5ebd015c19697f34
 sources: 
+- Git: 
+    git: http://github.com/thoughtbot/factory_girl.git
+    branch: rails3
+    require: 
+    uri: http://github.com/thoughtbot/factory_girl.git
+    ref: feac7298352a83fef0717d8beadd2eda9aabfe56
+- Git: 
+    git: http://github.com/thoughtbot/shoulda.git
+    branch: rails3
+    require: 
+    uri: http://github.com/thoughtbot/shoulda.git
+    ref: ad4a2e9d340803e3d0290e12d2088cc3e6c62ab9
 - Rubygems: 
     uri: http://rubygems.org
 specs: 
@@ -56,16 +68,19 @@ specs:
     version: 0.20.1
 - bundler: 
     version: 0.9.24
+- factory_girl: 
+    version: 1.2.3
+    source: 0
 - haml: 
     version: 2.2.23
+- mocha: 
+    version: 0.9.8
 - mongo: 
     version: 0.20.1
 - will_paginate: 
     version: 3.0.pre
 - mongoid: 
-    version: 2.0.0.beta2
-- nokogiri: 
-    version: 1.4.1
+    version: 2.0.0.beta4
 - thor: 
     version: 0.13.4
 - railties: 
@@ -74,18 +89,9 @@ specs:
     version: 3.0.0.beta3
 - rails_warden: 
     version: 0.5.1
-- rspec-core: 
-    version: 2.0.0.beta.7
-- rspec-expectations: 
-    version: 2.0.0.beta.7
-- rspec-mocks: 
-    version: 2.0.0.beta.7
-- rspec: 
-    version: 2.0.0.beta.7
-- webrat: 
-    version: 0.7.0
-- rspec-rails: 
-    version: 2.0.0.beta.7
+- shoulda: 
+    version: 2.10.3
+    source: 1
 - sqlite3-ruby: 
     version: 1.2.5
 - warden: 
@@ -102,7 +108,7 @@ dependencies:
     require: 
     - sqlite3
   mongoid: 
-    version: = 2.0.0.beta2
+    version: = 2.0.0.beta4
     group: 
     - :default
   bson_ext: 
@@ -121,7 +127,19 @@ dependencies:
     version: ">= 0"
     group: 
     - :default
-  rspec-rails: 
-    version: ">= 2.0.0.beta.7"
+  shoulda: 
+    version: ">= 0"
+    group: 
+    - :test
+    require: []
+
+  factory_girl: 
+    version: ">= 0"
+    group: 
+    - :test
+    require: []
+
+  mocha: 
+    version: ">= 0"
     group: 
     - :test

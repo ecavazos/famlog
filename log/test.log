@@ -1,0 +1,85 @@
+  Processing by HomeController#index as HTML
+  Processing by HomeController#index as HTML
+  Processing by HomeController#index as HTML
+  Processing by HomeController#index as HTML
+  Processing by HomeController#index as HTML
+  Processing by HomeController#index as HTML
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (80.6ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (46.9ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (70.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (69.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (14.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (21.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (58.1ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.3ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (21.6ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.7ms)
+Rendered layouts/_header.html.haml (12.9ms)
+Rendered messages/new.html.haml within layouts/post (120.6ms)
+Completed 200 OK in 126ms (Views: 125.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.9ms)
+Rendered layouts/_header.html.haml (12.5ms)
+Rendered messages/new.html.haml within layouts/post (123.3ms)
+Completed 200 OK in 140ms (Views: 139.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (21.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (11.0ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.9ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (14.0ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.0ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (12.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.3ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (11.8ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (11.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.7ms)
+Rendered layouts/_header.html.haml (5.2ms)
+Rendered messages/new.html.haml within layouts/post (123.3ms)
+Completed 200 OK in 128ms (Views: 127.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (10.4ms)
+Rendered layouts/_header.html.haml (5.4ms)
+Rendered messages/new.html.haml within layouts/post (111.5ms)
+Completed 200 OK in 116ms (Views: 116.0ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (21.7ms)
+Rendered layouts/_header.html.haml (5.5ms)
+Rendered messages/new.html.haml within layouts/post (177.5ms)
+Completed 200 OK in 195ms (Views: 194.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (30.3ms)
+Rendered layouts/_header.html.haml (5.4ms)
+Rendered messages/new.html.haml within layouts/post (123.0ms)
+Completed 200 OK in 129ms (Views: 128.5ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (22.5ms)
+Rendered layouts/_header.html.haml (5.0ms)
+Rendered messages/new.html.haml within layouts/post (110.0ms)
+Completed 200 OK in 127ms (Views: 126.0ms)

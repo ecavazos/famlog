@@ -8,7 +8,7 @@ gem 'rails', '3.0.0.beta3'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 #gem 'mongoid', :git => 'git://github.com/durran/mongoid.git', :branch => 'prerelease'
-gem "mongoid", "2.0.0.beta2"
+gem "mongoid", "2.0.0.beta4"
 gem "bson_ext", "0.20.1"
 
 gem 'haml'
@@ -32,6 +32,11 @@ gem 'rails_warden'
 # Bundle gems for certain environments:
 #gem 'rspec', :group => :test
 group :test do
-  gem "rspec-rails", ">= 2.0.0.beta.7"
+  gem "shoulda", :git => "http://github.com/thoughtbot/shoulda.git",
+    :branch => "rails3", :require => nil
+  gem "factory_girl", :git => "http://github.com/thoughtbot/factory_girl.git",
+    :branch => "rails3", :require => nil
+  gem "mocha"
+  #gem "rspec-rails", ">= 2.0.0.beta.7"
   #gem 'webrat'
 end

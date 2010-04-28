@@ -7,8 +7,7 @@ class MessagesController < ApplicationController
   private
 
   def set_user
-    @ecni = User.first(:conditions => { :username => "ecni" })
-    @message.set_user @ecni
+    @message.set_user current_user
     @message.is_event = false
   end
 end

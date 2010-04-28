@@ -5,6 +5,10 @@ development:
   <<: *defaults
   database: famlog_dev
 
+test:
+  <<: *defaults
+  database: famlog_test
+
 production:
   <<: *defaults
   host: db.mongohq.com
