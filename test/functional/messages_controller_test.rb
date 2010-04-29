@@ -29,20 +29,22 @@ class MessagesControllerTest < ActionController::TestCase
     assert_not_nil assigns(:message)
   end
 
-  test "should redirect to root when post to create is successful" do
-    post :create
-    message = Factory.build(:message)
-    message.expects(:set_user).with(@user)
-    Message.stubs(:find).returns(message)
-    assert_redirected_to root_path
-  end
+  context "create" do
+    should "redirect to root when post to create is successful" do
+      post :create
+      message = Factory.build(:message)
+      message.expects(:set_user).with(@user)
+      Message.stubs(:find).returns(message)
+      assert_redirected_to root_path
+    end
 
-  test "should render new when post to create fails" do
-    post :create
-    message = Factory.build(:message)
-    message.expects(:save).returns(false)
-    Message.stubs(:find).returns(message)
-    assert_response :redirect
-    assert_template :new
+    should "render new when post to create fails" do
+      post :create
+      message = Factory.build(:message)
+      message.expects(:save).returns(false)
+      Message.stubs(:find).returns(message)
+      assert_response :redirect
+      assert_template :new
+    end
   end
 end
