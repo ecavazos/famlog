@@ -10405,3 +10405,502 @@ Completed 302 Found in 1ms
   Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
 Redirected to http://test.host/
 Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (64.5ms)
+Rendered layouts/_header.html.haml (4.4ms)
+Rendered messages/new.html.haml within layouts/application (111.3ms)
+Completed 200 OK in 148ms (Views: 147.2ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (4.3ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/new.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 10ms (Views: 9.8ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (5.1ms)
+Rendered layouts/_header.html.haml (1.4ms)
+Rendered messages/edit.html.haml within layouts/post (32.7ms)
+Completed 200 OK in 71ms (Views: 71.4ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.4ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/edit.html.haml within layouts/post (8.0ms)
+Completed 200 OK in 9ms (Views: 9.0ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.2ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/edit.html.haml within layouts/post (7.9ms)
+Completed 200 OK in 9ms (Views: 8.8ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.3ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/new.html.haml within layouts/post (7.9ms)
+Completed 200 OK in 9ms (Views: 8.9ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.5ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/new.html.haml within layouts/post (8.9ms)
+Completed 200 OK in 10ms (Views: 9.9ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.4ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/new.html.haml within layouts/post (8.1ms)
+Completed 200 OK in 9ms (Views: 9.1ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.5ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/edit.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 11ms (Views: 10.7ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.9ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/edit.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (9.4ms)
+Rendered layouts/_header.html.haml (4.3ms)
+Rendered messages/new.html.haml within layouts/application (26.9ms)
+Completed 200 OK in 34ms (Views: 33.6ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (4.3ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/new.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 11ms (Views: 10.3ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 60ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.6ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/edit.html.haml within layouts/post (11.9ms)
+Completed 200 OK in 16ms (Views: 15.6ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.2ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/edit.html.haml within layouts/post (7.8ms)
+Completed 200 OK in 9ms (Views: 8.7ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (5.0ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/edit.html.haml within layouts/post (8.9ms)
+Completed 200 OK in 10ms (Views: 9.8ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.5ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/new.html.haml within layouts/post (8.4ms)
+Completed 200 OK in 10ms (Views: 9.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.3ms)
+Rendered layouts/_header.html.haml (1.4ms)
+Rendered messages/new.html.haml within layouts/post (8.9ms)
+Completed 200 OK in 10ms (Views: 9.9ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.7ms)
+Rendered layouts/_header.html.haml (1.5ms)
+Rendered messages/new.html.haml within layouts/post (12.9ms)
+Completed 200 OK in 14ms (Views: 14.0ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.5ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/edit.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 11ms (Views: 10.9ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.4ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/edit.html.haml within layouts/application (9.8ms)
+Completed 200 OK in 11ms (Views: 11.0ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (9.5ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (4.4ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.2ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (5.2ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.9ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.5ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.2ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.3ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (10.1ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (4.5ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.4ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.6ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.3ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.5ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.4ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.3ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.4ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (11.5ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (4.1ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.7ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.5ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.8ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.3ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.6ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.3ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (5.6ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (5.4ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (9.4ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (4.0ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.4ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.5ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.8ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.4ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (5.1ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.5ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.7ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (11.7ms)
+Rendered layouts/_header.html.haml (5.1ms)
+Rendered messages/new.html.haml within layouts/application (31.1ms)
+Completed 200 OK in 39ms (Views: 38.2ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (5.8ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/new.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 13ms (Views: 11.7ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (5.0ms)
+Rendered layouts/_header.html.haml (1.4ms)
+Rendered messages/edit.html.haml within layouts/post (12.5ms)
+Completed 200 OK in 18ms (Views: 17.4ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.3ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/edit.html.haml within layouts/post (7.9ms)
+Completed 200 OK in 9ms (Views: 8.9ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.5ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/edit.html.haml within layouts/post (8.3ms)
+Completed 200 OK in 9ms (Views: 9.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.4ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/new.html.haml within layouts/post (8.2ms)
+Completed 200 OK in 10ms (Views: 9.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.5ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/new.html.haml within layouts/post (8.4ms)
+Completed 200 OK in 10ms (Views: 9.5ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.5ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/new.html.haml within layouts/post (8.6ms)
+Completed 200 OK in 10ms (Views: 9.8ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.7ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/edit.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 12ms (Views: 11.4ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.7ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/edit.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms

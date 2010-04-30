@@ -6,9 +6,7 @@ class MessagesControllerTest < ActionController::TestCase
     # stub rails_warden helper method
     @user = Factory.build(:user)
     ApplicationHelper.class_eval do
-      def current_user
-        @user
-      end
+      def current_user; @user end
     end
     @controller.expects(:current_user).returns(@user)
     @controller.expects(:require_user)
@@ -85,15 +83,11 @@ class MessagesControllerTest < ActionController::TestCase
       Message.expects(:find).with(4).returns(@message)
     end
 
-    def update
-      put :update, :id => 4, :message => @params
-    end
-
     context 'when successful' do
       setup do
         @message.expects(:update_attributes).with(@params).returns(true)
         @message.expects(:set_user).with(@user)
-        update
+        put :update, :id => 4, :message => @params
       end
 
       should 'assign to message' do
@@ -107,7 +101,7 @@ class MessagesControllerTest < ActionController::TestCase
     context 'when failure' do
       setup do
         @message.expects(:update_attributes).with(@params).returns(false)
-        update
+        put :update, :id => 4, :message => @params
       end
 
       should_respond_with :success
@@ -116,5 +110,14 @@ class MessagesControllerTest < ActionController::TestCase
         assert_template 'edit'
       end
     end
+  end
+
+  context 'destroy' do
+    setup do
+      @message = Factory.build(:message)
+      Message.expects(:find).with(4).returns(@message)
+      delete :destroy, :id => 4
+    end
+    should_redirect_to('root') { root_path }
   end
 end
