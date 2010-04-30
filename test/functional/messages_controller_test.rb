@@ -18,7 +18,7 @@ class MessagesControllerTest < ActionController::TestCase
     setup { get :new }
 
     should_respond_with :success
-    should_render_template :new
+    should_render_template 'new'
     # should_render_with_layout 'post'
     should 'assign to message' do
       # shoulda bug in rails 3 bug
@@ -28,16 +28,72 @@ class MessagesControllerTest < ActionController::TestCase
 
   context 'create' do
     setup do
-      @params = { :message => { :title => 'Foo' } }
+      @params = { 'title' => 'foo' }
       @message = Factory.build(:message)
-      Message.stubs(:find).returns(@message)
-      post :create, :post => @params
     end
 
     context 'when successful' do
       setup do
-        @message.expects(:new).with(@params[:message])
+        Message.any_instance.stubs(:save).returns(true)
+        post :create, :message => @params
+      end
+
+      should 'assign to message' do
+        assert_not_nil assigns(:message)
+      end
+
+      should 'set the current user on new message' do
+        assert_equal @user, assigns(:message).user
+      end
+
+      should_respond_with :redirect
+      should_redirect_to('root') { root_path }
+    end
+
+    context 'when failure' do
+      setup do
+        Message.any_instance.stubs(:save).returns(false)
+        post :create, :message => @params
+      end
+
+      should_respond_with :success
+
+      should 'render new' do
+        assert_template 'new'
+      end
+    end
+  end
+
+  context 'edit' do
+    setup do
+      Message.expects(:find).with(2).returns(Factory.build(:message))
+      get :edit, { :id => 2 }
+    end
+
+    should_respond_with :success
+    should_render_template 'edit'
+    # should_render_with_layout 'post'
+    should 'assign to message' do
+      assert_not_nil assigns(:message)
+    end
+  end
+
+  context 'update' do
+    setup do
+      @params = { 'title' => 'bar' }
+      @message = Factory.build(:message)
+      Message.expects(:find).with(4).returns(@message)
+    end
+
+    def update
+      put :update, :id => 4, :message => @params
+    end
+
+    context 'when successful' do
+      setup do
+        @message.expects(:update_attributes).with(@params).returns(true)
         @message.expects(:set_user).with(@user)
+        update
       end
 
       should 'assign to message' do
@@ -50,53 +106,15 @@ class MessagesControllerTest < ActionController::TestCase
 
     context 'when failure' do
       setup do
-        @message.expects(:new).with(@params[:message])
-        @message.expects(:save).returns(false)
+        @message.expects(:update_attributes).with(@params).returns(false)
+        update
       end
 
-      should_respond_with :redirect
+      should_respond_with :success
 
-      should 'render new' do
-        assert_template :new
+      should 'render edit' do
+        assert_template 'edit'
       end
     end
-  end
-
-  context 'edit' do
-    setup do
-      get :edit, { :id => 2 }
-      Message.expects(:find).with(2).returns(Factory.build(:message))
-    end
-
-    should_respond_with :success
-    should_render_template :edit
-    # should_render_with_layout 'post'
-    should 'assign to message' do
-      assert_not_nil assigns(:message)
-    end
-  end
-
-  context 'update' do
-    setup do
-      @params = { :message => { :title => 'Bar' } }
-      @message = Factory.build(:message)
-      Message.expects(:find).with(4).returns(@message)
-      put :update, {:id => 4, :post => @params}
-    end
-
-    context 'when successful' do
-      setup do
-        @message.expects(:update_attributes).with(@params[:message]).returns(true)
-        @message.expects(:set_user).with(@user)
-      end
-
-      should 'assign to message' do
-        assert_not_nil assigns(:message)
-      end
-
-      should_respond_with :redirect
-      should_redirect_to('root') { root_path }
-    end
-
   end
 end

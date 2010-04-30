@@ -30,7 +30,7 @@ module Famlog
         if @message.update_attributes(params[:message])
           redirect_to :root
         else
-          render :action => :edit
+          render 'edit'
         end
       end
 

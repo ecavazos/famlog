@@ -4,5 +4,7 @@ Factory.define :message do |m|
 end
 
 Factory.define :user do |u|
-  u.username "jack"
+  u.username   "jack"
+  u.first_name "Jack"
+  u.last_name  "Move"
 end
