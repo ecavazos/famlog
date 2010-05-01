@@ -1,5 +1,5 @@
 --- 
-hash: 1f18119e5b1e8f4924fd9c6b5ebd015c19697f34
+hash: e4c58714c393ede64521f9817238427b5067daa3
 sources: 
 - Git: 
     git: http://github.com/thoughtbot/factory_girl.git
@@ -25,7 +25,7 @@ specs:
 - i18n: 
     version: 0.3.7
 - memcache-client: 
-    version: 1.8.2
+    version: 1.8.3
 - tzinfo: 
     version: 0.3.20
 - activesupport: 
@@ -68,11 +68,15 @@ specs:
     version: 0.20.1
 - bundler: 
     version: 0.9.24
+- warden: 
+    version: 0.10.3
+- devise: 
+    version: 1.1.rc0
 - factory_girl: 
     version: 1.2.3
     source: 0
 - haml: 
-    version: 2.2.23
+    version: 3.0.0.rc.3
 - mocha: 
     version: 0.9.8
 - mongo: 
@@ -82,20 +86,16 @@ specs:
 - mongoid: 
     version: 2.0.0.beta4
 - thor: 
-    version: 0.13.4
+    version: 0.13.6
 - railties: 
     version: 3.0.0.beta3
 - rails: 
     version: 3.0.0.beta3
-- rails_warden: 
-    version: 0.5.1
 - shoulda: 
     version: 2.10.3
     source: 1
 - sqlite3-ruby: 
     version: 1.2.5
-- warden: 
-    version: 0.10.3
 dependencies: 
   rails: 
     version: = 3.0.0.beta3
@@ -116,15 +116,11 @@ dependencies:
     group: 
     - :default
   haml: 
-    version: ">= 0"
+    version: = 3.0.0.rc.3
     group: 
     - :default
-  warden: 
-    version: ">= 0"
-    group: 
-    - :default
-  rails_warden: 
-    version: ">= 0"
+  devise: 
+    version: = 1.1.rc0
     group: 
     - :default
   shoulda: 

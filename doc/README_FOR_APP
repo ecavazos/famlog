@@ -1,12 +1,16 @@
 TODO
 ====
 
+* Add tests
 * Make index tabs async
 * Create cleaner routes for the user_session resource
 * Implement devise for auth
-* Make a login/sign up only index page for guests
-  * signed in users see current index page
-  * restrict all other pages from guests
 * Publish to heroku
 * Publish to github
 * Make the data for the index tabs paged
+
+Done
+====
+* Make a login/sign up only index page for guests
+  * signed in users see current index page
+  * restrict all other pages from guests

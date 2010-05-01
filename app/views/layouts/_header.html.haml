@@ -5,16 +5,16 @@
     %ul#hdr-util
       - if current_user
         %li
+          We love you
           = link_to current_user.username, edit_user_path(current_user.username)
-        %li
-          |
-        %li
+          and hope you never
           = link_to 'Sign out', user_session_path, :method => :delete
+          \... ever!
       - else
         %li
           = link_to "Sign in", new_user_session_path
         %li
           |
         %li
-          = link_to "Sign up", new_user_path
+          = link_to "Sign up", new_user_registration_path
 

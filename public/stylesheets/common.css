@@ -34,7 +34,7 @@ a:hover {
     #header #hdr-group h1 {
       float: left; }
     #header #hdr-group #hdr-util {
-      color: #999;
+      color: #fff;
       float: right;
       font-size: 0.75em;
       margin: 0 0 10px;
@@ -44,7 +44,8 @@ a:hover {
         float: left;
         margin: 0 0 0 8px; }
         #header #hdr-group #hdr-util li a {
-          color: #fff; }
+          color: #9DF74F;
+          text-decoration: underline; }
 
 #root {
   margin: 15px auto 10px auto;
