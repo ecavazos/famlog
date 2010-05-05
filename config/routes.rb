@@ -1,10 +1,10 @@
 Famlog::Application.routes.draw do |map|
   root       :to => 'home#index'
-
   devise_for :users, :controllers => { :sessions => "sessions" }
-
   resources  :messages
   resources  :events
+
+  match 'help' => 'home#help', :as => :help
   match ':controller(/:action(/:id(.:format)))'
 
   # The priority is based upon order of creation:

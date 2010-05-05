@@ -4,8 +4,13 @@ class Message
 
   field :title # events have titles but messages do not
   field :message
-  field :start_date, :type => Date
-  field :end_date, :type => Date
+
+  # TODO: these properties should be Dates but due to
+  # this bug - http://github.com/durran/mongoid/issues#issue/53
+  # I've made DateTimes as a workaround
+  field :start_date, :type => DateTime
+  field :end_date, :type => DateTime
+
   field :is_event, :type => Boolean, :default => false
   field :importance, :default => Importance::LOW
 

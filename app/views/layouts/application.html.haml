@@ -2,31 +2,31 @@
 %html
   %head
     %title famlog
-    = stylesheet_link_tag "reset", "common"
+    = stylesheet_link_tag 'reset', 'common'
     = csrf_meta_tag
     = yield :head
   %body
-    = render :partial => "layouts/header"
+    = render :partial => 'layouts/header'
     #root
       #top
         = today
         #add
-          New
-          = link_to "Message", new_message_path
-          \/
-          = link_to "Event", new_event_path
+          Create a new
+          = link_to 'Message', new_message_path
+          or
+          = link_to 'Event', new_event_path
         #tabs
           %ul
             %li#home.active
               Home
             %li#today
               Today
-            %li#week
-              This Week
+            %li#forecast
+              Forecast
             %li#history
               History
       #main
         = yield
 
-    = javascript_include_tag "jquery", "rails"
-    = javascript_include_tag "application", "messages", "tabs"
+    = javascript_include_tag 'jquery', 'rails',
+                             'application', 'messages', 'tabs'

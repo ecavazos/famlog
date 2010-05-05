@@ -20,23 +20,29 @@ var Famlog = Famlog || {};
 
     click: function(event) {
       event.preventDefault();
-      var link = $(this),
-          html = tabs.pages[link.attr("id")],
-          text = link.text().trim();
+      var tab  = $(this),
+          name = tab.attr('id'),
+          html = tabs.pages[name],
+          text = tab.text().trim();
 
       tabs.all().removeClass("active");
-      link.addClass("active");
-      console.log(text);
-      link.text(text);
-      tabs.makeLinks();
+      tab.addClass("active");
+      $.ajax({
+        url: '/messages?tab=' + name,
+        cache: false,
+        success: function (html) {
+          $("#main").html(html);
+        }
+      });
 
-      $("#main").text(html);
+      tab.text(text);
+      tabs.makeLinks();
     },
 
     pages: {
       home: "this will contain the most recent messages",
       today: "events for the day will be shown first followed by messages created today",
-      week: "all events for the next five days",
+      forecast: "all events for the next five days",
       history: "all past events and messages ordered by date"
     }
   };

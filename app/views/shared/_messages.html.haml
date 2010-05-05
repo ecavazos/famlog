@@ -1,0 +1,19 @@
+%ul#messages
+  - @messages.each do |m|
+    %li
+      .message-body
+        %h3
+          = m.title
+        %p
+          = link_to m.username
+          says:
+          = m.message
+        .message-meta
+          %strong(class="#{to_css(m.importance)}")
+            = m.importance
+          \-
+          = created_at m
+          \-
+          = link_to "Delete", message_path(m), :method => :delete
+      .action
+        = to_edit(m)

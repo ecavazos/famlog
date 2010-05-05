@@ -1,8 +1,11 @@
 class HomeController < ApplicationController
-  before_filter :require_user
 
   def index
-    @messages = Message.criteria.order_by([[:created_at, :desc]])
+    @messages = Message.all.order_by([[:created_at, :desc]]).limit(20)
+  end
+
+  def help
+    render :layout => 'post'
   end
 
 end

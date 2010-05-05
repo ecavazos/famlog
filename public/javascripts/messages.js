@@ -6,15 +6,15 @@ Famlog.messages = {
         className = ".action";
 
     $(selector)
-    .bind("mouseover", function () {
-      $(this).children(className).css({
-        display: "block"
+      .live("mouseover", function () {
+        $(this).children(className).css({
+          display: "block"
+        });
+      })
+      .live("mouseout", function () {
+        $(this).children(className).css({
+          display: "none"
+        });
       });
-    })
-    .bind("mouseout", function () {
-      $(this).children(className).css({
-        display: "none"
-      });
-    });
   }
 };

@@ -1,31 +1,40 @@
 body {
   background-color: white;
   font: 100%;
-  font-family: "Helvetica Neue", Helvetica, Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1.125em; }
 
 h1 {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-  font-size: 1.25em; }
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 20px; }
   h1 a {
-    color: #fff;
+    color: white;
     text-decoration: none; }
   h1 a:hover {
     text-decoration: none; }
 
+h2, h3 {
+  margin: 0 0 15px; }
+
 h2 {
-  margin: 0 0 10px; }
+  font-size: 24px; }
+
+h3 {
+  font-size: 18px; }
+
+hr {
+  margin-bottom: 30px; }
 
 a {
-  color: #0000ff;
+  color: blue;
   text-decoration: none; }
 
 a:hover {
   text-decoration: underline; }
 
 #header {
-  background-color: #222;
-  color: #fff;
+  background-color: #222222;
+  color: white;
   overflow: hidden; }
   #header #hdr-group {
     width: 640px;
@@ -34,7 +43,7 @@ a:hover {
     #header #hdr-group h1 {
       float: left; }
     #header #hdr-group #hdr-util {
-      color: #fff;
+      color: white;
       float: right;
       font-size: 0.75em;
       margin: 0 0 10px;
@@ -44,7 +53,7 @@ a:hover {
         float: left;
         margin: 0 0 0 8px; }
         #header #hdr-group #hdr-util li a {
-          color: #9DF74F;
+          color: #9df74f;
           text-decoration: underline; }
 
 #root {
@@ -62,7 +71,7 @@ a:hover {
     font-size: 0.75em;
     margin: 10px auto 20px auto;
     padding: 6px 8px;
-    width: 140px; }
+    width: 190px; }
   #top #tabs {
     border-bottom: solid 1px #cacaca; }
     #top #tabs li {
@@ -78,7 +87,7 @@ a:hover {
       margin-bottom: -1px; }
 
 #main {
-  background-color: #fff;
+  background-color: white;
   clear: both;
   margin: 0 0 10px 0;
   overflow: hidden; }
@@ -97,25 +106,25 @@ a:hover {
   #messages li .message-body {
     float: left; }
     #messages li .message-body p {
-      color: #222;
+      color: #222222;
       font-size: 0.875em;
       margin-bottom: 3px; }
     #messages li .message-body .message-meta {
-      color: #666;
-      font-size: 0.6875em; }
+      color: #666666;
+      font-size: 0.688em; }
   #messages li .action {
     display: none; }
     #messages li .action a {
-      background-color: #ddd;
+      background-color: #dddddd;
       border-radius: 5px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       float: right;
-      font-size: 0.6875em;
+      font-size: 0.688em;
       padding: 2px 8px; }
 
 .super-high {
-  color: #ff0000;
+  color: red;
   font-weight: bold; }
 
 .high {
@@ -126,3 +135,6 @@ a:hover {
 
 .cancel {
   font-size: 0.875em; }
+
+.help {
+  margin: 0 0 20px; }

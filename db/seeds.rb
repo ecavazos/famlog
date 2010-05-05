@@ -6,7 +6,10 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
+puts 'Deleting users ...'
 User.destroy_all
+
+puts 'Deleting messages ...'
 Message.destroy_all
 
 jack = User.create({
@@ -17,6 +20,7 @@ jack = User.create({
   password: "1234",
   password_confirmation: "1234"
 })
+puts "Added #{jack.email}"
 
 jill = User.create({
   username: "jill",
@@ -26,19 +30,28 @@ jill = User.create({
   password: "1234",
   password_confirmation: "1234"
 })
+puts "Added #{jill.email}"
 
-Message.create({
-  message: "First message ...",
-  user: jack,
-  username: jack.username
-})
+puts 'Adding messages ...'
 
-Message.create({
-  title: "First Event",
-  message: "Don't miss the first event ever.",
-  importance: Importance::SUPER_HIGH,
-  is_event: true,
-  user: jill,
-  username: jill.username,
-  start_date: Date.today
-})
+for i in 0..15
+  Message.create({
+    message: "This is message number #{i + 1}.",
+    user: jack,
+    username: jack.username
+  })
+end
+
+for i in 0..20
+  date = Date.today + 10 - i
+
+  Message.create({
+    title: "We have something to do on #{date}",
+    message: "Don't miss this event. This is event number #{i + 1}",
+    importance: Importance::SUPER_HIGH,
+    is_event: true,
+    user: jill,
+    username: jill.username,
+    start_date: date
+  })
+end

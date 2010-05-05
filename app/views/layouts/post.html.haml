@@ -2,12 +2,13 @@
 %html
   %head
     %title famlog
-    = javascript_include_tag "jquery.js", "home/index.js"
-    = stylesheet_link_tag "reset", "common", "forms"
+    = stylesheet_link_tag 'reset', 'common', 'forms'
+    = csrf_meta_tag
     = yield :head
   %body
-    = render :partial => "layouts/header"
+    = render :partial => 'layouts/header'
     #root
       #main
         = yield
 
+    = javascript_include_tag 'jquery.js', 'rails'
