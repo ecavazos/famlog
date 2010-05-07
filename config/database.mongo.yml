@@ -10,10 +10,5 @@ test:
   database: famlog_test
 
 production:
-  <<: *defaults
   uri: <%= ENV['MONGOHQ_URL'] %>
-  #host: db.mongohq.com
-  username: user
-  password: pass
-  database: famlog
 
