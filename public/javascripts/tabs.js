@@ -22,7 +22,6 @@ var Famlog = Famlog || {};
       event.preventDefault();
       var tab  = $(this),
           name = tab.attr('id'),
-          html = tabs.pages[name],
           text = tab.text().trim();
 
       tabs.all().removeClass("active");
@@ -37,13 +36,6 @@ var Famlog = Famlog || {};
 
       tab.text(text);
       tabs.makeLinks();
-    },
-
-    pages: {
-      home: "this will contain the most recent messages",
-      today: "events for the day will be shown first followed by messages created today",
-      forecast: "all events for the next five days",
-      history: "all past events and messages ordered by date"
     }
   };
 

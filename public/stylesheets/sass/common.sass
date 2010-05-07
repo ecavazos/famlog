@@ -108,6 +108,7 @@ a:hover
   overflow: hidden
 
 #messages
+  .event
 
   li
     background-color: #efefef
@@ -119,7 +120,7 @@ a:hover
     overflow: hidden
 
     h3
-      font-size: 0.875em
+      font-size: 14px
       margin: 0 0 3px 0
 
     .message-body
@@ -127,15 +128,27 @@ a:hover
 
       p
         color: #222
-        font-size: 0.875em
+        font-size: 14px
         margin-bottom: 3px
 
-      .message-meta
-        color: #666
-        font-size: 0.6875em
+    .event-info
+      background-color: #3D9BF2
+      clear: left
+      color: #fff
+      float: left
+      font-size: 11px
+      padding: 2px 10px
+      margin-bottom: 10px
+
+    .message-meta
+      clear: left
+      color: #666
+      float: left
+      font-size: 11px
 
     .action
       display: none
+      float: right
 
       a
         background-color: #ddd
@@ -143,7 +156,7 @@ a:hover
         -moz-border-radius: 5px
         -webkit-border-radius: 5px
         float: right
-        font-size: 0.6875em
+        font-size: 11px
         padding: 2px 8px
 
 .super-high
@@ -157,7 +170,7 @@ a:hover
   color: #80cc66
 
 .cancel
-  font-size: 0.875em
+  font-size: 14px
 
 .help
   margin: 0 0 20px

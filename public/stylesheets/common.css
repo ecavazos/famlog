@@ -101,26 +101,37 @@ a:hover {
   padding: 10px;
   overflow: hidden; }
   #messages li h3 {
-    font-size: 0.875em;
+    font-size: 14px;
     margin: 0 0 3px 0; }
   #messages li .message-body {
     float: left; }
     #messages li .message-body p {
       color: #222222;
-      font-size: 0.875em;
+      font-size: 14px;
       margin-bottom: 3px; }
-    #messages li .message-body .message-meta {
-      color: #666666;
-      font-size: 0.688em; }
+  #messages li .event-info {
+    background-color: #3d9bf2;
+    clear: left;
+    color: white;
+    float: left;
+    font-size: 11px;
+    padding: 2px 10px;
+    margin-bottom: 10px; }
+  #messages li .message-meta {
+    clear: left;
+    color: #666666;
+    float: left;
+    font-size: 11px; }
   #messages li .action {
-    display: none; }
+    display: none;
+    float: right; }
     #messages li .action a {
       background-color: #dddddd;
       border-radius: 5px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
       float: right;
-      font-size: 0.688em;
+      font-size: 11px;
       padding: 2px 8px; }
 
 .super-high {
@@ -134,7 +145,7 @@ a:hover {
   color: #80cc66; }
 
 .cancel {
-  font-size: 0.875em; }
+  font-size: 14px; }
 
 .help {
   margin: 0 0 20px; }

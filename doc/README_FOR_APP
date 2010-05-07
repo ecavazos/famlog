@@ -2,14 +2,15 @@ TODO
 ====
 
 * Add tests
-* Sort messages and events logically
 * Differentiate the messages of the current user from other messages
   * colors/icons ???
 * Don't allow users to edit other user's data
-* Make index tabs async
-* Make the data for the index tabs paged
+* Add pagination for all tabs
 * Publish to heroku
 * Publish to github
+
+* refactor message criteria 
+* Ajax load/error handling
 * Filter user specific data
 * Support family admin
   * add/edit members
@@ -23,4 +24,5 @@ Done
   * restrict all other pages from guests
 * Implement devise for auth
 * Create cleaner routes for the session resource
-
+* Sort messages and events logically
+* Make index tabs async

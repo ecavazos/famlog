@@ -42,7 +42,7 @@ JS
       @messages = Message.where(predicate)
         .order_by([:start_date, :asc]).limit(20)
     when 'history'
-      @messages = Message.where(:create_at.lt => Date.today.to_time.getutc)
+      @messages = Message.where(:created_at.lt => Date.today.to_time.getutc)
         .order_by([:created_at, :desc]).limit(20)
     else
       @messages = Message.criteria

@@ -1,6 +1,8 @@
 %ul#messages
   - @messages.each do |m|
-    %li
+    %li(class="#{type_name_to_css(m)}")
+      .action
+        = to_edit(m)
       .message-body
         %h3
           = m.title
@@ -8,12 +10,13 @@
           = link_to m.username
           says:
           = m.message
-        .message-meta
-          %strong(class="#{to_css(m.importance)}")
-            = m.importance
-          \-
-          = created_at m
-          \-
-          = link_to "Delete", message_path(m), :method => :delete
-      .action
-        = to_edit(m)
+
+      - event_info(m)
+
+      .message-meta
+        %strong(class="#{to_css(m.importance)}")
+          = m.importance
+        \-
+        = format_datetime(m.created_at)
+        \-
+        = link_to "Delete", message_path(m), :method => :delete

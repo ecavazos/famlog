@@ -25,4 +25,11 @@ class Message
     self.username = user.username
   end
 
+  def type_name
+    is_event ? "Event" : "Message"
+  end
+
+  def end_date?
+    is_event? && end_date && end_date > start_date
+  end
 end

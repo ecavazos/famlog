@@ -3,16 +3,28 @@ module HomeHelper
     Date.today.strftime("%A, %B %d, %Y")
   end
 
-  def created_at(model)
-    model.created_at.strftime("%m/%d/%Y at %l:%M%p")
+  def format_datetime(datetime)
+    datetime.strftime("%m/%d/%Y at %l:%M%p") if datetime
+  end
+
+  def event_info(message)
+    return unless message.is_event?
+    haml_tag('p.event-info') do
+      haml_concat "#{format_datetime(message.start_date)}"
+      return unless message.end_date?
+      haml_concat " to #{format_datetime(message.end_date)}"
+    end
   end
 
   def to_css(val)
     val.downcase.gsub(" ", "-") unless val.nil?
   end
 
+  def type_name_to_css(message)
+    message.type_name.downcase
+  end
+
   def to_edit(message)
-    type = message.is_event ? "event" : "message"
-    link_to "Edit", eval("edit_#{type}_path(message)")
+    link_to "Edit", eval("edit_#{message.type_name.downcase}_path(message)")
   end
 end
