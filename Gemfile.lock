@@ -1,5 +1,5 @@
 --- 
-hash: e4c58714c393ede64521f9817238427b5067daa3
+hash: 1c3dfdec8195d4266122612c38694feb19ca7505
 sources: 
 - Git: 
     git: http://github.com/thoughtbot/factory_girl.git
@@ -13,6 +13,10 @@ sources:
     require: 
     uri: http://github.com/thoughtbot/shoulda.git
     ref: ad4a2e9d340803e3d0290e12d2088cc3e6c62ab9
+- Git: 
+    git: git://github.com/durran/mongoid.git
+    uri: git://github.com/durran/mongoid.git
+    ref: 42f2ba7fab02d12e62c46a1bbf44f9c80e465bfe
 - Rubygems: 
     uri: http://rubygems.org
 specs: 
@@ -63,11 +67,11 @@ specs:
 - activeresource: 
     version: 3.0.0.beta3
 - bson: 
-    version: 0.20.1
+    version: "1.0"
 - bson_ext: 
     version: 0.20.1
 - bundler: 
-    version: 0.9.24
+    version: 0.9.25
 - warden: 
     version: 0.10.3
 - devise: 
@@ -80,11 +84,12 @@ specs:
 - mocha: 
     version: 0.9.8
 - mongo: 
-    version: 0.20.1
+    version: "1.0"
 - will_paginate: 
     version: 3.0.pre
 - mongoid: 
     version: 2.0.0.beta4
+    source: 2
 - thor: 
     version: 0.13.6
 - railties: 
@@ -108,7 +113,7 @@ dependencies:
     require: 
     - sqlite3
   mongoid: 
-    version: = 2.0.0.beta4
+    version: ">= 0"
     group: 
     - :default
   bson_ext: 
