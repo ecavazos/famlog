@@ -3,8 +3,8 @@ require 'uri'
 
 File.open(File.join(Rails.root, 'config/database.mongo.yml'), 'r') do |f|
   if ENV['MONGOHQ_URL']
-    puts'ass'
     mongo_uri = URI.parse(ENV['MONGOHQ_URL'])
+    puts mongo_uri
     @settings = {}
     @settings['host'] = mongo_uri.host
     @settings['port'] = mongo_uri.port.to_s
