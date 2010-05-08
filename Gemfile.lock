@@ -1,5 +1,5 @@
 --- 
-hash: 1c3dfdec8195d4266122612c38694feb19ca7505
+hash: cec9cbb74d39929573d038aa5f1e8f47d2a86512
 sources: 
 - Git: 
     git: http://github.com/thoughtbot/factory_girl.git
@@ -117,7 +117,7 @@ dependencies:
     group: 
     - :default
   bson_ext: 
-    version: = 0.20.1
+    version: ">= 0"
     group: 
     - :default
   haml: 
