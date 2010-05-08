@@ -1,5 +1,5 @@
 --- 
-hash: cec9cbb74d39929573d038aa5f1e8f47d2a86512
+hash: 1c3dfdec8195d4266122612c38694feb19ca7505
 sources: 
 - Git: 
     git: http://github.com/thoughtbot/factory_girl.git
@@ -16,7 +16,7 @@ sources:
 - Git: 
     git: git://github.com/durran/mongoid.git
     uri: git://github.com/durran/mongoid.git
-    ref: 42f2ba7fab02d12e62c46a1bbf44f9c80e465bfe
+    ref: de35568bd5e96debed2e8042d61077d84519a98f
 - Rubygems: 
     uri: http://rubygems.org
 specs: 
@@ -67,7 +67,7 @@ specs:
 - activeresource: 
     version: 3.0.0.beta3
 - bson: 
-    version: "1.0"
+    version: 1.0.1
 - bson_ext: 
     version: 0.20.1
 - bundler: 
@@ -84,7 +84,7 @@ specs:
 - mocha: 
     version: 0.9.8
 - mongo: 
-    version: "1.0"
+    version: 1.0.1
 - will_paginate: 
     version: 3.0.pre
 - mongoid: 
@@ -117,7 +117,7 @@ dependencies:
     group: 
     - :default
   bson_ext: 
-    version: ">= 0"
+    version: = 0.20.1
     group: 
     - :default
   haml: 
