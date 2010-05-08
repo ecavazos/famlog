@@ -1,5 +1,5 @@
 --- 
-hash: 1c3dfdec8195d4266122612c38694feb19ca7505
+hash: 71dfebf6c8dd6d53ff884b1d6ee08566d3880568
 sources: 
 - Git: 
     git: http://github.com/thoughtbot/factory_girl.git
@@ -67,7 +67,7 @@ specs:
 - activeresource: 
     version: 3.0.0.beta3
 - bson: 
-    version: 1.0.1
+    version: "1.0"
 - bson_ext: 
     version: 0.20.1
 - bundler: 
@@ -84,7 +84,7 @@ specs:
 - mocha: 
     version: 0.9.8
 - mongo: 
-    version: 1.0.1
+    version: "1.0"
 - will_paginate: 
     version: 3.0.pre
 - mongoid: 
@@ -102,6 +102,10 @@ specs:
 - sqlite3-ruby: 
     version: 1.2.5
 dependencies: 
+  bson: 
+    version: = 1.0.0
+    group: 
+    - :default
   rails: 
     version: = 3.0.0.beta3
     group: 

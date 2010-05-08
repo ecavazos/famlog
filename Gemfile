@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'bson', '1.0.0'
 gem 'rails', '3.0.0.beta3'
 
 # Bundle edge Rails instead:
