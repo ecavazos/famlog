@@ -14,7 +14,7 @@ gem 'bson_ext', '0.20.1'
 gem 'haml', '3.0.0.rc.3'
 
 # Authentication
-gem 'devise', '1.1.rc0'
+gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
