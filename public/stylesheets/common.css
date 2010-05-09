@@ -34,6 +34,7 @@ a:hover {
 
 #header {
   background-color: #222222;
+  border-bottom: solid 3px #e6e6e6;
   color: white;
   overflow: hidden; }
   #header #hdr-group {
@@ -51,9 +52,9 @@ a:hover {
       #header #hdr-group #hdr-util li {
         list-style: none;
         float: left;
-        margin: 0 0 0 8px; }
+        margin: 0 0 0 10px; }
         #header #hdr-group #hdr-util li a {
-          color: #9df74f;
+          color: #acd2f2;
           text-decoration: underline; }
 
 #root {
@@ -149,3 +150,14 @@ a:hover {
 
 .help {
   margin: 0 0 20px; }
+
+#loader {
+  background-color: #dddddd;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  font-size: 13px;
+  margin: 20px auto 0;
+  padding: 5px 8px;
+  text-align: center;
+  width: 130px; }

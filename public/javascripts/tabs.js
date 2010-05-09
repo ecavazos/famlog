@@ -4,9 +4,28 @@ var Famlog = Famlog || {};
 
   var tabs = Famlog.tabs = {
 
-    init: function() {
+    init: function () {
       tabs.makeLinks();
       tabs.all().live("click", tabs.click);
+      tabs.initAjaxError();
+      tabs.initAjaxStart();
+    },
+
+    initAjaxError: function () {
+      $('body').ajaxError(function (event, xhr, ajaxOptions, thrownError) {
+        $('#error').remove();
+        $('body').prepend('<div id="error"></div>');
+        $('#error').text(xhr.responseText)
+          .fadeOut(4000, function () {
+            $('#error').remove();
+          });
+      });
+    },
+
+    initAjaxStart: function () {
+      $('body').ajaxStart(function () {
+        tabs.load();
+      });
     },
 
     all: function () {
@@ -36,7 +55,12 @@ var Famlog = Famlog || {};
 
       tab.text(text);
       tabs.makeLinks();
-    }
+    },
+
+    load: function () {
+      $('#main')
+        .html('<div id="loader">Loading ...</div>');
+    },
   };
 
 })();
