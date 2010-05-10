@@ -1,6 +1,6 @@
 Famlog::Application.routes.draw do |map|
   root       :to => 'home#index'
-  devise_for :users, :controllers => { :sessions => "sessions" }
+  devise_for :users, :controllers => { :sessions => 'sessions' }
   resources  :messages
   resources  :events
 
