@@ -1,6 +1,9 @@
 TODO
 ====
 
+* Make username unique
+* Fix the denormalized username field on messages so that remains consistent
+  if users update their username
 * Add tests
 * Differentiate the messages of the current user from other messages
   * colors/icons ???
@@ -9,7 +12,6 @@ TODO
 * Publish to github
 * Profiles
 * Refactor message criteria
-* Ajax load/error handling
 * Filter user specific data
 * Support family admin
   * add/edit members
@@ -28,3 +30,4 @@ Done
 * Sort messages and events logically
 * Make index tabs async
 * Publish to heroku
+* Ajax load/error handling
