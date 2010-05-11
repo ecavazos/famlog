@@ -43,8 +43,9 @@ a:hover {
     padding: 10px 0 10px 0; }
     #header #hdr-group h1 {
       float: left; }
+      #header #hdr-group h1 a {
+        color: #abe05b; }
     #header #hdr-group #hdr-util {
-      color: white;
       float: right;
       font-size: 0.75em;
       margin: 0 0 10px;
@@ -52,13 +53,12 @@ a:hover {
       #header #hdr-group #hdr-util li {
         list-style: none;
         float: left;
-        margin: 0 0 0 10px; }
+        margin: 0 0 0 15px; }
         #header #hdr-group #hdr-util li a {
-          color: #acd2f2;
-          text-decoration: underline; }
+          color: white; }
 
 #root {
-  margin: 15px auto 10px auto;
+  margin: 30px auto 10px auto;
   width: 640px; }
 
 #top {
