@@ -9,6 +9,10 @@ class User
   field :first_name
   field :last_name
 
+  # validations
+  validates_uniqueness_of :username
+  validates_presence_of :username, :first_name, :last_name
+
   # relationships
   has_many_related :messages
 

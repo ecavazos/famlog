@@ -4,7 +4,7 @@ module Famlog
 
       def new
         @message = Message.new
-        render :layout => "post"
+        render :layout => "no_tabs"
       end
 
       def create
@@ -20,7 +20,7 @@ module Famlog
 
       def edit
         find_message
-        render :layout => "post"
+        render :layout => "no_tabs"
       end
 
       def update

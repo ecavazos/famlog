@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    render :layout => "post"
+    render :layout => "no_tabs"
   end
 
   def create
@@ -19,6 +19,6 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
-    render :layout => "post"
+    render :layout => "no_tabs"
   end
 end

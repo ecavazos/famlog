@@ -5,7 +5,7 @@ class HomeController < ApplicationController
   end
 
   def help
-    render :layout => 'post'
+    render :layout => 'no_tabs'
   end
 
 end
