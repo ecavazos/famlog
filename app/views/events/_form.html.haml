@@ -10,13 +10,17 @@
 
 %p
   = f.label :start_date
-  .date-select
-    = f.datetime_select :start_date
+  .date-group
+    = text_field_tag :s_date, '', :class => 'date'
+    \-
+    = text_field_tag :s_time, '', :class => 'time'
 
 %p
   = f.label :end_date
-  .date-select
-    = f.datetime_select :end_date
+  .date-group
+    = text_field_tag :e_date, '', :class => 'date'
+    \-
+    = text_field_tag :e_time, '', :class => 'time'
 
 %p
   = f.submit "Submit", :class => "submit"

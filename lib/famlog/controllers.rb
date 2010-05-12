@@ -26,6 +26,7 @@ module Famlog
       def update
         find_message
         set_user
+        before_save(params)
 
         if @message.update_attributes(params[:message])
           redirect_to :root
@@ -43,6 +44,9 @@ module Famlog
 
       def find_message
         @message = Message.find(params[:id])
+      end
+
+      def before_save(params)
       end
 
     end

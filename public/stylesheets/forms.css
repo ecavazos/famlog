@@ -14,9 +14,12 @@ label {
 .submit {
   float: none; }
 
-.date-select {
+.date-group {
   clear: left;
   float: left;
   overflow: hidden; }
-  .date-select select {
+  .date-group input {
+    clear: none;
     float: none; }
+  .date-group .time {
+    width: 100px; }
