@@ -6,12 +6,6 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
 
-puts 'Deleting users ...'
-User.destroy_all
-
-puts 'Deleting messages ...'
-Message.destroy_all
-
 jack = User.create({
   username: "jack",
   email: "jack@famlog.com",
