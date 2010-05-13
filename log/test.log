@@ -11178,3 +11178,218 @@ Completed 302 Found in 1ms
   Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
 Redirected to http://test.host/
 Completed 302 Found in 1ms
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"_type_1", :ns=>"famlog_test.messages", :key=>{"_type"=>1}, :unique=>false}])
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"_type_1", :ns=>"famlog_test.messages", :key=>{"_type"=>1}, :unique=>false}])
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (72.5ms)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"_type_1", :ns=>"famlog_test.messages", :key=>{"_type"=>1}, :unique=>false}])
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (54.5ms)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"_type_1", :ns=>"famlog_test.messages", :key=>{"_type"=>1}, :unique=>false}])
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (54.8ms)
+Rendered layouts/_header.html.haml (4.7ms)
+Rendered home/index.html.haml within layouts/application (72.5ms)
+Completed 200 OK in 81ms (Views: 81.2ms)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"_type_1", :ns=>"famlog_test.messages", :key=>{"_type"=>1}, :unique=>false}])
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (51.3ms)
+Rendered layouts/_header.html.haml (4.5ms)
+Rendered home/index.html.haml within layouts/application (68.5ms)
+Completed 200 OK in 77ms (Views: 76.9ms)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"_type_1", :ns=>"famlog_test.messages", :key=>{"_type"=>1}, :unique=>false}])
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (52.3ms)
+Rendered layouts/_header.html.haml (4.3ms)
+Rendered home/index.html.haml within layouts/application (69.4ms)
+Completed 200 OK in 78ms (Views: 77.6ms)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"_type_1", :ns=>"famlog_test.messages", :key=>{"_type"=>1}, :unique=>false}])
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (49.7ms)
+Rendered layouts/_header.html.haml (4.5ms)
+Rendered home/index.html.haml within layouts/application (67.1ms)
+Completed 200 OK in 76ms (Views: 75.6ms)
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (49.5ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered home/index.html.haml within layouts/application (54.9ms)
+Completed 200 OK in 56ms (Views: 55.8ms)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (43.8ms)
+Rendered layouts/_header.html.haml (4.4ms)
+Rendered home/index.html.haml within layouts/application (61.2ms)
+Completed 200 OK in 91ms (Views: 90.6ms)
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (114.1ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered home/index.html.haml within layouts/application (119.6ms)
+Completed 200 OK in 121ms (Views: 120.5ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (6.8ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/new.html.haml within layouts/application (14.5ms)
+Completed 200 OK in 47ms (Views: 46.3ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (4.3ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/new.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 10ms (Views: 9.6ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+  MONGODB famlog_test['messages'].remove({:_id=>"4bebff58cb66ec50ab000014"})
+Redirected to http://test.host/
+Completed 302 Found in 3ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.6ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/edit.html.haml within layouts/no_tabs (12.2ms)
+Completed 200 OK in 17ms (Views: 16.4ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.8ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/edit.html.haml within layouts/no_tabs (8.8ms)
+Completed 200 OK in 10ms (Views: 9.8ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.6ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/edit.html.haml within layouts/no_tabs (8.7ms)
+Completed 200 OK in 10ms (Views: 9.7ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.8ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/new.html.haml within layouts/no_tabs (9.1ms)
+Completed 200 OK in 11ms (Views: 10.2ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (5.1ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered messages/new.html.haml within layouts/no_tabs (9.2ms)
+Completed 200 OK in 11ms (Views: 10.3ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (5.0ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/new.html.haml within layouts/no_tabs (9.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (5.1ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/edit.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 12ms (Views: 11.9ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (5.0ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/edit.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 12ms (Views: 11.9ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (44.4ms)
+Rendered layouts/_header.html.haml (4.6ms)
+Rendered home/index.html.haml within layouts/application (62.4ms)
+Completed 200 OK in 71ms (Views: 70.8ms)
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (42.0ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Rendered home/index.html.haml within layouts/application (47.6ms)
+Completed 200 OK in 49ms (Views: 48.5ms)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (46.8ms)
+Rendered layouts/_header.html.haml (4.6ms)
+Rendered home/index.html.haml within layouts/application (65.2ms)
+Completed 200 OK in 75ms (Views: 74.6ms)
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (47.3ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered home/index.html.haml within layouts/application (52.9ms)
+Completed 200 OK in 54ms (Views: 53.8ms)

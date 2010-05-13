@@ -1,5 +1,5 @@
 --- 
-hash: e99da3e552b0131b16dec489605188b231effab8
+hash: a16d12169e0b90bcbf08ec0b2bea9f21033473a9
 sources: 
 - Git: 
     git: http://github.com/thoughtbot/factory_girl.git
@@ -16,11 +16,11 @@ sources:
 - Git: 
     git: git://github.com/plataformatec/devise.git
     uri: git://github.com/plataformatec/devise.git
-    ref: bb39243da2be6ae8171ed5884e85174a69f02100
+    ref: 08c51798691289697f6dff0f59d999ea19d564f8
 - Git: 
     git: git://github.com/durran/mongoid.git
     uri: git://github.com/durran/mongoid.git
-    ref: de35568bd5e96debed2e8042d61077d84519a98f
+    ref: b86ddceb1bd1533df52b4b78c3595b74f128145f
 - Rubygems: 
     uri: http://rubygems.org
 specs: 
@@ -57,7 +57,7 @@ specs:
 - treetop: 
     version: 1.4.5
 - mail: 
-    version: 2.2.0
+    version: 2.2.1
 - text-hyphen: 
     version: 1.0.0
 - text-format: 
@@ -71,9 +71,9 @@ specs:
 - activeresource: 
     version: 3.0.0.beta3
 - bson: 
-    version: "1.0"
+    version: 1.0.1
 - bson_ext: 
-    version: 0.20.1
+    version: 1.0.1
 - bundler: 
     version: 0.9.25
 - warden: 
@@ -89,7 +89,7 @@ specs:
 - mocha: 
     version: 0.9.8
 - mongo: 
-    version: "1.0"
+    version: 1.0.1
 - will_paginate: 
     version: 3.0.pre
 - mongoid: 
@@ -107,10 +107,6 @@ specs:
 - sqlite3-ruby: 
     version: 1.2.5
 dependencies: 
-  bson: 
-    version: = 1.0.0
-    group: 
-    - :default
   rails: 
     version: = 3.0.0.beta3
     group: 
@@ -126,7 +122,7 @@ dependencies:
     group: 
     - :default
   bson_ext: 
-    version: = 0.20.1
+    version: = 1.0.1
     group: 
     - :default
   haml: 
