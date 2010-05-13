@@ -10,6 +10,7 @@ module Famlog
       def create
         @message = Message.new(params[:message])
         set_user
+        before_save(params)
 
         if @message.save
           redirect_to :root

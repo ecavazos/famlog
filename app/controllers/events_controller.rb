@@ -11,8 +11,8 @@ class EventsController < ApplicationController
   end
 
   def before_save(params)
-    @message.start_date = Time.utc(2010, 5, 13)
-    # @message.start_date = Famlog::DateTimeParser.parse(params[:s_date], params[:s_time]).to_time.getutc
+    puts 'monkey tits'
+    @message.start_date = Famlog::DateTimeParser.parse(params[:s_date], params[:s_time])
     @message.end_date = Famlog::DateTimeParser.parse(params[:e_date], params[:e_time])
   end
 end

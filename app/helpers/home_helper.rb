@@ -4,7 +4,7 @@ module HomeHelper
   end
 
   def format_datetime(datetime)
-    datetime.strftime("%m/%d/%Y at %l:%M%p") if datetime
+    datetime.getutc.strftime("%m/%d/%Y at %l:%M%p") if datetime
   end
 
   def event_info(message)

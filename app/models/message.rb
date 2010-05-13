@@ -33,6 +33,22 @@ class Message
     is_event? && end_date && end_date > start_date
   end
 
+  def start_date_display
+    start_date.strftime("%m/%d/%Y") if start_date
+  end
+
+  def start_time_display
+    start_date.strftime("%l:%M%p") if start_date
+  end
+
+  def end_date_display
+    end_date.strftime("%m/%d/%Y") if end_date
+  end
+
+  def end_time_display
+    end_date.strftime("%l:%M%p") if end_date
+  end
+
   class << self
     def by_tab(tab)
       case tab
