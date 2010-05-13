@@ -9,7 +9,7 @@
   = f.select :importance, Importance::ALL
 
 %p
-  = f.label :start_date
+  = f.label :start_at
   .date-group
     = text_field_tag :s_date, @message.start_date_display, :class => 'date'
     \-

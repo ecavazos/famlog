@@ -4,12 +4,11 @@ class ApplicationController < ActionController::Base
 
   before_filter :authenticate_user!
 
-
   layout :layout_by_resource
 
   def layout_by_resource
     if devise_controller?
-      'post'
+      'no_tabs'
     else
       'application'
     end

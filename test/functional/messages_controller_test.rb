@@ -9,7 +9,7 @@ class MessagesControllerTest < ActionController::TestCase
       def current_user; @user end
     end
     @controller.expects(:current_user).returns(@user)
-    @controller.expects(:require_user)
+    @controller.expects(:authenticate_user!)
   end
 
   context 'new' do

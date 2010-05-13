@@ -9,10 +9,11 @@ module HomeHelper
 
   def event_info(message)
     return unless message.is_event?
+
     haml_tag('p.event-info') do
-      haml_concat "#{format_datetime(message.start_date)}"
+      haml_concat "#{format_datetime(message.start_at)}"
       return unless message.end_date?
-      haml_concat " to #{format_datetime(message.end_date)}"
+      haml_concat " to #{format_datetime(message.end_at)}"
     end
   end
 

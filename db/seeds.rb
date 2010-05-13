@@ -52,6 +52,6 @@ for i in 0..20
     is_event: true,
     user: jill,
     username: jill.username,
-    start_date: date
+    start_at: date
   })
 end
