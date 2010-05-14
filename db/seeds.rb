@@ -31,8 +31,7 @@ puts 'Adding messages ...'
 for i in 0..15
   Message.create({
     message: "This is message number #{i + 1}.",
-    user: jack,
-    username: jack.username
+    user: jack
   })
 end
 
@@ -45,7 +44,6 @@ for i in 0..20
     importance: Importance::SUPER_HIGH,
     is_event: true,
     user: jill,
-    username: jill.username,
     start_at: date
   })
 end

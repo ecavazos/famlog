@@ -20,7 +20,7 @@ sources:
 - Git: 
     git: git://github.com/durran/mongoid.git
     uri: git://github.com/durran/mongoid.git
-    ref: b86ddceb1bd1533df52b4b78c3595b74f128145f
+    ref: 8ceb7c4366e996a027694319868300ee1d6a6dcc
 - Rubygems: 
     uri: http://rubygems.org
 specs: 
@@ -77,7 +77,7 @@ specs:
 - bundler: 
     version: 0.9.25
 - warden: 
-    version: 0.10.3
+    version: 0.10.4
 - devise: 
     version: 1.1.rc1
     source: 2

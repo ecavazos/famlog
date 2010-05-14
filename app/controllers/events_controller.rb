@@ -5,13 +5,10 @@ class EventsController < ApplicationController
 
   private
 
-  def set_user
-    @message.set_user current_user
-    @message.is_event = true
-  end
-
   def before_save(params)
     @message.start = Famlog::DateTimeParser.parse(params[:s_date], params[:s_time])
     @message.end   = Famlog::DateTimeParser.parse(params[:e_date], params[:e_time])
+
+    @message.is_event = true
   end
 end

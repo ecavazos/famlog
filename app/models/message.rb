@@ -14,16 +14,8 @@ class Message
   field :is_event, :type => Boolean, :default => false
   field :importance, :default => Importance::LOW
 
-  field :user_id
-  field :username
-
   # relationships
   belongs_to_related :user
-
-  def set_user(user)
-    self.user = user
-    self.username = user.username
-  end
 
   def type_name
     is_event ? "Event" : "Message"

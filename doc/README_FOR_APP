@@ -1,12 +1,8 @@
 TODO
 ====
 
-* Make username unique
-* Fix the denormalized username field on messages so that remains consistent
-  if users update their username
 * Add tests
 * Differentiate the messages of the current user from other messages
-  * colors/icons ???
 * Don't allow users to edit other user's data
 * Add pagination for all tabs
 * Publish to github
@@ -31,3 +27,6 @@ Done
 * Make index tabs async
 * Publish to heroku
 * Ajax load/error handling
+* Make username unique
+* Fix the denormalized username field on messages so that remains consistent
+  if users update their username
