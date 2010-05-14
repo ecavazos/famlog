@@ -11393,3 +11393,113 @@ Rendered shared/_messages.html.haml (47.3ms)
 Rendered layouts/_header.html.haml (1.1ms)
 Rendered home/index.html.haml within layouts/application (52.9ms)
 Completed 200 OK in 54ms (Views: 53.8ms)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (83.2ms)
+Rendered layouts/_header.html.haml (5.0ms)
+Rendered home/index.html.haml within layouts/application (103.2ms)
+Completed 200 OK in 129ms (Views: 128.8ms)
+  Processing by HomeController#index as HTML
+  MONGODB famlog_test['messages'].find({}, {}).limit(20).sort([[:created_at, :desc]])
+  MONGODB cursor.close
+Rendered shared/_messages.html.haml (51.2ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered home/index.html.haml within layouts/application (57.8ms)
+Completed 200 OK in 59ms (Views: 58.9ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (8.6ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Rendered messages/new.html.haml within layouts/application (22.6ms)
+Completed 200 OK in 134ms (Views: 133.3ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (6.0ms)
+Rendered layouts/_header.html.haml (1.6ms)
+Rendered messages/new.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 15ms (Views: 14.0ms)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+  MONGODB famlog_test['messages'].remove({:_id=>"4becb649cb66ec512d000014"})
+Redirected to http://test.host/
+Completed 302 Found in 5ms
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (5.1ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/edit.html.haml within layouts/no_tabs (14.6ms)
+Completed 200 OK in 25ms (Views: 24.5ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.9ms)
+Rendered layouts/_header.html.haml (1.4ms)
+Rendered messages/edit.html.haml within layouts/no_tabs (9.6ms)
+Completed 200 OK in 11ms (Views: 10.6ms)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (6.2ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/edit.html.haml within layouts/no_tabs (10.5ms)
+Completed 200 OK in 12ms (Views: 11.6ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (5.2ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Rendered messages/new.html.haml within layouts/no_tabs (9.7ms)
+Completed 200 OK in 11ms (Views: 10.8ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (5.4ms)
+Rendered layouts/_header.html.haml (1.5ms)
+Rendered messages/new.html.haml within layouts/no_tabs (10.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (6.8ms)
+Rendered layouts/_header.html.haml (2.3ms)
+Rendered messages/new.html.haml within layouts/no_tabs (12.7ms)
+Completed 200 OK in 14ms (Views: 13.9ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (7.2ms)
+Rendered layouts/_header.html.haml (1.4ms)
+Rendered messages/edit.html.haml within layouts/application (13.5ms)
+Completed 200 OK in 16ms (Views: 15.2ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (6.1ms)
+Rendered layouts/_header.html.haml (1.6ms)
+Rendered messages/edit.html.haml within layouts/application (12.7ms)
+Completed 200 OK in 15ms (Views: 14.2ms)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
