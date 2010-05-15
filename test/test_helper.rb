@@ -16,4 +16,18 @@ class ActiveSupport::TestCase
   # fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  # MongoDB has no transactions. Drop all collections after each test case.
+  def teardown
+    Mongoid.database.collections.each(&:drop)
+  end
+
+  # Make sure that each test case has a teardown
+  # method to clear the db after each test.
+  def inherited(base)
+    base.define_method teardown do
+      super
+    end
+  end
+
 end

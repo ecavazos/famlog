@@ -3,7 +3,6 @@ require 'test_helper'
 class MessagesControllerTest < ActionController::TestCase
 
   setup do
-    # stub rails_warden helper method
     @user = Factory.build(:user)
     ApplicationHelper.class_eval do
       def current_user; @user end
@@ -86,7 +85,6 @@ class MessagesControllerTest < ActionController::TestCase
     context 'when successful' do
       setup do
         @message.expects(:update_attributes).with(@params).returns(true)
-        @message.expects(:set_user).with(@user)
         put :update, :id => 4, :message => @params
       end
 

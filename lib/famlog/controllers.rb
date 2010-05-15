@@ -9,7 +9,7 @@ module Famlog
 
       def create
         @message = Message.new(params[:message])
-        @message.set_user current_user
+        @message.user = current_user
         before_save(params)
 
         if @message.save
@@ -26,7 +26,7 @@ module Famlog
 
       def update
         find_message
-        @message.set_user current_user
+        @message.user = current_user
         before_save(params)
 
         if @message.update_attributes(params[:message])
