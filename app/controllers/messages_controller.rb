@@ -1,7 +1,7 @@
-require "famlog/controllers"
+require 'lib/famlog/controllers/messages'
 
 class MessagesController < ApplicationController
-  include Famlog::Controllers::MessageMixin
+  include Famlog::Controllers::Messages
 
   def index
     @messages = Message.by_tab params[:tab]

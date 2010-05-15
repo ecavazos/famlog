@@ -1,7 +1,8 @@
+require 'lib/famlog/controllers/messages'
 require 'lib/famlog/datetime_parser'
 
 class EventsController < ApplicationController
-  include Famlog::Controllers::MessageMixin
+  include Famlog::Controllers::Messages
 
   private
 
