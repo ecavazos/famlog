@@ -1,6 +1,6 @@
 if Rails.env == 'production'
 
-  emilio = User.create({
+  User.create({
     username: 'ecni',
     email: 'ejcavazos@gmail.com',
     first_name: 'Emilio',
@@ -9,7 +9,7 @@ if Rails.env == 'production'
     password_confirmation: 'emilio'
   })
 
-  josie = User.create({
+  User.create({
     username: 'josie',
     email: 'jmorris22734@gmail.com',
     first_name: 'Josie',

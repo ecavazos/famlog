@@ -105,7 +105,8 @@ a:hover {
     font-size: 14px;
     margin: 0 0 3px 0; }
   #messages li .message-body {
-    float: left; }
+    float: left;
+    width: 570px; }
     #messages li .message-body p {
       color: #222222;
       font-size: 14px;
