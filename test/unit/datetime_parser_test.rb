@@ -6,8 +6,6 @@ class DateTimeParserTester < Test::Unit::TestCase
 
     should 'parse date without time value' do
       actual = Famlog::DateTimeParser.parse('5/11/2010')
-      puts actual.to_time.getutc
-      puts Date.today.to_time.getutc
       assert_equal(DateTime.new(2010, 5, 11), actual)
     end
 

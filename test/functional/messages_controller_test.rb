@@ -43,6 +43,10 @@ class MessagesControllerTest < ActionController::TestCase
         assert_equal @user, assigns(:message).user
       end
 
+      should 'not be an event' do
+        assert !assigns(:message).is_event?
+      end
+
       should_respond_with :redirect
       should_redirect_to('root') { root_path }
     end
@@ -90,6 +94,10 @@ class MessagesControllerTest < ActionController::TestCase
 
       should 'assign to message' do
         assert_not_nil assigns(:message)
+      end
+
+      should 'not be an event' do
+        assert !assigns(:message).is_event?
       end
 
       should_respond_with :redirect

@@ -8,11 +8,9 @@ class Message
   field :title # events have titles but messages do not
   field :message
 
-  # TODO: these properties should be Dates but due to
-  # this bug - http://github.com/durran/mongoid/issues#issue/53
-  # I've made DateTimes as a workaround
-  field :start_at, :type => DateTime
-  field :end_at, :type => DateTime
+  # TODO: mongoid/mongodb bug - http://github.com/durran/mongoid/issues#issue/53
+  field :start_at, :type => Time
+  field :end_at,   :type => Time
 
   field :is_event, :type => Boolean, :default => false
   field :importance, :default => Importance::LOW

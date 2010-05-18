@@ -17,4 +17,12 @@ class HomeControllerTest < ActionController::TestCase
       assert_not_nil assigns(:messages)
     end
   end
+
+  context 'help' do
+    setup do
+      get :help
+    end
+
+    should_respond_with :success
+  end
 end

@@ -3,6 +3,8 @@ TODO
 
 * Add tests
 * Differentiate the messages of the current user from other messages
+* Sort by importance
+* Allow messages and events to be targeted (@ user)
 * Don't allow users to edit other user's data
 * Add pagination for all tabs
 * Publish to github

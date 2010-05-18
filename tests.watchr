@@ -61,3 +61,5 @@ Signal.trap 'INT' do
     run_suite
   end
 end
+
+run_suite

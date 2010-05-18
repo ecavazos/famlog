@@ -7,8 +7,8 @@ class EventsController < ApplicationController
   private
 
   def before_save(params)
-    @message.start = Famlog::DateTimeParser.parse(params[:s_date], params[:s_time])
-    @message.end   = Famlog::DateTimeParser.parse(params[:e_date], params[:e_time])
+    @message.start_at = Famlog::DateTimeParser.parse(params[:s_date], params[:s_time])
+    @message.end_at   = Famlog::DateTimeParser.parse(params[:e_date], params[:e_time])
 
     @message.is_event = true
   end
