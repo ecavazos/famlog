@@ -62,7 +62,7 @@ class EventsControllerTest < ActionController::TestCase
     end
 
     should 'have correct end at date' do
-      actual = DateTime.new(2010, 5, 16, 16, 44).getutc
+      actual = DateTime.new(2010, 5, 17, 16, 44)
       assert_equal actual, assigns(:message).end_at
     end
   end

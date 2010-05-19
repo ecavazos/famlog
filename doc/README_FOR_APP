@@ -3,13 +3,12 @@ TODO
 
 * Add tests
 * Differentiate the messages of the current user from other messages
-* Sort by importance
+* Sort by importance (this may not be correct)
 * Allow messages and events to be targeted (@ user)
 * Don't allow users to edit other user's data
 * Add pagination for all tabs
 * Publish to github
 * Profiles
-* Refactor message criteria
 * Filter user specific data
 * Support family admin
   * add/edit members
@@ -32,3 +31,4 @@ Done
 * Make username unique
 * Fix the denormalized username field on messages so that remains consistent
   if users update their username
+* Refactor message criteria
