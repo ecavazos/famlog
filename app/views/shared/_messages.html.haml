@@ -1,6 +1,6 @@
 %ul#messages
   - @messages.each do |m|
-    %li(class="#{type_name_to_css(m)}")
+    %li(class="#{to_css(m.type_name)}")
       .action
         = to_edit(m)
       .message-body

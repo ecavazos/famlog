@@ -29,4 +29,23 @@ class HomeHelperTest < ActionView::TestCase
   should 'be nil if called with a nil parameter' do
     assert_nil to_css(nil)
   end
+
+  should 'create an edit link for a message' do
+    message = Message.new
+    expects(:edit_message_path).with(message).returns('fake path')
+    expects(:link_to).with('Edit', 'fake path')
+    to_edit(message)
+  end
+
+  should 'create an edit link for an event' do
+    message = Message.new(:is_event => true)
+    expects(:edit_event_path).with(message).returns('fake path')
+    expects(:link_to).with('Edit', 'fake path')
+    to_edit(message)
+  end
+
+  should 'return nil when not an event' do
+    message = Message.new
+    assert_nil event_info(message)
+  end
 end
