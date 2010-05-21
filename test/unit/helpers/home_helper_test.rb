@@ -63,7 +63,7 @@ class HomeHelperTest < ActionView::TestCase
 
       expected =<<HTML
 <p class='event-info'>
-  05/05/2010 at12:00 AM
+  05/05/2010 at 12:00 AM
 </p>
 HTML
       assert_equal expected, actual
@@ -77,8 +77,8 @@ HTML
 
       expected =<<HTML
 <p class='event-info'>
-  05/05/2010 at12:00 AM
-  to 05/06/2010 at12:00 AM
+  05/05/2010 at 12:00 AM
+  to 05/06/2010 at 12:00 AM
 </p>
 HTML
 

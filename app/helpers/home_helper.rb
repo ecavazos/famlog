@@ -4,7 +4,8 @@ module HomeHelper
   end
 
   def format_datetime(datetime)
-    datetime.getutc.strftime("%m/%d/%Y at%l:%M %p") if datetime
+    return unless datetime
+    datetime.getutc.strftime("%m/%d/%Y at %l:%M %p").gsub('  ', ' ')
   end
 
   def to_css(val)

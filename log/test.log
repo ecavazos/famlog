@@ -21854,3 +21854,572 @@ Completed 302 Found in 4ms
   MONGODB famlog_test['system.namespaces'].find({}, {})
   MONGODB famlog_test['system.namespaces'].find({}, {})
   MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  MONGODB famlog_test['messages'].insert([{"is_event"=>false, "importance"=>"Low", "_id"=>"4bf68999cb66ec0ce7000001", "created_at"=>2010-05-21 13:24:41 UTC, "updated_at"=>2010-05-21 13:24:41 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['messages'].insert([{"is_event"=>true, "importance"=>"Low", "_id"=>"4bf68999cb66ec0ce7000002", "created_at"=>2010-05-21 13:24:41 UTC, "updated_at"=>2010-05-21 13:24:41 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  MONGODB famlog_test['messages'].insert([{"is_event"=>false, "importance"=>"Low", "_id"=>"4bf689f5cb66ec0cef000001", "created_at"=>2010-05-21 13:26:13 UTC, "updated_at"=>2010-05-21 13:26:13 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['messages'].insert([{"is_event"=>true, "importance"=>"Low", "_id"=>"4bf689f5cb66ec0cef000002", "created_at"=>2010-05-21 13:26:13 UTC, "updated_at"=>2010-05-21 13:26:13 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  MONGODB famlog_test['messages'].insert([{"is_event"=>false, "importance"=>"Low", "_id"=>"4bf68a10cb66ec0cf7000001", "created_at"=>2010-05-21 13:26:40 UTC, "updated_at"=>2010-05-21 13:26:40 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['messages'].insert([{"is_event"=>true, "importance"=>"Low", "_id"=>"4bf68a10cb66ec0cf7000002", "created_at"=>2010-05-21 13:26:40 UTC, "updated_at"=>2010-05-21 13:26:40 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  MONGODB famlog_test['messages'].insert([{"is_event"=>false, "importance"=>"Low", "_id"=>"4bf68a3acb66ec0cfe000001", "created_at"=>2010-05-21 13:27:22 UTC, "updated_at"=>2010-05-21 13:27:22 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['messages'].insert([{"is_event"=>true, "importance"=>"Low", "_id"=>"4bf68a3acb66ec0cfe000002", "created_at"=>2010-05-21 13:27:22 UTC, "updated_at"=>2010-05-21 13:27:22 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  MONGODB famlog_test['messages'].insert([{"is_event"=>false, "importance"=>"Low", "_id"=>"4bf68a94cb66ec0d08000001", "created_at"=>2010-05-21 13:28:52 UTC, "updated_at"=>2010-05-21 13:28:52 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['messages'].insert([{"is_event"=>true, "importance"=>"Low", "_id"=>"4bf68a94cb66ec0d08000002", "created_at"=>2010-05-21 13:28:52 UTC, "updated_at"=>2010-05-21 13:28:52 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  MONGODB famlog_test['messages'].insert([{"is_event"=>false, "importance"=>"Low", "_id"=>"4bf68a9ccb66ec0d10000001", "created_at"=>2010-05-21 13:29:00 UTC, "updated_at"=>2010-05-21 13:29:00 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['messages'].insert([{"is_event"=>true, "importance"=>"Low", "_id"=>"4bf68a9ccb66ec0d10000002", "created_at"=>2010-05-21 13:29:00 UTC, "updated_at"=>2010-05-21 13:29:00 UTC}])
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (8.2ms)
+Rendered layouts/_header.html.haml (6.5ms)
+Rendered messages/new.html.haml within layouts/application (61.0ms)
+Completed 200 OK in 94ms (Views: 93.3ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (4.1ms)
+Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 9ms (Views: 8.8ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 3ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+  MONGODB famlog_test['messages'].remove({:_id=>"4bf68bf1cb66ec0d22000017"})
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.2ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Completed 200 OK in 40ms (Views: 39.6ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (3.8ms)
+Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 7ms (Views: 7.3ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (3.8ms)
+Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 7ms (Views: 7.2ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (5.3ms)
+Rendered layouts/_header.html.haml (1.5ms)
+Completed 200 OK in 10ms (Views: 9.7ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (3.9ms)
+Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 8ms (Views: 7.4ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (3.8ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.6ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Completed 200 OK in 9ms (Views: 8.6ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.0ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Completed 200 OK in 9ms (Views: 9.1ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.5ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (6.5ms)
+Rendered layouts/_header.html.haml (4.7ms)
+Rendered messages/new.html.haml within layouts/application (23.4ms)
+Completed 200 OK in 33ms (Views: 32.2ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (4.3ms)
+Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 9ms (Views: 8.9ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+  MONGODB famlog_test['messages'].remove({:_id=>"4bf68c0ccb66ec0d2a000017"})
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (12.7ms)
+Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 27ms (Views: 26.7ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.4ms)
+Rendered layouts/_header.html.haml (1.1ms)
+Completed 200 OK in 8ms (Views: 8.1ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (6.7ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Completed 200 OK in 11ms (Views: 10.9ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (12.4ms)
+Rendered layouts/_header.html.haml (1.2ms)
+Completed 200 OK in 18ms (Views: 17.2ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.2ms)
+Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 9ms (Views: 8.0ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (6.7ms)
+Rendered layouts/_header.html.haml (1.3ms)
+Completed 200 OK in 12ms (Views: 11.2ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (3.9ms)
+Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 9ms (Views: 8.6ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (3.7ms)
+Rendered layouts/_header.html.haml (1.0ms)
+Completed 200 OK in 9ms (Views: 8.7ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Redirected to http://test.host/
+Completed 302 Found in 1ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
