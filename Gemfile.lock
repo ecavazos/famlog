@@ -1,5 +1,5 @@
 --- 
-hash: a16d12169e0b90bcbf08ec0b2bea9f21033473a9
+hash: 3b8fdeb1591e3b822c224eb2f755109572ff904a
 sources: 
 - Git: 
     git: http://github.com/thoughtbot/factory_girl.git
@@ -16,11 +16,15 @@ sources:
 - Git: 
     git: git://github.com/plataformatec/devise.git
     uri: git://github.com/plataformatec/devise.git
-    ref: 08c51798691289697f6dff0f59d999ea19d564f8
+    ref: 0150fddb4c062050a483b855a138ad3fa816db38
 - Git: 
     git: git://github.com/durran/mongoid.git
     uri: git://github.com/durran/mongoid.git
-    ref: 8ceb7c4366e996a027694319868300ee1d6a6dcc
+    ref: 0a40d864708ce9607bc9adf33fc99b3a154addab
+- Git: 
+    git: git://github.com/rails/rails.git
+    uri: git://github.com/rails/rails.git
+    ref: 048cf9e922379436f577ade30276f9c0c033ea83
 - Rubygems: 
     uri: http://rubygems.org
 specs: 
@@ -31,15 +35,17 @@ specs:
 - builder: 
     version: 2.1.2
 - i18n: 
-    version: 0.3.7
+    version: 0.4.0.beta1
 - memcache-client: 
     version: 1.8.3
 - tzinfo: 
     version: 0.3.20
 - activesupport: 
     version: 3.0.0.beta3
+    source: 4
 - activemodel: 
     version: 3.0.0.beta3
+    source: 4
 - erubis: 
     version: 2.6.5
 - rack: 
@@ -50,6 +56,7 @@ specs:
     version: 0.5.3
 - actionpack: 
     version: 3.0.0.beta3
+    source: 4
 - mime-types: 
     version: "1.16"
 - polyglot: 
@@ -64,12 +71,15 @@ specs:
     version: 1.0.0
 - actionmailer: 
     version: 3.0.0.beta3
+    source: 4
 - arel: 
     version: 0.3.3
 - activerecord: 
     version: 3.0.0.beta3
+    source: 4
 - activeresource: 
     version: 3.0.0.beta3
+    source: 4
 - bson: 
     version: 1.0.1
 - bson_ext: 
@@ -77,7 +87,7 @@ specs:
 - bundler: 
     version: 0.9.25
 - warden: 
-    version: 0.10.4
+    version: 0.10.5
 - devise: 
     version: 1.1.rc1
     source: 2
@@ -85,7 +95,7 @@ specs:
     version: 1.2.3
     source: 0
 - haml: 
-    version: 3.0.0.rc.3
+    version: 3.0.4
 - mocha: 
     version: 0.9.8
 - mongo: 
@@ -93,14 +103,16 @@ specs:
 - will_paginate: 
     version: 3.0.pre
 - mongoid: 
-    version: 2.0.0.beta4
+    version: 2.0.0.beta6
     source: 3
 - thor: 
     version: 0.13.6
 - railties: 
     version: 3.0.0.beta3
+    source: 4
 - rails: 
     version: 3.0.0.beta3
+    source: 4
 - shoulda: 
     version: 2.10.3
     source: 1
@@ -108,7 +120,7 @@ specs:
     version: 1.2.5
 dependencies: 
   rails: 
-    version: = 3.0.0.beta3
+    version: ">= 0"
     group: 
     - :default
   sqlite3-ruby: 
@@ -126,7 +138,7 @@ dependencies:
     group: 
     - :default
   haml: 
-    version: = 3.0.0.rc.3
+    version: = 3.0.4
     group: 
     - :default
   devise: 

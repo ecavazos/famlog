@@ -20,8 +20,10 @@ module HomeHelper
 
     haml_tag('p.event-info') do
       haml_concat "#{format_datetime(message.start_at)}"
-      return unless message.end_date?
-      haml_concat " to #{format_datetime(message.end_at)}"
+
+      if message.end_date?
+        haml_concat "to #{format_datetime(message.end_at)}"
+      end
     end
   end
 end

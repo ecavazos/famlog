@@ -31,21 +31,59 @@ class HomeHelperTest < ActionView::TestCase
   end
 
   should 'create an edit link for a message' do
-    message = Message.new
-    expects(:edit_message_path).with(message).returns('fake path')
-    expects(:link_to).with('Edit', 'fake path')
-    to_edit(message)
+    message = Message.create
+    expected = "<a href=\"/messages/#{message.id}/edit\">Edit</a>"
+    assert_equal expected, to_edit(message)
   end
 
   should 'create an edit link for an event' do
-    message = Message.new(:is_event => true)
-    expects(:edit_event_path).with(message).returns('fake path')
-    expects(:link_to).with('Edit', 'fake path')
-    to_edit(message)
+    message = Message.create(:is_event => true)
+    expected = "<a href=\"/events/#{message.id}/edit\">Edit</a>"
+    assert_equal expected, to_edit(message)
   end
 
-  should 'return nil when not an event' do
-    message = Message.new
-    assert_nil event_info(message)
+  context 'event info' do
+    setup do
+      class << self
+        include Haml::Helpers
+      end
+      init_haml_helpers
+      @message = Message.new({:is_event => true, :start_at => DateTime.new(2010, 5, 5)})
+    end
+
+    should 'return nil when not an event' do
+      message = Message.new
+      assert_nil event_info(message)
+    end
+
+    should 'output event info markup with start at date only' do
+      actual = capture_haml do
+        event_info @message
+      end
+
+      expected =<<HTML
+<p class='event-info'>
+  05/05/2010 at12:00 AM
+</p>
+HTML
+      assert_equal expected, actual
+    end
+
+    should 'output event info markup with start at and end at date' do
+      @message.end_at = Date.new(2010, 5, 6)
+      actual = capture_haml do
+        event_info @message
+      end
+
+      expected =<<HTML
+<p class='event-info'>
+  05/05/2010 at12:00 AM
+  to 05/06/2010 at12:00 AM
+</p>
+HTML
+
+      assert_equal expected, actual
+    end
   end
+
 end

@@ -1,16 +1,15 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.beta3'
-
 # Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+# gem 'rails', '3.0.0.beta3'
+gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'mongoid', :git => 'git://github.com/durran/mongoid.git'
 gem 'bson_ext', '1.0.1'
 
-gem 'haml', '3.0.0.rc.3'
+gem 'haml', '3.0.4'
 
 # Authentication
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
