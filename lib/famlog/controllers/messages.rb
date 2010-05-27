@@ -11,6 +11,7 @@ module Famlog::Controllers::Messages
     before_save(params)
 
     if @message.save
+      MessageMailer.new_message_email(@message).deliver
       redirect_to :root
     else
       render :action => :new
@@ -28,6 +29,7 @@ module Famlog::Controllers::Messages
     before_save(params)
 
     if @message.update_attributes(params[:message])
+      MessageMailer.new_message_email(@message).deliver
       redirect_to :root
     else
       render 'edit'

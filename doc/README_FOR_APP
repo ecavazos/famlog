@@ -1,6 +1,9 @@
 TODO
 ====
 
+* Search
+* Reply
+* Mailer per message
 * Add tests
 * Differentiate the messages of the current user from other messages
 * Sort by importance (this may not be correct)
