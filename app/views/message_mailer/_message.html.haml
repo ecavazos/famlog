@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+  %body
+    %h1
+      = @message.title
+    %p
+      %strong
+        = @message.user.username
+        says:
+      = @message.message
+    %p
+      %a{:href => 'http://heroku.famlog.com'} Famlog
+
