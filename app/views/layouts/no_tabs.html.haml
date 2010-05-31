@@ -2,7 +2,7 @@
 %html
   %head
     %title Famlog
-    = stylesheet_link_tag 'reset', 'common', 'forms'
+    = stylesheet_link_tag 'reset', 'common', 'forms', 'jquery-ui'
     = csrf_meta_tag
     = yield :head
   %body
@@ -11,4 +11,6 @@
       #main
         = yield
 
-    = javascript_include_tag 'jquery.js', 'rails'
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js',
+                             'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js',
+                             'rails', 'forms'
