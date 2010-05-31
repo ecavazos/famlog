@@ -1,24 +1,26 @@
 class MessageMailer < ActionMailer::Base
-  default :from => "me@iamneato.com"
+  default :from => 'me@iamneato.com'
 
   def create_message_email(message)
-    @message = message
-
-    mail(:to => to,
-         :subject => "#{message.user.username} added a new #{message.type_name.downcase} on Famlog")
+    template(message, 'added a new')
   end
 
   def update_message_email(message)
-    @message = message
-
-    mail(:to => to,
-         :subject => "#{message.user.username} updated an existing #{message.type_name.downcase} on Famlog")
+    desc = message.is_event? ? 'updated an' : 'updated a'
+    template(message, desc)
   end
 
   private
 
+  def template(message, description)
+    @message = message
+
+    mail(:to => to,
+         :subject => "#{message.user.username} #{description} #{message.type_name.downcase} on Famlog")
+  end
+
   def to
-    # ['ejcavazos@gmail.com']
+    return 'ejcavazos@gmail.com' if Rails.env == 'development'
     ['jmorris22734@gmail.com', 'ejcavazos@gmail.com']
   end
 end

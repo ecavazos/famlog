@@ -1,7 +1,7 @@
 #header
   #hdr-group
     %h1
-      = link_to "famlog", root_path
+      = link_to 'Famlog', root_path
     %ul#hdr-util
       - if current_user
         %li
@@ -14,9 +14,9 @@
           = link_to 'Sign out', destroy_user_session_path
       - else
         %li
-          = link_to "Sign in", new_user_session_path
+          = link_to 'Sign in', new_user_session_path
         %li
           |
         %li
-          = link_to "Sign up", new_user_registration_path
+          = link_to 'Sign up', new_user_registration_path
 
