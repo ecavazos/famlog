@@ -31056,3 +31056,463 @@ Completed 302 Found in 26ms
   MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
   MONGODB famlog_test['system.namespaces'].find({}, {})
   MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:ismaster=>1}, {}).limit(-1)
+  MONGODB admin['$cmd'].find({:buildinfo=>1}, {}).limit(-1)
+  MONGODB famlog_test['system.indexes'].insert([{:name=>"user_id_1", :ns=>"famlog_test.messages", :key=>{"user_id"=>1}, :unique=>false}])
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (6.7ms)
+Rendered layouts/_header.html.haml (5.7ms)
+Rendered messages/new.html.haml within layouts/application (24.6ms)
+Completed 200 OK in 34ms (Views: 33.8ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"messages"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered messages/_form.html.haml (3.6ms)
+Rendered layouts/_header.html.haml (2.0ms)
+Completed 200 OK in 10ms (Views: 9.9ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered message_mailer/_message.html.haml (2.6ms)
+
+Sent mail to jmorris22734@gmail.com, ejcavazos@gmail.com (64ms)
+Date: Tue, 01 Jun 2010 07:23:56 -0700
+From: me@iamneato.com
+To: jmorris22734@gmail.com, 
+	ejcavazos@gmail.com
+Message-ID: <4c0517fc278b0_271c804264603701a@emilio-cavazoss-macbook.local.mail>
+Subject: chum chum added a new message on Famlog
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head></head>
+<body>
+<h1>
+foo
+</h1>
+<p>
+<strong>
+chum chum
+says:
+</strong>
+
+</p>
+<p>
+<a href='http://famlog.heroku.com'>Famlog</a>
+</p>
+</body>
+</html>
+
+Redirected to http://test.host/
+Completed 302 Found in 214ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered message_mailer/_message.html.haml (0.4ms)
+
+Sent mail to jmorris22734@gmail.com, ejcavazos@gmail.com (68ms)
+Date: Tue, 01 Jun 2010 07:23:56 -0700
+From: me@iamneato.com
+To: jmorris22734@gmail.com, 
+	ejcavazos@gmail.com
+Message-ID: <4c0517fc41b72_271c80426460371fa@emilio-cavazoss-macbook.local.mail>
+Subject: chum chum added a new message on Famlog
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head></head>
+<body>
+<h1>
+foo
+</h1>
+<p>
+<strong>
+chum chum
+says:
+</strong>
+
+</p>
+<p>
+<a href='http://famlog.heroku.com'>Famlog</a>
+</p>
+</body>
+</html>
+
+Redirected to http://test.host/
+Completed 302 Found in 82ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered message_mailer/_message.html.haml (0.4ms)
+
+Sent mail to jmorris22734@gmail.com, ejcavazos@gmail.com (10ms)
+Date: Tue, 01 Jun 2010 07:23:56 -0700
+From: me@iamneato.com
+To: jmorris22734@gmail.com, 
+	ejcavazos@gmail.com
+Message-ID: <4c0517fc4a853_271c8042646037268@emilio-cavazoss-macbook.local.mail>
+Subject: chum chum added a new message on Famlog
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head></head>
+<body>
+<h1>
+foo
+</h1>
+<p>
+<strong>
+chum chum
+says:
+</strong>
+
+</p>
+<p>
+<a href='http://famlog.heroku.com'>Famlog</a>
+</p>
+</body>
+</html>
+
+Redirected to http://test.host/
+Completed 302 Found in 26ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered message_mailer/_message.html.haml (0.4ms)
+
+Sent mail to jmorris22734@gmail.com, ejcavazos@gmail.com (9ms)
+Date: Tue, 01 Jun 2010 07:23:56 -0700
+From: me@iamneato.com
+To: jmorris22734@gmail.com, 
+	ejcavazos@gmail.com
+Message-ID: <4c0517fc55d8f_271c8042646037384@emilio-cavazoss-macbook.local.mail>
+Subject: chum chum added a new message on Famlog
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head></head>
+<body>
+<h1>
+foo
+</h1>
+<p>
+<strong>
+chum chum
+says:
+</strong>
+
+</p>
+<p>
+<a href='http://famlog.heroku.com'>Famlog</a>
+</p>
+</body>
+</html>
+
+Redirected to http://test.host/
+Completed 302 Found in 23ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"title"=>"foo"}}
+Rendered message_mailer/_message.html.haml (0.4ms)
+
+Sent mail to jmorris22734@gmail.com, ejcavazos@gmail.com (9ms)
+Date: Tue, 01 Jun 2010 07:23:56 -0700
+From: me@iamneato.com
+To: jmorris22734@gmail.com, 
+	ejcavazos@gmail.com
+Message-ID: <4c0517fc5e9ae_271c80426460374a1@emilio-cavazoss-macbook.local.mail>
+Subject: chum chum added a new message on Famlog
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head></head>
+<body>
+<h1>
+foo
+</h1>
+<p>
+<strong>
+chum chum
+says:
+</strong>
+
+</p>
+<p>
+<a href='http://famlog.heroku.com'>Famlog</a>
+</p>
+</body>
+</html>
+
+Redirected to http://test.host/
+Completed 302 Found in 25ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#destroy as HTML
+  Parameters: {"id"=>4}
+  MONGODB famlog_test['messages'].remove({:_id=>"4c0517fccb66ec271c000017"})
+Redirected to http://test.host/
+Completed 302 Found in 2ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.9ms)
+Rendered layouts/_header.html.haml (1.9ms)
+Completed 200 OK in 34ms (Views: 34.2ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.2ms)
+Rendered layouts/_header.html.haml (2.0ms)
+Completed 200 OK in 11ms (Views: 10.5ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#edit as HTML
+  Parameters: {"id"=>2}
+Rendered messages/_form.html.haml (4.5ms)
+Rendered layouts/_header.html.haml (2.3ms)
+Completed 200 OK in 10ms (Views: 9.8ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (9.2ms)
+Rendered layouts/_header.html.haml (2.0ms)
+Completed 200 OK in 15ms (Views: 14.8ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (5.8ms)
+Rendered layouts/_header.html.haml (2.0ms)
+Completed 200 OK in 12ms (Views: 11.6ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#new as HTML
+Rendered messages/_form.html.haml (4.1ms)
+Rendered layouts/_header.html.haml (2.2ms)
+Completed 200 OK in 11ms (Views: 10.8ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (4.8ms)
+Rendered layouts/_header.html.haml (2.5ms)
+Completed 200 OK in 12ms (Views: 12.0ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered messages/_form.html.haml (5.2ms)
+Rendered layouts/_header.html.haml (2.3ms)
+Completed 200 OK in 12ms (Views: 12.1ms)
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered message_mailer/_message.html.haml (0.4ms)
+
+Sent mail to jmorris22734@gmail.com, ejcavazos@gmail.com (10ms)
+Date: Tue, 01 Jun 2010 07:23:56 -0700
+From: me@iamneato.com
+To: jmorris22734@gmail.com, 
+	ejcavazos@gmail.com
+Message-ID: <4c0517fc9f040_271c80426460375ab@emilio-cavazoss-macbook.local.mail>
+Subject: chum chum updated a message on Famlog
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head></head>
+<body>
+<h1>
+Test Message
+</h1>
+<p>
+<strong>
+chum chum
+says:
+</strong>
+
+</p>
+<p>
+<a href='http://famlog.heroku.com'>Famlog</a>
+</p>
+</body>
+</html>
+
+Redirected to http://test.host/
+Completed 302 Found in 35ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered message_mailer/_message.html.haml (0.5ms)
+
+Sent mail to jmorris22734@gmail.com, ejcavazos@gmail.com (89ms)
+Date: Tue, 01 Jun 2010 07:23:56 -0700
+From: me@iamneato.com
+To: jmorris22734@gmail.com, 
+	ejcavazos@gmail.com
+Message-ID: <4c0517fcbd4cd_271c80426460376e5@emilio-cavazoss-macbook.local.mail>
+Subject: chum chum updated a message on Famlog
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head></head>
+<body>
+<h1>
+Test Message
+</h1>
+<p>
+<strong>
+chum chum
+says:
+</strong>
+
+</p>
+<p>
+<a href='http://famlog.heroku.com'>Famlog</a>
+</p>
+</body>
+</html>
+
+Redirected to http://test.host/
+Completed 302 Found in 109ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered message_mailer/_message.html.haml (0.4ms)
+
+Sent mail to jmorris22734@gmail.com, ejcavazos@gmail.com (9ms)
+Date: Tue, 01 Jun 2010 07:23:56 -0700
+From: me@iamneato.com
+To: jmorris22734@gmail.com, 
+	ejcavazos@gmail.com
+Message-ID: <4c0517fcc6bcb_271c8042646037757@emilio-cavazoss-macbook.local.mail>
+Subject: chum chum updated a message on Famlog
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head></head>
+<body>
+<h1>
+Test Message
+</h1>
+<p>
+<strong>
+chum chum
+says:
+</strong>
+
+</p>
+<p>
+<a href='http://famlog.heroku.com'>Famlog</a>
+</p>
+</body>
+</html>
+
+Redirected to http://test.host/
+Completed 302 Found in 27ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
+  Processing by MessagesController#update as HTML
+  Parameters: {"message"=>{"title"=>"bar"}, "id"=>4}
+Rendered message_mailer/_message.html.haml (0.3ms)
+
+Sent mail to jmorris22734@gmail.com, ejcavazos@gmail.com (8ms)
+Date: Tue, 01 Jun 2010 07:23:56 -0700
+From: me@iamneato.com
+To: jmorris22734@gmail.com, 
+	ejcavazos@gmail.com
+Message-ID: <4c0517fcce3ac_271c80426460378b6@emilio-cavazoss-macbook.local.mail>
+Subject: chum chum updated a message on Famlog
+Mime-Version: 1.0
+Content-Type: text/html;
+	charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head></head>
+<body>
+<h1>
+Test Message
+</h1>
+<p>
+<strong>
+chum chum
+says:
+</strong>
+
+</p>
+<p>
+<a href='http://famlog.heroku.com'>Famlog</a>
+</p>
+</body>
+</html>
+
+Redirected to http://test.host/
+Completed 302 Found in 21ms
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['system.namespaces'].find({}, {})
+  MONGODB famlog_test['$cmd'].find({:drop=>"system.indexes"}, {}).limit(-1)
