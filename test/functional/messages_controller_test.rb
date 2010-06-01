@@ -4,10 +4,8 @@ class MessagesControllerTest < ActionController::TestCase
 
   setup do
     @user = Factory.build(:user)
-    ApplicationHelper.class_eval do
-      def current_user; @user end
-    end
-    @controller.expects(:current_user).returns(@user)
+    @user.username = 'chum chum'
+    @controller.stubs(:current_user).returns(@user)
     @controller.expects(:authenticate_user!)
   end
 
@@ -67,7 +65,9 @@ class MessagesControllerTest < ActionController::TestCase
 
   context 'edit' do
     setup do
-      Message.expects(:find).with(2).returns(Factory.build(:message))
+      @message = Factory.build(:message)
+      @message.user = @user
+      Message.expects(:find).with(2).returns(@message)
       get :edit, { :id => 2 }
     end
 
@@ -83,6 +83,7 @@ class MessagesControllerTest < ActionController::TestCase
     setup do
       @params = { 'title' => 'bar' }
       @message = Factory.build(:message)
+      @message.user = @user
       Message.expects(:find).with(4).returns(@message)
     end
 
@@ -121,6 +122,7 @@ class MessagesControllerTest < ActionController::TestCase
   context 'destroy' do
     setup do
       @message = Factory.build(:message)
+      @message.user = @user
       Message.expects(:find).with(4).returns(@message)
       delete :destroy, :id => 4
     end

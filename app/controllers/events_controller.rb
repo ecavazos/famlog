@@ -4,6 +4,8 @@ require 'lib/famlog/datetime_parser'
 class EventsController < ApplicationController
   include Famlog::Controllers::Messages
 
+  before_filter :find_message_and_verify_ownership, :except => [:new, :create]
+
   private
 
   def before_save(params)

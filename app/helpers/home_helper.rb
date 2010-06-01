@@ -13,7 +13,15 @@ module HomeHelper
   end
 
   def to_edit(message)
+    return unless message.belongs_to? current_user
     link_to "Edit", eval("edit_#{message.type_name.downcase}_path(message)")
+  end
+
+  def to_reply(message)
+    return unless message.belongs_to? current_user
+    haml_tag('a', :href => '') do
+      haml_concat 'Reply'
+    end
   end
 
   def event_info(message)

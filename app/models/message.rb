@@ -18,6 +18,10 @@ class Message
   # relationships
   belongs_to_related :user
 
+  def belongs_to?(other_user)
+    user.username == other_user.username
+  end
+
   def type_name
     is_event ? "Event" : "Message"
   end

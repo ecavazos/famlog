@@ -3,7 +3,6 @@ TODO
 
 * Search/Filter
 * Reply
-* Mailer per message
 * Add tests
 * Differentiate the messages of the current user from other messages
 * Sort by importance (this may not be correct)
@@ -35,3 +34,4 @@ Done
 * Fix the denormalized username field on messages so that remains consistent
   if users update their username
 * Refactor message criteria
+* Mailer per message/event

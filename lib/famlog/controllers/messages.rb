@@ -1,5 +1,4 @@
 module Famlog::Controllers::Messages
-
   def new
     @message = Message.new
     render :layout => "no_tabs"
@@ -19,12 +18,10 @@ module Famlog::Controllers::Messages
   end
 
   def edit
-    find_message
     render :layout => "no_tabs"
   end
 
   def update
-    find_message
     @message.user = current_user
     before_save(params)
 
@@ -37,14 +34,15 @@ module Famlog::Controllers::Messages
   end
 
   def destroy
-    find_message.destroy
+    @message.destroy
     redirect_to root_url
   end
 
   private
 
-  def find_message
+  def find_message_and_verify_ownership
     @message = Message.find(params[:id])
+    redirect_to root_url unless @message.belongs_to? current_user
   end
 
   def before_save(params)

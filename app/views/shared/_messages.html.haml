@@ -2,6 +2,8 @@
   - @messages.each do |m|
     %li(class="#{to_css(m.type_name)}")
       .action
+        - to_reply(m)
+      .action
         = to_edit(m)
       .message-body
         %h3

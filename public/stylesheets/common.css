@@ -106,8 +106,8 @@ a:hover {
     font-size: 14px;
     margin: 0 0 3px 0; }
   #messages li .message-body {
-    float: left;
-    width: 570px; }
+    position: relative;
+    z-index: 1; }
     #messages li .message-body p {
       color: #222222;
       font-size: 14px;
@@ -127,7 +127,9 @@ a:hover {
     font-size: 11px; }
   #messages li .action {
     display: none;
-    float: right; }
+    float: right;
+    position: relative;
+    z-index: 99; }
     #messages li .action a {
       background-color: #dddddd;
       border-radius: 5px;
@@ -135,6 +137,7 @@ a:hover {
       -webkit-border-radius: 5px;
       float: right;
       font-size: 11px;
+      margin-left: 5px;
       padding: 2px 8px; }
 
 .super-high {

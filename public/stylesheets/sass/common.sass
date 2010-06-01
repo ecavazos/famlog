@@ -126,8 +126,8 @@ a:hover
       margin: 0 0 3px 0
 
     .message-body
-      float: left
-      width: 570px
+      position: relative
+      z-index: 1
 
       p
         color: #222
@@ -152,6 +152,8 @@ a:hover
     .action
       display: none
       float: right
+      position: relative
+      z-index: 99
 
       a
         background-color: #ddd
@@ -160,6 +162,7 @@ a:hover
         -webkit-border-radius: 5px
         float: right
         font-size: 11px
+        margin-left: 5px
         padding: 2px 8px
 
 .super-high

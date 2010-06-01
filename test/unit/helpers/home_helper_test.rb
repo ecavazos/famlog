@@ -30,16 +30,29 @@ class HomeHelperTest < ActionView::TestCase
     assert_nil to_css(nil)
   end
 
-  should 'create an edit link for a message' do
-    message = Message.create
-    expected = "<a href=\"/messages/#{message.id}/edit\">Edit</a>"
-    assert_equal expected, to_edit(message)
-  end
+  context 'to edit' do
+    setup do
+      @user = User.create(:username => 'iron man')
+      stubs(:current_user).returns(@user)
+    end
 
-  should 'create an edit link for an event' do
-    message = Message.create(:is_event => true)
-    expected = "<a href=\"/events/#{message.id}/edit\">Edit</a>"
-    assert_equal expected, to_edit(message)
+    should 'create an edit link for a message' do
+      message = Message.create(:user => @user)
+      expected = "<a href=\"/messages/#{message.id}/edit\">Edit</a>"
+      assert_equal expected, to_edit(message)
+    end
+
+    should 'create an edit link for an event' do
+      message = Message.create(:user => @user, :is_event => true)
+      expected = "<a href=\"/events/#{message.id}/edit\">Edit</a>"
+      assert_equal expected, to_edit(message)
+    end
+
+    should 'do nothing when message does not belong to current user' do
+      message = Message.create(:user => User.new)
+      assert_nil to_edit(message)
+    end
+
   end
 
   context 'event info' do
