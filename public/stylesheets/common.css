@@ -14,14 +14,13 @@ h1 {
   h1 a:hover {
     text-decoration: none; }
 
-h2, h3 {
-  margin: 0 0 15px; }
-
 h2 {
-  font-size: 24px; }
+  font-size: 24px;
+  margin: 0 0 25px; }
 
 h3 {
-  font-size: 18px; }
+  font-size: 18px;
+  margin: 0 0 15px; }
 
 hr {
   margin-bottom: 30px; }
@@ -94,25 +93,25 @@ a:hover {
   margin: 0 0 10px 0;
   overflow: hidden; }
 
-#messages li {
+.message, .event {
   background-color: #efefef;
   border-radius: 5px;
+  font-size: 14px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   margin: 0 0 10px 0;
   padding: 10px;
   overflow: hidden; }
-  #messages li h3 {
+  .message h3, .event h3 {
     font-size: 14px;
     margin: 0 0 3px 0; }
-  #messages li .message-body {
+  .message .message-body, .event .message-body {
     position: relative;
     z-index: 1; }
-    #messages li .message-body p {
+    .message .message-body p, .event .message-body p {
       color: #222222;
-      font-size: 14px;
       margin-bottom: 3px; }
-  #messages li .event-info {
+  .message .event-info, .event .event-info {
     background-color: #3d9bf2;
     clear: left;
     color: white;
@@ -120,17 +119,17 @@ a:hover {
     font-size: 11px;
     padding: 2px 10px;
     margin-bottom: 10px; }
-  #messages li .message-meta {
+  .message .message-meta, .event .message-meta {
     clear: left;
     color: #666666;
     float: left;
     font-size: 11px; }
-  #messages li .action {
+  .message .action, .event .action {
     display: none;
     float: right;
     position: relative;
     z-index: 99; }
-    #messages li .action a {
+    .message .action a, .event .action a {
       background-color: #dddddd;
       border-radius: 5px;
       -moz-border-radius: 5px;
@@ -166,3 +165,18 @@ a:hover {
   padding: 5px 8px;
   text-align: center;
   width: 130px; }
+
+.replies {
+  margin: 0 0 40px; }
+
+.reply {
+  border-bottom: solid 1px #cccccc;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+  padding: 10px 0 40px 0;
+  overflow: hidden; }
+
+.date {
+  color: #666666;
+  font-size: 11px;
+  margin-bottom: 10px; }

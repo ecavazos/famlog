@@ -4,15 +4,18 @@
   %p
     %strong
       = @message.user.username
-      says:
+    says:
+  .date= format_datetime(@message.created_at)
+  %p
     = @message.message
+  - event_info(@message)
 .replies
   - @message.replies.each do |reply|
     .reply
-      %strong
-        = reply.user.username
-        says:
-      = reply.text
+      %strong= reply.user.username
+      says:
+      .date= format_datetime(reply.created_at)
+      %p= reply.text
 
 %h3 Add A Reply:
 = form_for([@message, @message.replies.build]) do |f|
