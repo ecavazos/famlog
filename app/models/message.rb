@@ -17,6 +17,7 @@ class Message
 
   # relationships
   belongs_to_related :user
+  embeds_many :replies
 
   def belongs_to?(other_user)
     user.username == other_user.username

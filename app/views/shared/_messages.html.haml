@@ -2,7 +2,7 @@
   - @messages.each do |m|
     %li(class="#{to_css(m.type_name)}")
       .action
-        - to_reply(m)
+        = link_to 'Reply', new_message_reply_path(m)
       .action
         = to_edit(m)
       .message-body

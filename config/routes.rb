@@ -2,7 +2,11 @@ Famlog::Application.routes.draw do |map|
 
   root       :to => 'home#index'
   devise_for :users, :controllers => { :sessions => 'sessions' }
-  resources  :messages
+
+  resources  :messages do
+    resources :replies
+  end
+
   resources  :events
 
   match '/help' => 'home#help', :as => :help

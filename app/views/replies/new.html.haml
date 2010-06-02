@@ -1,0 +1,26 @@
+%h2 Reply
+.message
+  %h3= @message.title
+  %p
+    %strong
+      = @message.user.username
+      says:
+    = @message.message
+.replies
+  - @message.replies.each do |reply|
+    .reply
+      %strong
+        = reply.user.username
+        says:
+      = reply.text
+
+%h3 Add A Reply:
+= form_for([@message, @message.replies.build]) do |f|
+  %p
+    = f.label 'Reply'
+    = f.text_area :text, :cols => 77, :rows => 3
+  %p
+    = f.submit "Submit", :class => "submit"
+    or
+    = link_to "Cancel", root_path, :class => "cancel"
+
