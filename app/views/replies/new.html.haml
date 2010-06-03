@@ -9,6 +9,7 @@
   %p
     = @message.message
   - event_info(@message)
+
 .replies
   - @message.replies.each do |reply|
     .reply

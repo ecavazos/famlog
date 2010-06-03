@@ -1,27 +1,27 @@
 %ul#messages
   - @messages.each do |m|
-    %li(class="#{to_css(m.type_name)}")
+    %li(class="#{to_css(m.type_name)} #{to_css(m.importance)}")
       .action
         = link_to 'Reply', new_message_reply_path(m)
       .action
-        = to_edit(m)
+        = edit_link(m)
       .message-body
         %h3
           = m.title
         %p
           = link_to m.user.username
           says:
+        .date= format_datetime(m.created_at)
         %p
           = m.message
 
       - event_info(m)
 
-      .message-meta
-        %strong(class="#{to_css(m.importance)}")
-          = m.importance
-        \-
-        = "#{m.replies.length} replie(s)"
-        \-
-        = format_datetime(m.created_at)
-        \-
-        = link_to "Delete", message_path(m), :method => :delete
+      %ul.message-meta
+        %li
+          %strong(class="#{to_css(m.importance)}")
+            = m.importance
+        %li
+          = reply_count(m)
+        %li
+          = destroy_link(m)

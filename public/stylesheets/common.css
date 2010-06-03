@@ -6,7 +6,7 @@ body {
 
 h1 {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-size: 20px; }
+  font-size: 23px; }
   h1 a {
     color: white;
     text-decoration: none;
@@ -34,7 +34,9 @@ a:hover {
 
 #header {
   background-color: #222222;
-  border-bottom: solid 3px #e6e6e6;
+  -moz-box-shadow: 0px 2px 4px #cccccc;
+  -webkit-box-shadow: 0px 2px 4px #cccccc;
+  box-shadow: 0px 2px 4px #cccccc;
   color: white;
   overflow: hidden; }
   #header #hdr-group {
@@ -44,7 +46,7 @@ a:hover {
     #header #hdr-group h1 {
       float: left; }
       #header #hdr-group h1 a {
-        color: #affff6; }
+        color: #edffdd; }
     #header #hdr-group #hdr-util {
       float: right;
       font-size: 0.75em;
@@ -66,9 +68,9 @@ a:hover {
   margin: 0 0 20px 0; }
   #top #add {
     background-color: #efefef;
-    border-radius: 7px;
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
+    border-radius: 7px;
     font-size: 0.75em;
     margin: 10px auto 20px auto;
     padding: 6px 8px;
@@ -95,10 +97,10 @@ a:hover {
 
 .message, .event {
   background-color: #efefef;
-  border-radius: 5px;
-  font-size: 14px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 14px;
   margin: 0 0 10px 0;
   padding: 10px;
   overflow: hidden; }
@@ -112,7 +114,10 @@ a:hover {
       color: #222222;
       margin-bottom: 3px; }
   .message .event-info, .event .event-info {
-    background-color: #3d9bf2;
+    background-color: #444444;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
     clear: left;
     color: white;
     float: left;
@@ -124,6 +129,10 @@ a:hover {
     color: #666666;
     float: left;
     font-size: 11px; }
+    .message .message-meta li, .event .message-meta li {
+      float: left;
+      margin: 0 5px 0 0;
+      padding: 0; }
   .message .action, .event .action {
     display: none;
     float: right;
@@ -131,23 +140,23 @@ a:hover {
     z-index: 99; }
     .message .action a, .event .action a {
       background-color: #dddddd;
-      border-radius: 5px;
+      border: solid 1px #bbbbbb;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
+      border-radius: 5px;
       float: right;
       font-size: 11px;
       margin-left: 5px;
       padding: 2px 8px; }
 
 .super-high {
-  color: red;
-  font-weight: bold; }
+  background-color: #ffe7e7; }
 
 .high {
-  color: #ff6600; }
+  background-color: #f8f8d5; }
 
 .medium {
-  color: #80cc66; }
+  background-color: #edffdd; }
 
 .cancel {
   font-size: 14px; }
@@ -157,9 +166,9 @@ a:hover {
 
 #loader {
   background-color: #dddddd;
-  border-radius: 7px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
+  border-radius: 7px;
   font-size: 13px;
   margin: 20px auto 0;
   padding: 5px 8px;

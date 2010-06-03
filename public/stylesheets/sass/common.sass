@@ -1,3 +1,13 @@
+@mixin box-shadow($x, $y, $blur, $color)
+  -moz-box-shadow:    $x $y $blur $color
+  -webkit-box-shadow: $x $y $blur $color
+  box-shadow:         $x $y $blur $color
+
+@mixin border-radius($radius)
+  -moz-border-radius:    $radius
+  -webkit-border-radius: $radius
+  border-radius:         $radius
+
 !bg_color = #fff
 !f_color = #000
 
@@ -9,7 +19,7 @@ body
 
 h1
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif
-  font-size: 20px
+  font-size: 23px
 
   a
     color: #fff
@@ -39,7 +49,7 @@ a:hover
 
 #header
   background-color: #222
-  border-bottom: solid 3px #e6e6e6
+  @include box-shadow(0px, 2px, 4px, #ccc)
   color: #fff
   overflow: hidden
 
@@ -51,7 +61,7 @@ a:hover
     h1
       float: left
       a
-        color: #AFFFF6
+        color: #EDFFDD
 
     #hdr-util
       float: right
@@ -77,9 +87,7 @@ a:hover
 
   #add
     background-color: #efefef
-    border-radius: 7px
-    -moz-border-radius: 7px
-    -webkit-border-radius: 7px
+    @include border-radius(7px)
     font-size: 0.75em
     margin: 10px auto 20px auto
     padding: 6px 8px
@@ -111,10 +119,8 @@ a:hover
 
 .message, .event
   background-color: #efefef
-  border-radius: 5px
+  @include border-radius(5px)
   font-size: 14px
-  -moz-border-radius: 5px
-  -webkit-border-radius: 5px
   margin: 0 0 10px 0
   padding: 10px
   overflow: hidden
@@ -132,7 +138,8 @@ a:hover
       margin-bottom: 3px
 
   .event-info
-    background-color: #3D9BF2
+    background-color: #444
+    @include border-radius(4px)
     clear: left
     color: #fff
     float: left
@@ -146,6 +153,11 @@ a:hover
     float: left
     font-size: 11px
 
+    li
+      float: left
+      margin: 0 5px 0 0
+      padding: 0
+
   .action
     display: none
     float: right
@@ -154,23 +166,21 @@ a:hover
 
     a
       background-color: #ddd
-      border-radius: 5px
-      -moz-border-radius: 5px
-      -webkit-border-radius: 5px
+      border: solid 1px #bbb
+      @include border-radius(5px)
       float: right
       font-size: 11px
       margin-left: 5px
       padding: 2px 8px
 
 .super-high
-  color: #ff0000
-  font-weight: bold
+  background-color: #FFE7E7
 
 .high
-  color: #ff6600
+  background-color: #F8F8D5
 
 .medium
-  color: #80cc66
+  background-color: #EDFFDD
 
 .cancel
   font-size: 14px
@@ -180,9 +190,7 @@ a:hover
 
 #loader
   background-color: #ddd
-  border-radius: 7px
-  -moz-border-radius: 7px
-  -webkit-border-radius: 7px
+  @include border-radius(7px)
   font-size: 13px
   margin: 20px auto 0
   padding: 5px 8px

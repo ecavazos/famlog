@@ -20,7 +20,7 @@ class HomeHelperTest < ActionView::TestCase
     assert_nil to_css(nil)
   end
 
-  context 'to edit' do
+  context 'edit link' do
     setup do
       @user = User.create(:username => 'iron man')
       stubs(:current_user).returns(@user)
@@ -29,19 +29,56 @@ class HomeHelperTest < ActionView::TestCase
     should 'create an edit link for a message' do
       message = Message.create(:user => @user)
       expected = "<a href=\"/messages/#{message.id}/edit\">Edit</a>"
-      assert_equal expected, to_edit(message)
+      assert_equal expected, edit_link(message)
     end
 
     should 'create an edit link for an event' do
       message = Message.create(:user => @user, :is_event => true)
       expected = "<a href=\"/events/#{message.id}/edit\">Edit</a>"
-      assert_equal expected, to_edit(message)
+      assert_equal expected, edit_link(message)
     end
 
     should 'do nothing when message does not belong to current user' do
       message = Message.create(:user => User.new)
-      assert_nil to_edit(message)
+      assert_nil edit_link(message)
+    end
+  end
+
+  context 'destroy link' do
+    setup do
+      @user = User.create(:username => 'master shifu')
+      stubs(:current_user).returns(@user)
     end
 
+    should 'create a destroy link for a message' do
+      message = Message.create(:user => @user)
+      expected = "<a href=\"/messages/#{message.id}\" data-method=\"delete\" rel=\"nofollow\">Delete</a>"
+      assert_equal expected, destroy_link(message)
+    end
+
+    should 'do nothing when message does not belong to current user' do
+      message = Message.create(:user => User.new)
+      assert_nil destroy_link(message)
+    end
+  end
+
+  context 'reply count' do
+    should 'display correct number of replies' do
+      message = Message.new
+      message.replies.build
+      message.replies.build
+      assert_equal '2 replies', reply_count(message)
+    end
+
+    should 'display in singular form when only one reply' do
+      message = Message.new
+      message.replies.build
+      assert_equal '1 reply', reply_count(message)
+    end
+
+    should 'display nothing when there are no replies' do
+      message = Message.new
+      assert_nil reply_count(message)
+    end
   end
 end
