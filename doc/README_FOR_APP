@@ -2,12 +2,10 @@ TODO
 ====
 
 * Search/Filter
-* Reply
-* Add tests
+* Add tests to model
 * Differentiate the messages of the current user from other messages
 * Sort by importance (this may not be correct)
 * Allow messages and events to be targeted (@ user)
-* Don't allow users to edit other user's data
 * Add pagination for all tabs
 * Publish to github
 * Profiles
@@ -35,3 +33,6 @@ Done
   if users update their username
 * Refactor message criteria
 * Mailer per message/event
+* Reply
+* Don't allow users to edit other user's data
+

@@ -10,6 +10,12 @@ class MessageMailer < ActionMailer::Base
     template(message, desc)
   end
 
+  def message_reply_email(reply)
+    @reply = reply
+
+    mail(:to => to, :subject => "#{reply.user.username} replied on Famlog")
+  end
+
   private
 
   def template(message, description)

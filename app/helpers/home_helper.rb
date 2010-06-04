@@ -21,10 +21,8 @@ module HomeHelper
     count = message.replies.length
 
     return if count == 0
+    return "#{count} reply" if count == 1
 
-    if count == 1 then
-      return "#{count} reply"
-    end
     "#{count} replies"
   end
 end
