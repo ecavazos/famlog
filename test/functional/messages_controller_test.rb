@@ -1,12 +1,11 @@
 require 'test_helper'
+require 'functional_helpers'
 
 class MessagesControllerTest < ActionController::TestCase
+  include FunctionalHelpers
 
   setup do
-    @user = Factory.build(:user)
-    @user.username = 'chum chum'
-    @controller.stubs(:current_user).returns(@user)
-    @controller.expects(:authenticate_user!)
+    authenticate_user_mock
   end
 
   context 'new' do
@@ -16,7 +15,7 @@ class MessagesControllerTest < ActionController::TestCase
     should_render_template 'new'
     # should_render_with_layout 'post'
     should 'assign to message' do
-      # shoulda bug in rails 3 bug
+      # shoulda bug in rails 3
       assert_not_nil assigns(:message)
     end
   end
