@@ -44,7 +44,7 @@ class RepliesControllerTest < ActionController::TestCase
     end
 
     should_respond_with :redirect
-    should_redirect_to('new') { new_message_reply_path(@message) }
+    should_redirect_to('to new action') { new_message_reply_path(@message) }
   end
 
 end
