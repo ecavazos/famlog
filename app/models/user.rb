@@ -15,6 +15,7 @@ class User
 
   # relationships
   has_many_related :messages
+  has_many_related :replies
 
   class << self
 

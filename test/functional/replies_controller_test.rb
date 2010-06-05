@@ -43,6 +43,17 @@ class RepliesControllerTest < ActionController::TestCase
       assert_equal @user, assigns(:message).replies.first.user
     end
 
+    should 'send out an email notifying family members of a new reply' do
+      msg = Mail::Message.new
+      msg.expects(:deliver)
+      MessageMailer.expects(:message_reply_email).returns(msg)
+    end
+
+    should 'not send an email when reply is not valid' do
+      Reply.any_instance.stubs(:save).returns(false)
+      MessageMailer.expects(:message_reply_email).never
+    end
+
     should_respond_with :redirect
     should_redirect_to('to new action') { new_message_reply_path(@message) }
   end

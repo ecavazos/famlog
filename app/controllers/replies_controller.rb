@@ -8,10 +8,9 @@ class RepliesController < ApplicationController
   def create
     @message = Message.find(params[:message_id])
     params[:reply][:user] = current_user # add user to hash
-    reply = @message.replies.create(params[:reply])
+    reply = @message.replies.build(params[:reply])
 
-    # TODO: need to only do this when reply is valid and saved successfully
-    MessageMailer.message_reply_email(reply).deliver
+    MessageMailer.message_reply_email(reply).deliver if reply.save
 
     redirect_to :action => :new
   end
