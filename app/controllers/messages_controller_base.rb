@@ -1,4 +1,4 @@
-module Famlog::Controllers::Messages
+class MessagesControllerBase < ApplicationController
   def new
     @message = Message.new
     render :layout => "no_tabs"

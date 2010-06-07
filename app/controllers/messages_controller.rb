@@ -1,7 +1,4 @@
-require 'lib/famlog/controllers/messages'
-
-class MessagesController < ApplicationController
-  include Famlog::Controllers::Messages
+class MessagesController < MessagesControllerBase
 
   before_filter :find_message_and_verify_ownership, :except => [:index, :new, :create]
 
