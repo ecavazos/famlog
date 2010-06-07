@@ -7,7 +7,7 @@ gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'mongoid', :git => 'git://github.com/durran/mongoid.git'
-gem 'bson_ext', '1.0.1'
+gem 'bson_ext'
 
 gem 'haml', '3.0.4'
 
@@ -28,12 +28,15 @@ gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 
 # Bundle gems for certain environments:
 #gem 'rspec', :group => :test
+
 group :test do
-  gem 'shoulda', :git => 'http://github.com/thoughtbot/shoulda.git',
-    :branch => 'rails3', :require => nil
-  gem 'factory_girl', :git => 'http://github.com/thoughtbot/factory_girl.git',
-    :branch => 'rails3', :require => nil
+  gem 'shoulda',
+    :git => 'http://github.com/thoughtbot/shoulda.git',
+    :branch => 'rails3',
+    :require => nil
+  gem 'factory_girl',
+    :git => 'http://github.com/thoughtbot/factory_girl.git',
+    :branch => 'rails3',
+    :require => nil
   gem 'mocha'
-  #gem 'rspec-rails', '>= 2.0.0.beta.7'
-  #gem 'webrat'
 end

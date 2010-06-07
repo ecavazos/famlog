@@ -19,7 +19,9 @@ class ActiveSupport::TestCase
 
   # MongoDB has no transactions. Drop all collections after each test case.
   def teardown
-    Mongoid.database.collections.each(&:drop)
+    Mongoid.database.collections.each do |c|
+      c.drop unless c.name == 'system.indexes'
+    end
   end
 
   # Make sure that each test case has a teardown

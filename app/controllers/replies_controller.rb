@@ -10,7 +10,7 @@ class RepliesController < ApplicationController
     params[:reply][:user] = current_user # add user to hash
     reply = @message.replies.build(params[:reply])
 
-    MessageMailer.message_reply_email(reply).deliver if reply.save
+    Notifier.message_reply_email(reply).deliver if reply.save
 
     redirect_to :action => :new
   end

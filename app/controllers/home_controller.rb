@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @messages = Message.all.order_by([[:created_at, :desc]]).limit(20)
+    @messages = Message.most_recent.page_one
   end
 
   def help

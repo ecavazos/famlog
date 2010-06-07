@@ -23,7 +23,6 @@ class MessagesControllerTest < ActionController::TestCase
   context 'create' do
     setup do
       @params = { 'title' => 'foo' }
-      @message = Factory.build(:message)
     end
 
     context 'when successful' do
@@ -42,6 +41,12 @@ class MessagesControllerTest < ActionController::TestCase
 
       should 'not be an event' do
         assert !assigns(:message).is_event?
+      end
+
+      should 'send out an email notifying family members of a new message' do
+        msg = Mail::Message.new
+        msg.expects(:deliver)
+        Notifier.expects(:create_message_email).returns(msg)
       end
 
       should_respond_with :redirect
@@ -100,6 +105,12 @@ class MessagesControllerTest < ActionController::TestCase
         assert !assigns(:message).is_event?
       end
 
+      should 'send out an email notifying family members of an updated message' do
+        msg = Mail::Message.new
+        msg.expects(:deliver)
+        Notifier.expects(:update_message_email).returns(msg)
+      end
+
       should_respond_with :redirect
       should_redirect_to('root') { root_path }
     end
@@ -114,6 +125,10 @@ class MessagesControllerTest < ActionController::TestCase
 
       should 'render edit' do
         assert_template 'edit'
+      end
+
+      should 'not send an email when message is not valid' do
+#        Notifier.expects(:update_message_email).never
       end
     end
   end

@@ -1,5 +1,7 @@
-class MessageMailer < ActionMailer::Base
-  default :from => 'me@iamneato.com'
+class Notifier < ActionMailer::Base
+  default :from => 'tool@famlog.heroku.com'
+
+  Host = "http://famlog.heroku.com"
 
   def create_message_email(message)
     template(message, 'added a new')
@@ -12,6 +14,7 @@ class MessageMailer < ActionMailer::Base
 
   def message_reply_email(reply)
     @reply = reply
+    @url   = new_message_reply_url(@reply.message, :host => Host)
 
     mail(:to => to, :subject => "#{reply.user.username} replied on Famlog")
   end
@@ -20,6 +23,7 @@ class MessageMailer < ActionMailer::Base
 
   def template(message, description)
     @message = message
+    @url = Host
 
     mail(:to => to,
          :subject => "#{message.user.username} #{description} #{message.type_name.downcase} on Famlog")

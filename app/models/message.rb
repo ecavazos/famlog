@@ -19,6 +19,9 @@ class Message
   belongs_to_related :user
   embeds_many :replies
 
+  named_scope :most_recent, :order_by => [[:created_at, :desc]]
+  named_scope :page_one, :limit => 20
+
   def belongs_to?(other_user)
     user.username == other_user.username
   end

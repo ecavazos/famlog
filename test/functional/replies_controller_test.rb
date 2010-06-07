@@ -46,12 +46,12 @@ class RepliesControllerTest < ActionController::TestCase
     should 'send out an email notifying family members of a new reply' do
       msg = Mail::Message.new
       msg.expects(:deliver)
-      MessageMailer.expects(:message_reply_email).returns(msg)
+      Notifier.expects(:message_reply_email).returns(msg)
     end
 
     should 'not send an email when reply is not valid' do
       Reply.any_instance.stubs(:save).returns(false)
-      MessageMailer.expects(:message_reply_email).never
+      Notifier.expects(:message_reply_email).never
     end
 
     should_respond_with :redirect

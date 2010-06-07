@@ -1,8 +1,6 @@
 TODO
 ====
 
-* Test mailers are being called from controllers
-* Rename mailers to be more generic
 * Search/Filter
 * Add tests to model
 * Differentiate the messages of the current user from other messages
@@ -37,4 +35,6 @@ Done
 * Mailer per message/event
 * Reply
 * Don't allow users to edit other user's data
+* Test mailers are being called from controllers
+* Rename mailers to be more generic
 
