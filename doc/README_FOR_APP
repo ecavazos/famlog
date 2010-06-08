@@ -1,6 +1,7 @@
 TODO
 ====
 
+* Looked into delayed job (for mailer)
 * Search/Filter
 * Add tests to model
 * Differentiate the messages of the current user from other messages

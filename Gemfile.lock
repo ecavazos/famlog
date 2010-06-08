@@ -12,7 +12,7 @@ sources:
     branch: rails3
     require: 
     uri: http://github.com/thoughtbot/shoulda.git
-    ref: ad4a2e9d340803e3d0290e12d2088cc3e6c62ab9
+    ref: 707b2607b8a11946ed9a07c4040bc21d4f9fb5b3
 - Git: 
     git: git://github.com/plataformatec/devise.git
     uri: git://github.com/plataformatec/devise.git
@@ -20,11 +20,11 @@ sources:
 - Git: 
     git: git://github.com/durran/mongoid.git
     uri: git://github.com/durran/mongoid.git
-    ref: acd7665fd0aeba6f5e9fb067b24264a2a48224a5
+    ref: 2163e36d1a2096824ae3cfc1ae0cb6f45f9dbf79
 - Git: 
     git: git://github.com/rails/rails.git
     uri: git://github.com/rails/rails.git
-    ref: 509f3d7d2f346b83dfd22aec681feffbd2d25803
+    ref: 94ed39d146e898f15317477c8ca61cbb4d3b97d0
 - Rubygems: 
     uri: http://rubygems.org
 specs: 
@@ -62,7 +62,7 @@ specs:
 - treetop: 
     version: 1.4.8
 - mail: 
-    version: 2.2.1
+    version: 2.2.2
 - actionmailer: 
     version: 3.0.0.beta3
     source: 4
@@ -111,7 +111,7 @@ specs:
     version: 2.10.3
     source: 1
 - sqlite3-ruby: 
-    version: 1.2.5
+    version: 1.3.0
 dependencies: 
   rails: 
     version: ">= 0"
