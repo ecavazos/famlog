@@ -8,17 +8,17 @@ module HomeHelper
   end
 
   def edit_link(message)
-    return unless message.belongs_to? current_user
+    return unless current_user.owns?(message)
     link_to "Edit", eval("edit_#{message.type_name.downcase}_path(message)")
   end
 
   def destroy_link(message)
-    return unless message.belongs_to? current_user
+    return unless current_user.owns?(message)
     link_to "Delete", message_path(message), :method => :delete
   end
 
   def reply_count(message)
-    count = message.replies.length
+    count = message.replies.count
 
     return if count == 0
     return "#{count} reply" if count == 1

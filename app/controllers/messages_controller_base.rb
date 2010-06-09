@@ -10,11 +10,9 @@ class MessagesControllerBase < ApplicationController
     before_save(params)
 
     if @message.save
-      puts 'save'
       Notifier.create_message_email(@message).deliver
       redirect_to :root
     else
-      puts 'fail'
       render :action => :new
     end
   end
@@ -44,7 +42,7 @@ class MessagesControllerBase < ApplicationController
 
   def find_message_and_verify_ownership
     @message = Message.find(params[:id])
-    redirect_to root_url unless @message.belongs_to? current_user
+    redirect_to root_url unless current_user.owns?(@message)
   end
 
   def before_save(params)

@@ -17,8 +17,16 @@ class User
   has_many_related :messages
   has_many_related :replies
 
-  class << self
+  named_scope :family_members, lambda { |user| where(:email.ne => user.email) }
 
+  def owns?(entity)
+    if entity.respond_to?(:user)
+      return entity.user == self
+    end
+    false
+  end
+
+  class << self
     # find user by email or username
     def find_for_database_authentication(conditions)
       user = find(:first, :conditions => conditions)

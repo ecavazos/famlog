@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
 
+  helper :home
+
   def index
     @messages = Message.most_recent.page_one
   end

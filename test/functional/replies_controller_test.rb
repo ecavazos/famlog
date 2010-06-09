@@ -58,4 +58,29 @@ class RepliesControllerTest < ActionController::TestCase
     should_redirect_to('to new action') { new_message_reply_path(@message) }
   end
 
+  context 'destroy' do
+    setup do
+      @message = Factory.create(:message)
+      @message.user = @user
+      Message.expects(:find).with(@message.id).returns(@message)
+
+      @reply = Reply.create(:id => 2, :message => @message)
+      @reply.expects(:destroy)
+
+      delete :destroy, :id => 2, :message_id => @message.id
+    end
+
+    should_respond_with :redirect
+    # should_redirect_to('new message reply path') { new_message_reply_path(@message) }
+
+    context 'when not owner' do
+      setup do
+        @reply.user = nil
+      end
+
+      should_respond_with :redirect
+      should_redirect_to('root') { root_path }
+    end
+  end
+
 end

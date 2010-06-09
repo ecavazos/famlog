@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  helper :all # include all helpers, all the time
 
   before_filter :authenticate_user!
 
