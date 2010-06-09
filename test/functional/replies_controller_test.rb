@@ -8,6 +8,7 @@ class RepliesControllerTest < ActionController::TestCase
     authenticate_user_mock
     @message = Factory.create(:message)
     @message.user = @user
+    @message.save
     Message.expects(:find).with(@message.id).returns(@message)
   end
 
@@ -60,27 +61,34 @@ class RepliesControllerTest < ActionController::TestCase
 
   context 'destroy' do
     setup do
-      @message = Factory.create(:message)
-      @message.user = @user
-      Message.expects(:find).with(@message.id).returns(@message)
-
-      @reply = Reply.create(:id => 2, :message => @message)
-      @reply.expects(:destroy)
-
-      delete :destroy, :id => 2, :message_id => @message.id
+      @reply = @message.replies.create(:text => 'blah', :user => @user)
     end
 
-    should_respond_with :redirect
-    # should_redirect_to('new message reply path') { new_message_reply_path(@message) }
+    context 'when called by owner' do
+      setup do
+        @reply.expects(:destroy)
+        delete :destroy, :id => @reply.id, :message_id => @message.id
+      end
 
-    context 'when not owner' do
+      should 'assign to message' do
+        assert_not_nil assigns(:message)
+      end
+
+      should_respond_with :redirect
+      should_redirect_to('to new action') { new_message_reply_path(@message) }
+    end
+
+    context 'when not called by owner' do
       setup do
         @reply.user = nil
+        @reply.save
+        delete :destroy, :id => @reply.id, :message_id => @message.id
       end
 
       should_respond_with :redirect
       should_redirect_to('root') { root_path }
     end
+
   end
 
 end

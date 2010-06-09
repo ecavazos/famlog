@@ -17,7 +17,7 @@
       says:
       .date= format_datetime(reply.created_at)
       %p= reply.text
-      %p= destroy_link(@message, reply)
+      %p= destroy_reply_link(@message, reply)
 
 %h3 Add A Reply:
 = form_for([@message, @message.replies.build]) do |f|

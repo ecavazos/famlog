@@ -22,7 +22,7 @@ class RepliesController < ApplicationController
 
     if current_user.owns?(reply)
       reply.destroy
-      redirect_to new_message_reply_path(@message)
+      redirect_to :action => :new
     else
       redirect_to :root
     end
