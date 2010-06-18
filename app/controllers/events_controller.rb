@@ -1,4 +1,4 @@
-require 'lib/famlog/datetime_parser'
+require 'famlog/datetime_parser'
 
 class EventsController < MessagesControllerBase
   before_filter :find_message_and_verify_ownership, :except => [:new, :create]

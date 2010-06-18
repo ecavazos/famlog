@@ -1,4 +1,4 @@
-require 'lib/famlog/message_query'
+require 'famlog/message_query'
 
 class Message
   include Mongoid::Document

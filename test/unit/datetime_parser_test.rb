@@ -1,5 +1,5 @@
 require 'test/test_helper'
-require 'lib/famlog/datetime_parser'
+require 'famlog/datetime_parser'
 
 class DateTimeParserTester < Test::Unit::TestCase
   context Famlog::DateTimeParser do

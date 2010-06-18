@@ -1,5 +1,5 @@
 --- 
-hash: dee5724003c04bab1d94face7dfdd9da25387a85
+hash: 00e9e22c756ccb50ac79b36269abb096c6ef3726
 sources: 
 - Git: 
     git: http://github.com/thoughtbot/factory_girl.git
@@ -9,22 +9,21 @@ sources:
     ref: feac7298352a83fef0717d8beadd2eda9aabfe56
 - Git: 
     git: http://github.com/thoughtbot/shoulda.git
-    branch: rails3
     require: 
     uri: http://github.com/thoughtbot/shoulda.git
-    ref: 707b2607b8a11946ed9a07c4040bc21d4f9fb5b3
+    ref: f3e56edc5a72a0cd1e7948021c9eead9ed6ebc17
 - Git: 
     git: git://github.com/plataformatec/devise.git
     uri: git://github.com/plataformatec/devise.git
-    ref: f0c0f5f11b115df0dbe64a267ada4d92c9d028fa
+    ref: ac0105d15f5bcc78f7a4b496eb52b0a5e9a27100
 - Git: 
     git: git://github.com/durran/mongoid.git
     uri: git://github.com/durran/mongoid.git
-    ref: 2163e36d1a2096824ae3cfc1ae0cb6f45f9dbf79
+    ref: 05cade56119abcb1f59103f6ac8cee7e2a25c95e
 - Git: 
     git: git://github.com/rails/rails.git
     uri: git://github.com/rails/rails.git
-    ref: 94ed39d146e898f15317477c8ca61cbb4d3b97d0
+    ref: a55d83292f9dbc34368e3cb91d99eb5b4aa4fa78
 - Rubygems: 
     uri: http://rubygems.org
 specs: 
@@ -33,27 +32,27 @@ specs:
 - abstract: 
     version: 1.0.0
 - activesupport: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
     source: 4
 - builder: 
     version: 2.1.2
 - i18n: 
     version: 0.4.1
 - activemodel: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
     source: 4
 - erubis: 
     version: 2.6.5
 - rack: 
     version: 1.1.0
 - rack-mount: 
-    version: 0.6.3
+    version: 0.6.4
 - rack-test: 
     version: 0.5.4
 - tzinfo: 
     version: 0.3.22
 - actionpack: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
     source: 4
 - mime-types: 
     version: "1.16"
@@ -62,24 +61,26 @@ specs:
 - treetop: 
     version: 1.4.8
 - mail: 
-    version: 2.2.2
+    version: 2.2.5
 - actionmailer: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
     source: 4
 - arel: 
-    version: 0.3.3
+    version: 0.4.0
 - activerecord: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
     source: 4
 - activeresource: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
     source: 4
+- bcrypt-ruby: 
+    version: 2.1.2
 - bson: 
-    version: 1.0.2
+    version: 1.0.3
 - bson_ext: 
     version: 1.0.1
 - bundler: 
-    version: 0.9.25
+    version: 0.9.26
 - warden: 
     version: 0.10.7
 - devise: 
@@ -93,22 +94,22 @@ specs:
 - mocha: 
     version: 0.9.8
 - mongo: 
-    version: 1.0.2
+    version: 1.0.3
 - will_paginate: 
     version: 3.0.pre
 - mongoid: 
-    version: 2.0.0.beta6
+    version: 2.0.0.beta7
     source: 3
 - thor: 
     version: 0.13.6
 - railties: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
     source: 4
 - rails: 
-    version: 3.0.0.beta3
+    version: 3.0.0.beta4
     source: 4
 - shoulda: 
-    version: 2.10.3
+    version: 2.11.0
     source: 1
 - sqlite3-ruby: 
     version: 1.3.0
