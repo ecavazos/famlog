@@ -11,9 +11,9 @@ class MessagesControllerTest < ActionController::TestCase
   context 'new' do
     setup { get :new }
 
-    should_respond_with :success
-    should_render_template 'new'
-    # should_render_with_layout 'post'
+    should respond_with :success
+    should render_template 'new'
+    # should render_with_layout 'post'
     should 'assign to message' do
       # shoulda bug in rails 3
       assert_not_nil assigns(:message)
@@ -49,8 +49,8 @@ class MessagesControllerTest < ActionController::TestCase
         Notifier.expects(:create_message_email).returns(msg)
       end
 
-      should_respond_with :redirect
-      should_redirect_to('root') { root_path }
+      should respond_with :redirect
+      should redirect_to('root') { root_path }
     end
 
     context 'when failure' do
@@ -59,7 +59,7 @@ class MessagesControllerTest < ActionController::TestCase
         post :create, :message => @params
       end
 
-      should_respond_with :success
+      should respond_with :success
 
       should 'render new' do
         assert_template 'new'
@@ -75,9 +75,9 @@ class MessagesControllerTest < ActionController::TestCase
       get :edit, { :id => 2 }
     end
 
-    should_respond_with :success
-    should_render_template 'edit'
-    # should_render_with_layout 'post'
+    should respond_with :success
+    should render_template 'edit'
+    # should render_with_layout 'post'
     should 'assign to message' do
       assert_not_nil assigns(:message)
     end
@@ -111,8 +111,8 @@ class MessagesControllerTest < ActionController::TestCase
         Notifier.expects(:update_message_email).returns(msg)
       end
 
-      should_respond_with :redirect
-      should_redirect_to('root') { root_path }
+      should respond_with :redirect
+      should redirect_to('root') { root_path }
     end
 
     context 'when failure' do
@@ -121,7 +121,7 @@ class MessagesControllerTest < ActionController::TestCase
         put :update, :id => 4, :message => @params
       end
 
-      should_respond_with :success
+      should respond_with :success
 
       should 'render edit' do
         assert_template 'edit'
@@ -140,6 +140,6 @@ class MessagesControllerTest < ActionController::TestCase
       Message.expects(:find).with(4).returns(@message)
       delete :destroy, :id => 4
     end
-    should_redirect_to('root') { root_path }
+    should redirect_to('root') { root_path }
   end
 end

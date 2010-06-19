@@ -12,7 +12,7 @@ class HomeControllerTest < ActionController::TestCase
       get :index
     end
 
-    should_respond_with :success
+    should respond_with :success
     should 'assign default collection of messages and events to messages' do
       assert_not_nil assigns(:messages)
     end
@@ -23,6 +23,6 @@ class HomeControllerTest < ActionController::TestCase
       get :help
     end
 
-    should_respond_with :success
+    should respond_with :success
   end
 end

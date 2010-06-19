@@ -17,9 +17,9 @@ class RepliesControllerTest < ActionController::TestCase
       get :new, :message_id => @message.id
     end
 
-    should_respond_with :success
-    should_render_template 'new'
-    # should_render_with_layout 'post'
+    should respond_with :success
+    should render_template 'new'
+    # should render_with_layout 'post'
     should 'assign to message' do
       # shoulda bug in rails 3
       assert_not_nil assigns(:message)
@@ -55,8 +55,8 @@ class RepliesControllerTest < ActionController::TestCase
       Notifier.expects(:message_reply_email).never
     end
 
-    should_respond_with :redirect
-    should_redirect_to('to new action') { new_message_reply_path(@message) }
+    should respond_with :redirect
+    should redirect_to('to new action') { new_message_reply_path(@message) }
   end
 
   context 'destroy' do
@@ -74,8 +74,8 @@ class RepliesControllerTest < ActionController::TestCase
         assert_not_nil assigns(:message)
       end
 
-      should_respond_with :redirect
-      should_redirect_to('to new action') { new_message_reply_path(@message) }
+      should respond_with :redirect
+      should redirect_to('to new action') { new_message_reply_path(@message) }
     end
 
     context 'when not called by owner' do
@@ -85,8 +85,8 @@ class RepliesControllerTest < ActionController::TestCase
         delete :destroy, :id => @reply.id, :message_id => @message.id
       end
 
-      should_respond_with :redirect
-      should_redirect_to('root') { root_path }
+      should respond_with :redirect
+      should redirect_to('root') { root_path }
     end
 
   end
