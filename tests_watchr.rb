@@ -4,27 +4,36 @@ system 'clear'
 def growl(message)
   growlnotify = `which growlnotify`.chomp
   title = "Watchr Test Results"
-  image = message.include?('0 failures, 0 errors') ? "~/.watchr_images/passed.png" : "~/.watchr_images/failed.png"
-  options = "-w -n Watchr --image '#{File.expand_path(image)}' -m '#{message}' '#{title}'"
+
+  image = image_path(message)
+
+  options = "-w -n Watchr --image '#{image}' -m '#{message}' '#{title}'"
   system %(#{growlnotify} #{options} &)
 end
 
-def run(cmd)
+def image_path(message)
+  dir = '~/.Watchr_images/'
+  name = message.include?('0 failures, 0 errors') ? 'passed.png' : 'failed.png'
+  "#{File.expand_path(dir + name)}"
+end
+
+def execute(cmd)
   puts(cmd)
   `#{cmd}`
 end
 
-def run_test_file(file)
-  system('clear')
-  result = run(%Q(ruby -I"lib:test" -rubygems #{file}))
-  growl result.split("\n").last rescue nil
-  puts result
+def test(file)
+  run %Q(ruby -I"lib:test" -rubygems #{file})
 end
 
-def run_all_tests
+def test_all
+  run 'rake test'
+end
+
+def run(command)
   system('clear')
-  result = run "rake test"
-  growl result.split("\n").last rescue nil
+  result = execute command
+  growl result.match(/^\d+ tests,.+$/)[0] rescue nil
   puts result
 end
 
@@ -32,18 +41,17 @@ def related_test_files(path)
   Dir['test/**/*.rb'].select { |file| file =~ /#{File.basename(path).split(".").first}_test.rb/ }
 end
 
-def run_suite
-  run_all_tests
-end
+watch('test/test_helper\.rb') { test_all }
+watch('test/.*/.*_test\.rb') { |m| test(m[0]) }
 
-watch('test/test_helper\.rb') { run_all_tests }
-watch('test/.*/.*_test\.rb') { |m| run_test_file(m[0]) }
-watch('app/.*/.*\.rb') { |m| related_test_files(m[0]).map {|tf| run_test_file(tf) } }
+['app/.*/.*\.rb', 'lib/.*/.*\.rb'].each do |p|
+  watch(p) { |m| related_test_files(m[0]).map {|tf| test(tf) } }
+end
 
 # Ctrl-\
 Signal.trap 'QUIT' do
   puts " --- Running all tests ---\n\n"
-  run_all_tests
+  test_all
 end
 
 @interrupted = false
@@ -58,8 +66,8 @@ Signal.trap 'INT' do
     @interrupted = true
     Kernel.sleep 1.5
     # raise Interrupt, nil # let the run loop catch it
-    run_suite
+    test_all
   end
 end
 
-run_suite
+test_all

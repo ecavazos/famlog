@@ -63,22 +63,22 @@ class HomeHelperTest < ActionView::TestCase
   end
 
   context 'reply count' do
+    setup do
+      @message = Factory.create(:message)
+    end
     should 'display correct number of replies' do
-      message = Message.new
-      message.replies.build
-      message.replies.build
-      assert_equal '2 replies', reply_count(message)
+      @message.replies.create(:text => 'foo')
+      @message.replies.create(:text => 'foo')
+      assert_equal '2 replies', reply_count(@message)
     end
 
     should 'display in singular form when only one reply' do
-      message = Message.new
-      message.replies.build
-      assert_equal '1 reply', reply_count(message)
+      @message.replies.create(:text => 'foo')
+      assert_equal '1 reply', reply_count(@message)
     end
 
     should 'display nothing when there are no replies' do
-      message = Message.new
-      assert_nil reply_count(message)
+      assert_nil reply_count(@message)
     end
   end
 end

@@ -10,8 +10,8 @@ class RepliesHelperTest < ActionView::TestCase
     end
 
     should 'create a destroy link for a reply' do
-      reply = @message.replies.build(:text => 'blah', :user => @user)
-      expected = "<a href=\"/messages/#{@message.id}/reply/#{reply.id}\" data-method=\"delete\" rel=\"nofollow\">Delete</a>"
+      reply = @message.replies.create(:text => 'blah', :user => @user)
+      expected = "<a href=\"/messages/#{@message.id}/replies/#{reply.id}\" data-method=\"delete\" rel=\"nofollow\">Delete</a>"
       assert_equal expected, destroy_reply_link(@message, reply)
     end
 
