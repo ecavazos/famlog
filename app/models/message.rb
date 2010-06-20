@@ -24,11 +24,11 @@ class Message
 
   class << self
     def today_count
-      0
+      by_tab(:today).count
     end
 
     def forecast_count
-      0
+      by_tab(:forecast).count
     end
   end
 

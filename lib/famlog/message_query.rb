@@ -6,18 +6,18 @@ module Famlog
 
     module ClassMethods
       def by_tab(tab)
-        case tab
+        case tab.to_s
         when 'today' then
           where(event_is_today_js)
-            .order_by([:start_at, :desc]).limit(20)
+            .order_by([:start_at, :desc])
         when 'forecast' then
           where(event_is_this_week_js)
-            .order_by([:start_at, :asc]).limit(20)
+            .order_by([:start_at, :asc])
         when 'history'
           where(:created_at.lt => Date.today.to_time.getutc)
-            .order_by([:created_at, :desc]).limit(20)
+            .order_by([:created_at, :desc])
         else
-          all.order_by([[:created_at, :desc]]).limit(20)
+          all.order_by([[:created_at, :desc]])
         end
       end
 
