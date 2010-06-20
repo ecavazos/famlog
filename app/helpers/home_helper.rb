@@ -25,4 +25,16 @@ module HomeHelper
 
     "#{count} replies"
   end
+
+  def today_label
+    count = Message.today_count
+    return 'Today' if count == 0
+    "Today (#{count})"
+  end
+
+  def forecast_label
+    count = Message.forecast_count
+    return 'Forecast' if count == 0
+    "Forecast (#{count})"
+  end
 end

@@ -81,4 +81,26 @@ class HomeHelperTest < ActionView::TestCase
       assert_nil reply_count(@message)
     end
   end
+
+  context 'today count' do
+    should 'not show a count when there are no events today' do
+      assert_equal 'Today', today_label
+    end
+
+    should 'show a count for all the events today' do
+      Message.stubs(:today_count).returns(3)
+      assert_equal 'Today (3)', today_label
+    end
+  end
+
+  context 'forecast count' do
+    should 'not show a count when there are no up comming events' do
+      assert_equal 'Forecast', forecast_label
+    end
+
+    should 'show a count for all the up comming events' do
+      Message.stubs(:forecast_count).returns(7)
+      assert_equal 'Forecast (7)', forecast_label
+    end
+  end
 end

@@ -22,6 +22,16 @@ class Message
   named_scope :most_recent, :order_by => [[:created_at, :desc]]
   named_scope :page_one, :limit => 20
 
+  class << self
+    def today_count
+      0
+    end
+
+    def forecast_count
+      0
+    end
+  end
+
   def type_name
     is_event ? "Event" : "Message"
   end

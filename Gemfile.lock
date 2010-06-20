@@ -15,15 +15,15 @@ sources:
 - Git: 
     git: git://github.com/plataformatec/devise.git
     uri: git://github.com/plataformatec/devise.git
-    ref: ac0105d15f5bcc78f7a4b496eb52b0a5e9a27100
+    ref: e3b815de49007bba5c32b12a9df062b423cfcfe9
 - Git: 
     git: git://github.com/durran/mongoid.git
     uri: git://github.com/durran/mongoid.git
-    ref: 05cade56119abcb1f59103f6ac8cee7e2a25c95e
+    ref: 79b4d3710d17c949544fe2b233990a4c3a648b1c
 - Git: 
     git: git://github.com/rails/rails.git
     uri: git://github.com/rails/rails.git
-    ref: a55d83292f9dbc34368e3cb91d99eb5b4aa4fa78
+    ref: 96f5e59a26329aa972b8061a818410b0b378f306
 - Rubygems: 
     uri: http://rubygems.org
 specs: 
