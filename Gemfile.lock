@@ -1,5 +1,5 @@
 --- 
-hash: c8b2b6c8337b1b7c4da86e2835fc6d5162fe0fa8
+hash: bb24298037b3736ef9e51b2de0a75029f736ccf3
 sources: 
 - Git: 
     git: http://github.com/thoughtbot/factory_girl.git
@@ -91,8 +91,6 @@ specs:
     source: 0
 - haml: 
     version: 3.0.12
-- hassle: 
-    version: 0.0.1
 - mocha: 
     version: 0.9.8
 - mongo: 
@@ -134,12 +132,6 @@ dependencies:
     version: ">= 0"
     group: 
     - :default
-  hassle: 
-    version: ">= 0"
-    group: 
-    - :default
-    require: 
-    - hassle
   haml: 
     version: = 3.0.12
     group: 
