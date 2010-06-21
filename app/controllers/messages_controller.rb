@@ -11,7 +11,7 @@ class MessagesController < MessagesControllerBase
     if params['search-phrase']
       search = params['search-phrase']
       @messages = Message.all(:conditions =>
-                            { :message => /#{search}/ }).limit(20)
+                            { :message => /#{search}/i }).limit(20)
     else
       @messages = Message.by_tab(params[:tab]).limit(20)
     end
