@@ -1,6 +1,7 @@
 TODO
 ====
 
+* Error messages for login form
 * Looked into DJ/Beanstalkd (for mailer)
 * Search/Filter
 * Add tests to model

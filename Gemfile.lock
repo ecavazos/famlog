@@ -1,5 +1,5 @@
 --- 
-hash: 00e9e22c756ccb50ac79b36269abb096c6ef3726
+hash: bb24298037b3736ef9e51b2de0a75029f736ccf3
 sources: 
 - Git: 
     git: http://github.com/thoughtbot/factory_girl.git
@@ -15,7 +15,7 @@ sources:
 - Git: 
     git: git://github.com/plataformatec/devise.git
     uri: git://github.com/plataformatec/devise.git
-    ref: e3b815de49007bba5c32b12a9df062b423cfcfe9
+    ref: 92cf50454b828f2a4c1acf27e95387455c4fe0c7
 - Git: 
     git: git://github.com/durran/mongoid.git
     uri: git://github.com/durran/mongoid.git
@@ -23,7 +23,7 @@ sources:
 - Git: 
     git: git://github.com/rails/rails.git
     uri: git://github.com/rails/rails.git
-    ref: 96f5e59a26329aa972b8061a818410b0b378f306
+    ref: 207fa59675cb624dde0e01c1d57597f752cdf095
 - Rubygems: 
     uri: http://rubygems.org
 specs: 
@@ -90,7 +90,7 @@ specs:
     version: 1.2.3
     source: 0
 - haml: 
-    version: 3.0.4
+    version: 3.0.12
 - mocha: 
     version: 0.9.8
 - mongo: 
@@ -133,7 +133,7 @@ dependencies:
     group: 
     - :default
   haml: 
-    version: = 3.0.4
+    version: = 3.0.12
     group: 
     - :default
   devise: 

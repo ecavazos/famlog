@@ -9,6 +9,7 @@ var Famlog = Famlog || {};
       tabs.all().live("click", tabs.click);
       tabs.initAjaxError();
       tabs.initAjaxStart();
+      $('#search-button').live('click', tabs.searchClick);
     },
 
     initAjaxError: function () {
@@ -19,6 +20,19 @@ var Famlog = Famlog || {};
           .fadeOut(4000, function () {
             $('#error').remove();
           });
+      });
+    },
+
+    searchClick :function (event) {
+      event.preventDefault();
+      $('#results').html('<div id="loader">Loading ...</div>');
+      $.ajax({
+        url: '/messages?' + $('#search-phrase').serialize(),
+        cache: false,
+        global: false,
+        success: function (html) {
+          $('#results').html(html);
+        }
       });
     },
 
@@ -50,6 +64,8 @@ var Famlog = Famlog || {};
         cache: false,
         success: function (html) {
           $("#main").html(html);
+          if(name == 'search')
+           $('#search-phrase').focus();
         }
       });
 
