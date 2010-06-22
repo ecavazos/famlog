@@ -4,14 +4,15 @@ class MessagesController < MessagesControllerBase
 
   def index
     if params[:tab] == 'search'
-      render :search, :layout => false
-      return
+      return render :search, :layout => false
+    end
+
+    if params[:tab] == 'history'
+      return render :history, :layout => false
     end
 
     if params['search-phrase']
-      search = params['search-phrase']
-      @messages = Message.all(:conditions =>
-                            { :message => /#{search}/i }).limit(20)
+      @messages = Message.search(params['search-phrase'])
     else
       @messages = Message.by_tab(params[:tab]).limit(20)
     end

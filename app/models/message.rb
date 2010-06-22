@@ -30,6 +30,11 @@ class Message
     def forecast_count
       by_tab(:forecast).count
     end
+
+    def search(query)
+      all(:conditions => { :message => /#{query}/i })
+      .limit(20).order_by([:create_at, :desc])
+    end
   end
 
   def type_name

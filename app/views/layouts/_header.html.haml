@@ -1,22 +1,23 @@
-#header
-  #hdr-group
-    %h1
-      = link_to 'Famlog', root_path
-    %ul#hdr-util
-      - if current_user
-        %li
-          = link_to 'Home', root_path
-        %li
-          = link_to 'Profile', edit_user_registration_path(current_user.username)
-        %li
-          = link_to 'Help', help_path
-        %li
-          = link_to 'Sign out', destroy_user_session_path
-      - else
-        %li
-          = link_to 'Sign in', new_user_session_path
-        %li
-          |
-        %li
-          = link_to 'Sign up', new_user_registration_path
+#header-clip
+  #header
+    #hdr-group
+      %h1
+        = link_to 'Famlog', root_path
+      %ul#hdr-util
+        - if current_user
+          %li
+            = link_to 'Home', root_path
+          %li
+            = link_to 'Profile', edit_user_registration_path(current_user.username)
+          %li
+            = link_to 'Help', help_path
+          %li
+            = link_to 'Sign out', destroy_user_session_path
+        - else
+          %li
+            = link_to 'Sign in', new_user_session_path
+          %li
+            |
+          %li
+            = link_to 'Sign up', new_user_registration_path
 

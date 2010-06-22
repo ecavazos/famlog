@@ -25,9 +25,13 @@ var Famlog = Famlog || {};
 
     searchClick :function (event) {
       event.preventDefault();
+      var searchBox = $('#search-phrase');
+      if (searchBox.val() == '') return;
+
       $('#results').html('<div id="loader">Loading ...</div>');
+
       $.ajax({
-        url: '/messages?' + $('#search-phrase').serialize(),
+        url: '/messages?' + searchBox.serialize(),
         cache: false,
         global: false,
         success: function (html) {
