@@ -17,8 +17,14 @@ module Famlog
           where(:created_at.lt => Date.today.to_time.getutc)
             .order_by([:created_at, :desc])
         else
-          all.order_by([[:created_at, :desc]])
+          all.order_by([:created_at, :desc])
         end
+      end
+
+      def by_month(year, month, type)
+        month = month.to_i - 1
+        where(all_for_month_js(year, month, type))
+          .order_by([:created_at, :desc])
       end
 
       def event_is_today_js
@@ -51,6 +57,21 @@ JS
             && this.start_at <  new Date(yr, mon, day + 5)
             || (this.end_at >= new Date(yr, mon, day)
             && this.end_at < new Date(yr, mon, day + 5));
+          }
+JS
+      end
+
+      def all_for_month_js(year, month, type)
+        <<JS
+          function () {
+            var start = new Date(#{year}, #{month}, 1),
+                end   = new Date(#{year}, #{month + 1}, 1);
+
+            return this.is_event
+            && this.start_at >= start
+            && this.start_at < end
+            || (this.end_at >= start
+            && this.end_at < end);
           }
 JS
       end

@@ -10,6 +10,7 @@ var Famlog = Famlog || {};
       tabs.initAjaxError();
       tabs.initAjaxStart();
       $('#search-button').live('click', tabs.searchClick);
+      $('#filter-button').live('click', tabs.filterClick);
     },
 
     initAjaxError: function () {
@@ -32,6 +33,21 @@ var Famlog = Famlog || {};
 
       $.ajax({
         url: '/messages?' + searchBox.serialize(),
+        cache: false,
+        global: false,
+        success: function (html) {
+          $('#results').html(html);
+        }
+      });
+    },
+
+    filterClick :function (event) {
+      event.preventDefault();
+
+      $('#results').html('<div id="loader">Loading ...</div>');
+
+      $.ajax({
+        url: '/messages?' + $('#history-form').serialize(),
         cache: false,
         global: false,
         success: function (html) {

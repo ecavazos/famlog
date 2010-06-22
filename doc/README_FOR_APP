@@ -1,9 +1,12 @@
 TODO
 ====
 
+* Clean up tabs.js
+* Use type option to pick the correct history query
+* Search/Filter
+
 * Error messages for login form
 * Looked into DJ/Beanstalkd (for mailer)
-* Search/Filter
 * Add tests to model
 * Differentiate the messages of the current user from other messages
 * Sort by importance (this may not be correct)

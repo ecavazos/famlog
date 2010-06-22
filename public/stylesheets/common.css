@@ -199,7 +199,13 @@ a:hover {
   background-color: #efefef;
   margin: 0 0 10px;
   padding: 15px; }
-  .tab-form #search-phrase {
+
+.tab-form-group {
+  float: left;
+  margin: 0 15px 0 0; }
+  .tab-form-group label {
+    font-size: 12px; }
+  .tab-form-group #search-phrase {
     border: solid 1px #dddddd;
     padding: 4px;
     width: 530px; }
