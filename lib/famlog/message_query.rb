@@ -22,9 +22,22 @@ module Famlog
       end
 
       def by_month(year, month, type)
-        month = month.to_i - 1
-        where(all_for_month_js(year, month, type))
-          .order_by([:created_at, :desc])
+        year  = year.to_i
+        month = month.to_i
+        query = nil
+
+        if type.downcase == 'message' then
+          ey = (month == 12)?  year + 1 : year
+          em = (month == 12)?  1 : month + 1
+
+          query = criteria.and(:created_at.gte => Time.new(year, month, 1))
+            .and(:created_at.lt => Time.new(ey, em, 1))
+            .and(:is_event => false)
+        else
+          query = where(all_events_for_month_js(year, month - 1))
+        end
+
+          query.order_by([:created_at, :desc])
       end
 
       def event_is_today_js
@@ -61,7 +74,7 @@ JS
 JS
       end
 
-      def all_for_month_js(year, month, type)
+      def all_events_for_month_js(year, month)
         <<JS
           function () {
             var start = new Date(#{year}, #{month}, 1),

@@ -1,16 +1,16 @@
 .tab-form
   - form_tag '', :id => 'history-form' do
     .tab-form-group
+      = label_tag 'type', 'Type'
+      = select_tag 'type', options_for_select(['Event', 'Message'])
+
+    .tab-form-group
       = label_tag 'month', 'Month'
       = select_tag 'month', options_for_select(months)
 
     .tab-form-group
       = label_tag 'year', 'Year'
       = select_tag 'year', options_for_select(years)
-
-    .tab-form-group
-      = label_tag 'type', 'Type'
-      = select_tag 'type', options_for_select(['Event', 'Message'])
 
     = submit_tag 'Filter', :id => 'filter-button'
 
