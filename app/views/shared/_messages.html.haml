@@ -8,12 +8,12 @@
       .message-body
         %h3
           = m.title
-        %p
+        %div
           = link_to m.user.username
           says:
         .date= format_datetime(m.created_at)
         %p
-          = m.message
+          = simple_format(m.message)
 
       - event_info(m)
 

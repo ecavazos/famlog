@@ -8,7 +8,7 @@
       %strong
         = @message.user.username
         says:
-      = @message.message
+      = simple_format @message.message
     %p
       = link_to 'Famlog', @url
 

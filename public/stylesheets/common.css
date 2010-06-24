@@ -116,7 +116,7 @@ a:hover {
     z-index: 1; }
     .message .message-body p, .event .message-body p {
       color: #222222;
-      margin-bottom: 3px; }
+      margin-bottom: 10px; }
   .message .event-info, .event .event-info {
     background-color: #444444;
     -moz-border-radius: 4px;

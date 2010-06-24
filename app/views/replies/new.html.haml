@@ -1,14 +1,15 @@
 %h2 Reply
 .message
-  %h3= @message.title
-  %p
-    %strong
-      = @message.user.username
-    says:
-  .date= format_datetime(@message.created_at)
-  %p
-    = @message.message
-  - event_info(@message)
+  .message-body
+    %h3= @message.title
+    %div
+      %strong
+        = @message.user.username
+      says:
+    .date= format_datetime(@message.created_at)
+    %p
+      = simple_format @message.message
+    - event_info(@message)
 
 .replies
   - @message.replies.each do |reply|
@@ -16,7 +17,7 @@
       %strong= reply.user.username
       says:
       .date= format_datetime(reply.created_at)
-      %p= reply.text
+      %p= simple_format reply.text
       %p= destroy_reply_link(@message, reply)
 
 %h3 Add A Reply:

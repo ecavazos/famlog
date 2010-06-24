@@ -1,9 +1,12 @@
 TODO
 ====
 
+* Add time picker
+* Add textile or markdown formatting
 * Clean up tabs.js
 * Use type option to pick the correct history query
 * Search/Filter
+* Rename message property of Message entity to text
 
 * Error messages for login form
 * Looked into DJ/Beanstalkd (for mailer)
