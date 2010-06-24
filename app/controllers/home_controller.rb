@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def index
-    @messages = Message.most_recent.page_one
+    @messages = Message.by_tab(:home)
   end
 
   def help

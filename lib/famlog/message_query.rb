@@ -17,7 +17,9 @@ module Famlog
           where(:created_at.lt => Date.today.to_time.getutc)
             .order_by([:created_at, :desc])
         else
-          all.order_by([:created_at, :desc])
+          now = Time.now
+          where(default_js)
+            .order_by([:created_at, :desc])
         end
       end
 
@@ -38,6 +40,22 @@ module Famlog
         end
 
           query.order_by([:created_at, :desc])
+      end
+
+      def default_js
+        <<JS
+          function () {
+            var now = new Date(),
+                day = now.getDate(),
+                mon = now.getMonth(),
+                yr  = now.getFullYear();
+
+            return this.start_at >= new Date(yr, mon, day)
+            || this.end_at >= new Date(yr, mon, day)
+            || (this.created_at >= new Date(yr, mon, day - 7)
+                && this.is_event == false);
+          }
+JS
       end
 
       def event_is_today_js
