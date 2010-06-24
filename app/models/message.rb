@@ -1,9 +1,9 @@
-require 'famlog/message_query'
+require 'famlog/message_queries'
 
 class Message
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Famlog::MessageQuery
+  extend  Famlog::MessageQueries
 
   field :title # events have titles but messages do not
   field :message
