@@ -50,11 +50,22 @@ JS
 JS
     end
 
+    def all_messages_for_month_js(sy, sm, ey, em)
+      <<JS
+        function () {
+          var start = new Date(#{sy}, #{sm - 1}, 1),
+              end   = new Date(#{ey}, #{em - 1}, 1);
+
+          return !this.is_event && this.created_at >= start && this.created_at < end
+        }
+JS
+    end
+
     def all_events_for_month_js(year, month)
       <<JS
         function () {
-          var start = new Date(#{year}, #{month}, 1),
-              end   = new Date(#{year}, #{month + 1}, 1);
+          var start = new Date(#{year}, #{month - 1}, 1),
+              end   = new Date(#{year}, #{month}, 1);
 
           return this.is_event
           && this.start_at >= start

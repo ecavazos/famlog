@@ -31,11 +31,9 @@ module Famlog
         ey = (month == 12)?  year + 1 : year
         em = (month == 12)?  1 : month + 1
 
-        query = criteria.and(:created_at.gte => Time.new(year, month, 1))
-          .and(:created_at.lt => Time.new(ey, em, 1))
-          .and(:is_event => false)
+        query = where(all_messages_for_month_js(year, month, ey, em))
       else
-        query = where(all_events_for_month_js(year, month - 1))
+        query = where(all_events_for_month_js(year, month))
       end
 
       query.order_by([:created_at, :desc])

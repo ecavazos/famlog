@@ -4,8 +4,6 @@ TODO
 * Add time picker
 * Add textile or markdown formatting
 * Clean up tabs.js
-* Use type option to pick the correct history query
-* Search/Filter
 * Rename message property of Message entity to text
 
 * Error messages for login form
@@ -27,6 +25,8 @@ TODO
 Done
 ====
 
+* Search/Filter
+* Use type option to pick the correct history query
 * Make a login/sign up only index page for guests
   * signed in users see current index page
   * restrict all other pages from guests
