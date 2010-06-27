@@ -8,7 +8,7 @@
       says:
     .date= format_datetime(@message.created_at)
     %p
-      = simple_format @message.message
+      = simple_format @message.text
     - event_info(@message)
 
 .replies

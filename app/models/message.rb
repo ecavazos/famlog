@@ -6,7 +6,7 @@ class Message
   extend  Famlog::MessageQueries
 
   field :title # events have titles but messages do not
-  field :message
+  field :text
 
   # TODO: mongoid/mongodb bug - http://github.com/durran/mongoid/issues#issue/53
   field :start_at, :type => Time
@@ -32,8 +32,8 @@ class Message
     end
 
     def search(query)
-      all(:conditions => { :message => /#{query}/i })
-      .limit(20).order_by([:create_at, :desc])
+      all(:conditions => { :text => /#{query}/i })
+      .limit(20).most_recent
     end
   end
 

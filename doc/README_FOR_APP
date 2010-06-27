@@ -2,11 +2,14 @@ TODO
 ====
 
 * Add time picker
-* Add textile or markdown formatting
+* Add script to build index for searching (message + title)
 * Clean up tabs.js
 * Rename message property of Message entity to text
-
+  * need a script to assist in the migration
+* Add textile or markdown formatting
 * Error messages for login form
+* Add system emails for app errors
+
 * Looked into DJ/Beanstalkd (for mailer)
 * Add tests to model
 * Differentiate the messages of the current user from other messages

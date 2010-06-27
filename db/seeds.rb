@@ -46,7 +46,7 @@ else
 
   for i in 0...15
     Message.create({
-      message: "This is message number #{i + 1}.",
+      text: "This is message number #{i + 1}.",
       user: jack
     })
 
@@ -58,7 +58,7 @@ else
 
     Message.create({
       title: "We have something to do on #{date}",
-      message: "Don't miss this event. This is event number #{i + 1}",
+      text: "Don't miss this event. This is event number #{i + 1}",
       importance: Importance::SUPER_HIGH,
       is_event: true,
       user: jill,
