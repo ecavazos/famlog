@@ -19,6 +19,9 @@ if Rails.env == 'production'
   })
 
 else
+  Mongoid.database.collections.each do |c|
+    c.drop unless c.name == 'system.indexes'
+  end
 
   jack = User.create({
     username: "jack",
@@ -69,3 +72,4 @@ else
   end
 
 end
+

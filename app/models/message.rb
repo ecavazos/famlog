@@ -7,6 +7,7 @@ class Message
 
   field :title # events have titles but messages do not
   field :text
+  field :keywords
 
   # TODO: mongoid/mongodb bug - http://github.com/durran/mongoid/issues#issue/53
   field :start_at, :type => Time
@@ -18,6 +19,8 @@ class Message
   # relationships
   belongs_to_related :user
   embeds_many :replies
+
+  before_save :build_keywords
 
   named_scope :most_recent, :order_by => [[:created_at, :desc]]
   named_scope :page_one, :limit => 20
@@ -32,7 +35,7 @@ class Message
     end
 
     def search(query)
-      all(:conditions => { :text => /#{query}/i })
+      all(:conditions => { :keywords => /#{query}/i })
       .limit(20).most_recent
     end
   end
@@ -68,4 +71,11 @@ class Message
   def time_display(prop)
     send("#{prop}_at").to_time.getutc.strftime("%l:%M %p").strip.downcase if send("#{prop}_at")
   end
+
+  private
+  def build_keywords
+    kw = (title || '') + ' ' + (text || '')
+    self.keywords = kw.strip
+  end
 end
+

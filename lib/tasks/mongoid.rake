@@ -5,12 +5,9 @@ namespace :db do
 #    #load(seed_file) if File.exist?(seed_file)
 #  end
 
-  desc 'Migrate message property to text property'
+  desc 'Migrate messages'
   task :migrate do
     Message.all.each do |m|
-      m.text = m.message
-      m.message = nil
-      m.instance_eval { @attributes.delete('message') }
       m.save
     end
   end
