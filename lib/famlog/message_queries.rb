@@ -7,18 +7,14 @@ module Famlog
     def by_tab(tab)
       case tab.to_s
       when 'today' then
-        where(event_is_today_js)
-          .order_by([:start_at, :desc])
+        where(event_is_today_js).order_by([:start_at, :desc])
       when 'forecast' then
-        where(event_is_this_week_js)
-          .order_by([:start_at, :asc])
+        where(event_is_this_week_js).order_by([:start_at, :asc])
       when 'history'
         where(:created_at.lt => Date.today.to_time.getutc)
           .order_by([:created_at, :desc])
       else
-        now = Time.now
-        where(default_js)
-          .order_by([:created_at, :desc])
+        where(default_js).order_by([:created_at, :desc])
       end
     end
 

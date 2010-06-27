@@ -18,7 +18,7 @@ label {
   clear: left;
   float: left;
   overflow: hidden; }
-  .date-group input {
+  .date-group input, .date-group select {
     clear: none;
     float: none; }
   .date-group .time {
