@@ -1,12 +1,9 @@
 module Famlog::MessageQueries
   module JS
-    def default_js
+    def home
       <<JS
         function () {
-          var now = new Date(),
-              day = now.getDate(),
-              mon = now.getMonth(),
-              yr  = now.getFullYear();
+          #{today_vars}
 
           return this.start_at >= new Date(yr, mon, day)
           || this.end_at >= new Date(yr, mon, day)
@@ -16,34 +13,28 @@ module Famlog::MessageQueries
 JS
     end
 
-    def event_is_today_js
+    def today
       <<JS
         function () {
-          var now = new Date(),
-              day = now.getDate(),
-              mon = now.getMonth(),
-              yr  = now.getFullYear();
+          #{today_vars}
 
           return this.is_event
-          && this.start_at >= new Date(yr, mon, day)
-          && this.start_at < new Date(yr, mon, day + 1)
+          && (this.start_at >= new Date(yr, mon, day)
+          && this.start_at < new Date(yr, mon, day + 1))
           || (this.start_at <= new Date(yr, mon, day)
           && this.end_at >= new Date(yr, mon, day + 1));
         }
 JS
     end
 
-    def event_is_this_week_js
+    def forecast
       <<JS
         function () {
-          var now = new Date(),
-              day = now.getDate(),
-              mon = now.getMonth(),
-              yr  = now.getFullYear();
+          #{today_vars}
 
           return this.is_event
-          && this.start_at >= new Date(yr, mon, day)
-          && this.start_at <  new Date(yr, mon, day + 5)
+          && (this.start_at >= new Date(yr, mon, day)
+          && this.start_at <  new Date(yr, mon, day + 5))
           || (this.end_at >= new Date(yr, mon, day)
           && this.end_at < new Date(yr, mon, day + 5));
         }
@@ -85,6 +76,13 @@ JS
     def month_range(range)
       "var start = new Date(#{range[:sy]}, #{range[:sm] - 1}, 1),
            end   = new Date(#{range[:ey]}, #{range[:em] - 1}, 1);"
+    end
+
+    def today_vars
+      "var now = new Date(),
+           day = now.getDate(),
+           mon = now.getMonth(),
+           yr  = now.getFullYear();"
     end
   end
 end
