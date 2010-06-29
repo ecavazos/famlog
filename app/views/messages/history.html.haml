@@ -12,7 +12,11 @@
       = label_tag 'year', 'Year'
       = select_tag 'year', options_for_select(years)
 
-    = submit_tag 'Filter', :id => 'filter-button'
+    .tab-form-group
+      = label_tag 'mine', 'Only mine'
+      = check_box_tag 'mine'
+
+    = submit_tag 'Go', :id => 'filter-button'
 
 #results
 

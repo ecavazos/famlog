@@ -50,30 +50,41 @@ JS
 JS
     end
 
-    def all_messages_for_month_js(sy, sm, ey, em)
+    def messages_by_month(range, user)
       <<JS
         function () {
-          var start = new Date(#{sy}, #{sm - 1}, 1),
-              end   = new Date(#{ey}, #{em - 1}, 1);
+          #{month_range(range)}
 
-          return !this.is_event && this.created_at >= start && this.created_at < end
+          return !this.is_event
+            && this.created_at >= start
+            && this.created_at < end
+            #{user_clause(user)};
         }
 JS
     end
 
-    def all_events_for_month_js(year, month)
+    def events_by_month(range, user)
       <<JS
         function () {
-          var start = new Date(#{year}, #{month - 1}, 1),
-              end   = new Date(#{year}, #{month}, 1);
+          #{month_range(range)}
 
           return this.is_event
-          && this.start_at >= start
-          && this.start_at < end
-          || (this.end_at >= start
-          && this.end_at < end);
+            && ((this.start_at >= start && this.start_at < end)
+              || (this.end_at >= start && this.end_at < end))
+            #{user_clause(user)};
         }
 JS
+    end
+
+    private
+
+    def user_clause(user)
+      "&& this.user_id == '#{user.id}'" if user
+    end
+
+    def month_range(range)
+      "var start = new Date(#{range[:sy]}, #{range[:sm] - 1}, 1),
+           end   = new Date(#{range[:ey]}, #{range[:em] - 1}, 1);"
     end
   end
 end
