@@ -24,7 +24,7 @@ var Famlog = Famlog || {};
       });
     },
 
-    searchClick :function (event) {
+    searchClick: function (event) {
       event.preventDefault();
       var searchBox = $('#search-phrase');
       if (searchBox.val() == '') return;
@@ -41,7 +41,7 @@ var Famlog = Famlog || {};
       });
     },
 
-    filterClick :function (event) {
+    filterClick: function (event) {
       event.preventDefault();
 
       $('#results').html('<div id="loader">Loading ...</div>');

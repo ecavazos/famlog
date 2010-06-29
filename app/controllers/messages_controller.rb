@@ -14,7 +14,8 @@ class MessagesController < MessagesControllerBase
     if params['search-phrase']
       @messages = Message.search(params['search-phrase'])
     elsif params['month']
-      @messages = Message.by_month(params['year'], params['month'], params['type'])
+      user = current_user if params['mine']
+      @messages = Message.by_month(params['year'].to_i, params['month'].to_i, params['type'], user)
     else
       @messages = Message.by_tab(params[:tab]).limit(20)
     end

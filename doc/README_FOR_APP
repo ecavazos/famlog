@@ -1,11 +1,7 @@
 TODO
 ====
 
-* Add time picker
-* Add script to build index for searching (message + title)
 * Clean up tabs.js
-* Rename message property of Message entity to text
-  * need a script to assist in the migration
 * Add textile or markdown formatting
 * Error messages for login form
 * Add system emails for app errors
@@ -28,6 +24,7 @@ TODO
 Done
 ====
 
+* Add time picker
 * Search/Filter
 * Use type option to pick the correct history query
 * Make a login/sign up only index page for guests
@@ -48,4 +45,7 @@ Done
 * Don't allow users to edit other user's data
 * Test mailers are being called from controllers
 * Rename mailers to be more generic
+* Add script to build index for searching (message + title)
+* Rename message property of Message entity to text
+  * need a script to assist in the migration
 

@@ -18,21 +18,17 @@ module Famlog
       end
     end
 
-    def by_month(year, month, type)
-      year  = year.to_i
-      month = month.to_i
+    def by_month(year, month, type, user)
       query = nil
+      range = {
+        :sy => year,
+        :sm => month,
+        :ey => (month == 12)? year + 1 : year,
+        :em => (month == 12)? 1 : month + 1
+      }
 
-      if type.downcase == 'message' then
-        ey = (month == 12)?  year + 1 : year
-        em = (month == 12)?  1 : month + 1
-
-        query = where(all_messages_for_month_js(year, month, ey, em))
-      else
-        query = where(all_events_for_month_js(year, month))
-      end
-
-      query.order_by([:created_at, :desc])
+      where(send("#{type.downcase}s_by_month", range, user))
+        .order_by([:created_at, :desc])
     end
 
   end
