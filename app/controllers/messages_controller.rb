@@ -3,12 +3,8 @@ class MessagesController < MessagesControllerBase
   before_filter :find_message_and_verify_ownership, :except => [:index, :new, :create]
 
   def index
-    if params[:tab] == 'search'
-      return render :search, :layout => false
-    end
-
-    if params[:tab] == 'history'
-      return render :history, :layout => false
+    if params[:tab] == 'search' || params[:tab] == 'history'
+      return render params[:tab], :layout => false
     end
 
     if params['search-phrase']
