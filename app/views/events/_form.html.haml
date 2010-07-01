@@ -13,16 +13,14 @@
   .date-group
     = text_field_tag :s_date, @message.start_date_display, :class => 'date'
     \-
-    = text_field_tag :s_time, @message.start_time_display, :class => 'time'
-    = select_tag :s_time, options_for_select(time_opts, @message.start_time_display), { :class => 'time' }
+    = select_tag :s_time, options_for_select(time_opts, @message.start_time_display), :class => 'time'
 
 %p
   = f.label :end_date
   .date-group
     = text_field_tag :e_date, @message.end_date_display, :class => 'date'
     \-
-    = text_field_tag :e_time, @message.end_time_display, :class => 'time'
-/    = select_tag :e_time, options_for_select(times, @message.end_time_display), :class => 'time'
+    = select_tag :e_time, options_for_select(time_opts, @message.end_time_display), :class => 'time'
 
 %p
   = f.submit "Submit", :class => "submit"
