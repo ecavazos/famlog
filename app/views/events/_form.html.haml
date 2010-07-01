@@ -13,7 +13,6 @@
   .date-group
     = text_field_tag :s_date, @message.start_date_display, :class => 'date'
     \-
-    = times
     = text_field_tag :s_time, @message.start_time_display, :class => 'time'
     = select_tag :s_time, options_for_select(["12:00 am", "12:30 am"], @message.start_time_display), { :class => 'time' }
 
