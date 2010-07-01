@@ -14,7 +14,7 @@
     = text_field_tag :s_date, @message.start_date_display, :class => 'date'
     \-
     = text_field_tag :s_time, @message.start_time_display, :class => 'time'
-    = select_tag :s_time, options_for_select(['blah', 'foo']), { :class => 'time' }
+    = select_tag :s_time, options_for_select(times, @message.start_time_display), { :class => 'time' }
 
 %p
   = f.label :end_date
