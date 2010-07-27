@@ -1,0 +1,14 @@
+development:
+  mail:
+    address: address
+    port: port
+    domain: domain
+    user_name: user_name
+    password: password
+    authentication: authentication
+    enable_starttls_auto: enable_starttls_auto
+
+test:
+
+production:
+
