@@ -1,6 +1,7 @@
 TODO
 ====
 
+* Move message into partial and pass message entity as parameter to partial
 * Clean up tabs.js
 * Add textile or markdown formatting
 * Error messages for login form
