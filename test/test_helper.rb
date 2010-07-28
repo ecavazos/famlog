@@ -1,12 +1,10 @@
 ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
+require "mocha"
 
-require "shoulda"
-require 'factory_girl'
 Factory.definition_file_paths = [ File.join(Rails.root, 'test', 'factories') ]
 Factory.find_definitions
-require "mocha"
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.

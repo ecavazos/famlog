@@ -28,6 +28,7 @@ class MessagesControllerTest < ActionController::TestCase
     context 'when successful' do
       setup do
         Message.any_instance.stubs(:save).returns(true)
+        mock_mailer :create_message_email
         post :create, :message => @params
       end
 
@@ -41,12 +42,6 @@ class MessagesControllerTest < ActionController::TestCase
 
       should 'not be an event' do
         assert !assigns(:message).is_event?
-      end
-
-      should 'send out an email notifying family members of a new message' do
-        msg = Mail::Message.new
-        msg.expects(:deliver)
-        Notifier.expects(:create_message_email).returns(msg)
       end
 
       should respond_with :redirect
@@ -94,6 +89,7 @@ class MessagesControllerTest < ActionController::TestCase
     context 'when successful' do
       setup do
         @message.expects(:update_attributes).with(@params).returns(true)
+        mock_mailer :update_message_email
         put :update, :id => 4, :message => @params
       end
 
@@ -103,12 +99,6 @@ class MessagesControllerTest < ActionController::TestCase
 
       should 'not be an event' do
         assert !assigns(:message).is_event?
-      end
-
-      should 'send out an email notifying family members of an updated message' do
-        msg = Mail::Message.new
-        msg.expects(:deliver)
-        Notifier.expects(:update_message_email).returns(msg)
       end
 
       should respond_with :redirect

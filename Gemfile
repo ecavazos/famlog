@@ -14,12 +14,7 @@ gem 'haml', '3.0.12'
 gem 'devise', '1.1.rc2'
 
 group :test do
-  gem 'shoulda',
-    :git => 'http://github.com/thoughtbot/shoulda.git',
-    :require => nil
-  gem 'factory_girl',
-    :git => 'http://github.com/thoughtbot/factory_girl.git',
-    :branch => 'rails3',
-    :require => nil
+  gem 'shoulda'
+  gem 'factory_girl'
   gem 'mocha'
 end
