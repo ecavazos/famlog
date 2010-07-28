@@ -1,14 +1,11 @@
 require 'test_helper'
+require 'functional_helpers'
 
 class EventsControllerTest < ActionController::TestCase
+  include FunctionalHelpers
 
   setup do
-    @user = Factory.build(:user)
-    ApplicationHelper.class_eval do
-      def current_user; @user end
-    end
-    @controller.expects(:current_user).returns(@user)
-    @controller.expects(:authenticate_user!)
+    authenticate_user_mock
   end
 
   context 'create event without start/end at time values' do

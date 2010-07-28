@@ -1,5 +1,5 @@
 development:
-  mail:
+  mail: &mail
     admin_email: admin_email
     host: host
     address: address
@@ -11,6 +11,10 @@ development:
     enable_starttls_auto: enable_starttls_auto
 
 test:
+  mail:
+    <<: *mail
 
 production:
+  mail:
+    <<: *mail
 

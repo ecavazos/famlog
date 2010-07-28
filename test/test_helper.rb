@@ -32,4 +32,9 @@ class ActiveSupport::TestCase
     end
   end
 
+  def tracer(x)
+    puts "\n"
+    puts "TRACER: #{x.to_s}"
+    puts "\n"
+  end
 end
