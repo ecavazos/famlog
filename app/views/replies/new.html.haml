@@ -1,25 +1,6 @@
 %h2 Reply
 %div(class="#{to_css(@message.type_name)} #{to_css(@message.importance)}")
-  .message-body
-    %h3= @message.title
-    %div
-      %strong
-        = @message.user.username
-      says:
-    .date= format_datetime(@message.created_at)
-    %p
-      = simple_format @message.text
-
-  - event_info(@message)
-
-  %ul.message-meta
-    %li
-      %strong(class="#{to_css(@message.importance)}")
-        = @message.importance
-    %li
-      = reply_count(@message)
-    %li
-      = destroy_link(@message)
+  = render :partial => 'shared/message', :locals => { :message => @message }
 
 .replies
   - @message.replies.each do |reply|

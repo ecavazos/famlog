@@ -5,23 +5,4 @@
         = link_to 'Reply', new_message_reply_path(m)
       .action
         = edit_link(m)
-      .message-body
-        %h3
-          = m.title
-        %div
-          = link_to m.user.username
-          says:
-        .date= format_datetime(m.created_at)
-        %p
-          = simple_format(m.text)
-
-      - event_info(m)
-
-      %ul.message-meta
-        %li
-          %strong(class="#{to_css(m.importance)}")
-            = m.importance
-        %li
-          = reply_count(m)
-        %li
-          = destroy_link(m)
+      = render :partial => 'shared/message', :locals => { :message => m }
