@@ -1,5 +1,7 @@
 development:
   mail:
+    admin_email: admin_email
+    host: host
     address: address
     port: port
     domain: domain

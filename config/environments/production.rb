@@ -36,16 +36,18 @@ Famlog::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => 'famlog.heroku.com' }
+  config.action_mailer.default_url_options = {
+    :host => Famlog::Settings.mail.host
+  }
 
   config.action_mailer.smtp_settings = {
-    :address              => Famlog.Settings.mail.address,
-    :port                 => Famlog.Settings.mail.port,
-    :domain               => Famlog.Settings.mail.domain,
-    :user_name            => Famlog.Settings.mail.user_name,
-    :password             => Famlog.Settings.mail.password,
-    :authentication       => Famlog.Settings.mail.authentication,
-    :enable_starttls_auto => Famlog.Settings.mail.enable_starttls_auto,
+    :address              => Famlog::Settings.mail.address,
+    :port                 => Famlog::Settings.mail.port,
+    :domain               => Famlog::Settings.mail.domain,
+    :user_name            => Famlog::Settings.mail.user_name,
+    :password             => Famlog::Settings.mail.password,
+    :authentication       => Famlog::Settings.mail.authentication,
+    :enable_starttls_auto => Famlog::Settings.mail.enable_starttls_auto,
   }
 
   # Enable threaded mode

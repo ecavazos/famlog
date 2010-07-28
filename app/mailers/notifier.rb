@@ -1,7 +1,9 @@
 class Notifier < ActionMailer::Base
-  default :from => 'tool@famlog.heroku.com'
 
-  Host = "http://famlog.heroku.com"
+  Host = Famlog::Settings.mail.host
+  Url = "http://#{Host}"
+
+  default :from => "tool@#{Host}"
 
   def create_message_email(message)
     template(message, 'added a new')
@@ -23,14 +25,14 @@ class Notifier < ActionMailer::Base
 
   def template(message, description)
     @message = message
-    @url = Host
+    @url = Url
 
     mail(:to => to,
          :subject => "#{message.user.username} #{description} #{message.type_name.downcase} on Famlog")
   end
 
   def to
-    return 'ejcavazos@gmail.com' if Rails.env == 'development'
-    ['jmorris22734@gmail.com', 'ejcavazos@gmail.com']
+    return Famlog::Settings.mail.admin_email if Rails.env == 'development'
+    User.all.map { |x| x.email }
   end
 end
