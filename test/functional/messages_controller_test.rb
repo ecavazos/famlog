@@ -13,11 +13,8 @@ class MessagesControllerTest < ActionController::TestCase
 
     should respond_with :success
     should render_template 'new'
-    # should render_with_layout 'post'
-    should 'assign to message' do
-      # shoulda bug in rails 3
-      assert_not_nil assigns(:message)
-    end
+    should render_with_layout 'no_tabs'
+    should assign_to :message
   end
 
   context 'create' do
@@ -32,10 +29,6 @@ class MessagesControllerTest < ActionController::TestCase
         post :create, :message => @params
       end
 
-      should 'assign to message' do
-        assert_not_nil assigns(:message)
-      end
-
       should 'set the current user on new message' do
         assert_equal @user, assigns(:message).user
       end
@@ -44,6 +37,7 @@ class MessagesControllerTest < ActionController::TestCase
         assert !assigns(:message).is_event?
       end
 
+      should assign_to :message
       should respond_with :redirect
       should redirect_to('root') { root_path }
     end
@@ -55,10 +49,7 @@ class MessagesControllerTest < ActionController::TestCase
       end
 
       should respond_with :success
-
-      should 'render new' do
-        assert_template 'new'
-      end
+      should render_template :new
     end
   end
 
@@ -71,11 +62,9 @@ class MessagesControllerTest < ActionController::TestCase
     end
 
     should respond_with :success
-    should render_template 'edit'
-    # should render_with_layout 'post'
-    should 'assign to message' do
-      assert_not_nil assigns(:message)
-    end
+    should render_template :edit
+    should render_with_layout :no_tabs
+    should assign_to :message
   end
 
   context 'update' do
@@ -93,14 +82,11 @@ class MessagesControllerTest < ActionController::TestCase
         put :update, :id => 4, :message => @params
       end
 
-      should 'assign to message' do
-        assert_not_nil assigns(:message)
-      end
-
       should 'not be an event' do
         assert !assigns(:message).is_event?
       end
 
+      should assign_to :message
       should respond_with :redirect
       should redirect_to('root') { root_path }
     end
@@ -108,18 +94,12 @@ class MessagesControllerTest < ActionController::TestCase
     context 'when failure' do
       setup do
         @message.expects(:update_attributes).with(@params).returns(false)
+        Notifier.expects(:update_message_email).never
         put :update, :id => 4, :message => @params
       end
 
       should respond_with :success
-
-      should 'render edit' do
-        assert_template 'edit'
-      end
-
-      should 'not send an email when message is not valid' do
-#        Notifier.expects(:update_message_email).never
-      end
+      should render_template :edit
     end
   end
 

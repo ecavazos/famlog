@@ -19,11 +19,8 @@ class RepliesControllerTest < ActionController::TestCase
 
     should respond_with :success
     should render_template 'new'
-    # should render_with_layout 'post'
-    should 'assign to message' do
-      # shoulda bug in rails 3
-      assert_not_nil assigns(:message)
-    end
+    should render_with_layout 'no_tabs'
+    should assign_to :message
   end
 
   context 'create' do
@@ -36,9 +33,6 @@ class RepliesControllerTest < ActionController::TestCase
         mock_mailer :message_reply_email
         post :create, { :message_id => @message.id, :reply => @params }
       end
-      should 'assign to message' do
-        assert_not_nil assigns(:message)
-      end
 
       should 'create a new reply' do
         assert_equal 1, assigns(:message).replies.length
@@ -48,6 +42,7 @@ class RepliesControllerTest < ActionController::TestCase
         assert_equal @user, assigns(:message).replies.first.user
       end
 
+      should assign_to :message
       should respond_with :redirect
       should redirect_to('to new action') { new_message_reply_path(@message) }
     end
@@ -72,17 +67,14 @@ class RepliesControllerTest < ActionController::TestCase
         delete :destroy, :id => @reply.id, :message_id => @message.id
       end
 
-      should 'assign to message' do
-        assert_not_nil assigns(:message)
-      end
-
+      should assign_to :message
       should respond_with :redirect
       should redirect_to('to new action') { new_message_reply_path(@message) }
     end
 
     context 'when not called by owner' do
       setup do
-        @reply.user = nil
+        @reply.user = Factory.build(:user)
         @reply.save
         delete :destroy, :id => @reply.id, :message_id => @message.id
       end
