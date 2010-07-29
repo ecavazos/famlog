@@ -1,7 +1,7 @@
 = form_for @message do |f|
   %p
     = f.label :message
-    = f.text_area :text, :cols => 77, :rows => 3
+    = f.text_area :text
   %p
     = f.label :importance
     = f.select :importance, Importance::ALL

@@ -2,7 +2,9 @@
   - @messages.each do |m|
     %li(class="#{to_css(m.type_name)} #{to_css(m.importance)}")
       .action
-        = link_to 'Reply', new_message_reply_path(m)
+        = destroy_link(m)
       .action
         = edit_link(m)
+      .action
+        = link_to 'Reply', new_message_reply_path(m)
       = render :partial => 'shared/message', :locals => { :message => m }

@@ -1,6 +1,8 @@
-form p {
-  clear: left;
-  overflow: hidden; }
+form {
+  margin: 0 0 20px 0; }
+  form p {
+    clear: left;
+    overflow: visible; }
 
 label, input, select, textarea {
   clear: left;
@@ -8,8 +10,30 @@ label, input, select, textarea {
   margin: 0 0 20px;
   padding: 2px; }
 
+input[type=text], input[type=password], textarea {
+  border: 1px solid #cccccc;
+  -moz-box-shadow: 0 0 2px #efefef;
+  -webkit-box-shadow: 0 0 2px #efefef;
+  box-shadow: 0 0 2px #efefef;
+  font-family: verdana;
+  color: #444444;
+  padding: 5px;
+  font-size: 14px;
+  width: 95%; }
+
+input:focus, textarea:focus {
+  border-color: #0099cc;
+  -moz-box-shadow: 0 0 4px #0099cc;
+  -webkit-box-shadow: 0 0 4px #0099cc;
+  box-shadow: 0 0 4px #0099cc; }
+
+textarea {
+  height: 200px; }
+
 label {
-  margin: 0 0 5px; }
+  font-size: 16px;
+  color: #444444;
+  margin: 0 0 10px; }
 
 .submit {
   float: none; }
@@ -17,9 +41,20 @@ label {
 .date-group {
   clear: left;
   float: left;
-  overflow: hidden; }
+  overflow: visible; }
   .date-group input, .date-group select {
     clear: none;
-    float: none; }
+    float: none;
+    font-size: 12px;
+    padding: 2px;
+    width: 100px; }
   .date-group .time {
     width: 100px; }
+
+.short input[type=text], .short input[type=password], .short textarea {
+  width: 70%; }
+.short em {
+  color: #444444;
+  display: inline-block;
+  font-size: 12px;
+  padding-left: 10px; }

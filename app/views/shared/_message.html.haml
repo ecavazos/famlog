@@ -12,9 +12,9 @@
 
 %ul.message-meta
   %li
-    %strong(class="#{to_css(message.importance)}")
+    \(
+    %strong(class="priority-text")
       = message.importance
+    \)
   %li
     = reply_count(message)
-  %li
-    = destroy_link(message)

@@ -14,7 +14,7 @@ module HomeHelper
 
   def destroy_link(message)
     return unless current_user.owns?(message)
-    link_to "Delete", message_path(message), :method => :delete
+    link_to "Del", message_path(message), :method => :delete
   end
 
   def reply_count(message)

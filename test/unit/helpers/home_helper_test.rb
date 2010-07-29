@@ -52,7 +52,7 @@ class HomeHelperTest < ActionView::TestCase
 
     should 'create a destroy link for a message' do
       message = Message.create(:user => @user)
-      expected = "<a href=\"/messages/#{message.id}\" data-method=\"delete\" rel=\"nofollow\">Delete</a>"
+      expected = "<a href=\"/messages/#{message.id}\" data-method=\"delete\" rel=\"nofollow\">Del</a>"
       assert_equal expected, destroy_link(message)
     end
 
