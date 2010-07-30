@@ -19,7 +19,7 @@ input[type=text], input[type=password], textarea {
   color: #444444;
   padding: 5px;
   font-size: 14px;
-  width: 95%; }
+  width: 100%; }
 
 input:focus, textarea:focus {
   border-color: #0099cc;

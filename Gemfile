@@ -7,7 +7,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'mongoid', :git => 'git://github.com/durran/mongoid.git'
 gem 'bson_ext'
-
+gem 'formatize'
 gem 'haml', '3.0.12'
 
 # Authentication

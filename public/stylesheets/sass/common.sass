@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Nobile)
 @import '_css3'
 
 !bg_color = #fff
@@ -10,13 +11,14 @@ body
   line-height: 1.125em
 
 h1
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif
+  font-family: Nobile
   font-size: 23px
+  font-weight: normal
 
   a
     color: #fff
     text-decoration: none
-    text-shadow: 1px 1px 0px #333
+    text-shadow: 0 0 0 #000
 
   a:hover
     text-decoration: none
@@ -44,32 +46,33 @@ a:hover
   padding: 0 0 5px
 
 #header
-  background-color: #222
-  @include box-shadow(0px, 2px, 4px, #ccc)
-  color: #fff
+  background-color: #444
+  border-bottom: solid 1px #000
+  color: #414141
   overflow: hidden
+  padding: 0 15px
 
   #hdr-group
-    width: 640px
     margin: 0 auto
     padding: 10px 0 10px 0
 
     h1
       float: left
       a
-        color: #EDFFDD
+        color: #fff
+        text-shadow: 0 1px 0 #000
 
     #hdr-util
       float: right
       font-size: 12px
       margin: 0 0 10px
       overflow: hidden
-      text-shadow: 0 0 0 #000
 
       li
         list-style: none
         float: left
         margin: 0 0 0 20px
+        text-shadow: 0 1px 0 #000
 
         a
           color: #fff

@@ -2,13 +2,11 @@ TODO
 ====
 
 * Clean up tabs.js
-* Add textile or markdown formatting
 * Error messages for login form
 * Add system emails for app errors
 * Sort by importance (this may not be correct)
 
 * Looked into DJ/Beanstalkd (for mailer)
-* Add tests to model
 * Differentiate the messages of the current user from other messages
 * Allow messages and events to be targeted (@ user)
 * Add pagination for all tabs
@@ -17,14 +15,16 @@ TODO
 * Filter user specific data
 * Support family admin
   * add/edit members
-* DRY layouts
 * Scripts to create admin user on deploy
   * screens to add more users to family
 
 Done
 ====
 
+* DRY layouts
+* Add markdown formatting
 * Add time picker
+* Add tests to model
 * Search/Filter
 * Use type option to pick the correct history query
 * Make a login/sign up only index page for guests

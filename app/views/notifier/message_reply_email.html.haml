@@ -8,7 +8,7 @@
       %strong
         = @reply.user.username
         says:
-      = simple_format @reply.text
+      = markdown(@reply.text)
     %p
       = link_to 'Reply Now', @url
 
