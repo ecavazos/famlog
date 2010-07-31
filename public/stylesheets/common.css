@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Nobile.css);
+@import url('http://fonts.googleapis.com/css?family=Molengo');
 body {
   background-color: white;
   font: 100%;
@@ -6,8 +6,8 @@ body {
   line-height: 1.125em; }
 
 h1 {
-  font-family: Nobile;
-  font-size: 23px;
+  font-family: "Molengo", Helvetica, serif;
+  font-size: 20px;
   font-weight: normal; }
   h1 a {
     color: white;
@@ -41,14 +41,16 @@ a:hover {
 #header {
   background-color: #444444;
   border-bottom: solid 1px black;
-  color: #414141;
+  color: #555555;
   overflow: hidden;
   padding: 0 15px; }
   #header #hdr-group {
     margin: 0 auto;
-    padding: 10px 0 10px 0; }
+    padding: 10px 0 10px 0;
+    overflow: hidden; }
     #header #hdr-group h1 {
-      float: left; }
+      float: left;
+      line-height: normal; }
       #header #hdr-group h1 a {
         color: white;
         text-shadow: 0 1px 0 black; }
