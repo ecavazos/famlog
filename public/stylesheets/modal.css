@@ -1,15 +1,19 @@
 h1 {
-  font-size: 1.5em;
-  margin: 100px 0 40px 0;
+  color: #888888;
+  font-size: 32px;
+  margin: 40px 0 40px 0;
   text-align: center; }
 
+h2 {
+  color: #555555; }
+
 #root {
-  width: 387px; }
+  width: 480px; }
 
 #main {
   background-color: #efefef;
   padding: 20px;
-  border: solid 1px #dddddd;
+  border: solid 2px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -17,19 +21,20 @@ h1 {
   -moz-box-shadow: 0px 0px 6px #cccccc;
   -webkit-box-shadow: 0px 0px 6px #cccccc;
   margin: 0 0 100px 0;
-  text-align: center; }
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(255, 255, 255, 0.9); }
 
 form {
   font-size: 13px;
   margin: 0 auto;
-  width: 260px; }
+  width: 400px; }
   form label {
-    margin-left: 5px; }
+    margin: 0 0 5px 0; }
   form input {
     margin: 0 0 10px;
     float: none; }
   form #user_email, form #user_password {
-    width: 240px; }
+    width: 386px; }
   form #remember_me {
     margin: 0 0 10px;
     overflow: hidden; }

@@ -244,3 +244,7 @@ a:hover {
   #cancel-account h3 {
     font-size: 14px;
     margin: 0 0 5px 0; }
+
+#alert {
+  color: red;
+  margin-bottom: 15px; }
