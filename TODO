@@ -2,7 +2,6 @@ TODO
 ====
 
 * Clean up tabs.js
-* Error messages for login form
 * Add system emails for app errors
 * Sort by importance (this may not be correct)
 
@@ -10,7 +9,6 @@ TODO
 * Differentiate the messages of the current user from other messages
 * Allow messages and events to be targeted (@ user)
 * Add pagination for all tabs
-* Publish to github
 * Profiles
 * Filter user specific data
 * Support family admin
@@ -48,4 +46,5 @@ Done
 * Add script to build index for searching (message + title)
 * Rename message property of Message entity to text
   * need a script to assist in the migration
-
+* Publish to github
+* Error messages for login form
