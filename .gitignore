@@ -6,3 +6,4 @@ log/*.log
 *.zip
 settings.yml
 vendor/cache
+.sass-cache/
