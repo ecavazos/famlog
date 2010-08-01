@@ -1,4 +1,9 @@
 = form_for @message do |f|
+  - if @message.errors.any?
+    #errors
+      %ul
+        - @message.errors.full_messages.each do |msg|
+          %li= msg
   %p
     = f.label :message
     = f.text_area :text

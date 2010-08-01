@@ -57,7 +57,7 @@ a:hover {
     #header #hdr-group #hdr-util {
       float: right;
       font-size: 12px;
-      margin: 0 0 10px;
+      margin: 5px auto 0 auto;
       overflow: hidden; }
       #header #hdr-group #hdr-util li {
         list-style: none;

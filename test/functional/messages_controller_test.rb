@@ -13,7 +13,7 @@ class MessagesControllerTest < ActionController::TestCase
 
     should respond_with :success
     should render_template 'new'
-    should render_with_layout 'no_tabs'
+    should render_with_layout :no_tabs
     should assign_to :message
   end
 
@@ -50,6 +50,7 @@ class MessagesControllerTest < ActionController::TestCase
 
       should respond_with :success
       should render_template :new
+      should render_with_layout :no_tabs
     end
   end
 
@@ -100,6 +101,7 @@ class MessagesControllerTest < ActionController::TestCase
 
       should respond_with :success
       should render_template :edit
+      should render_with_layout :no_tabs
     end
   end
 

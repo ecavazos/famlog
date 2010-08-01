@@ -1,7 +1,8 @@
 class MessagesControllerBase < ApplicationController
+  layout 'no_tabs'
+
   def new
     @message = Message.new
-    render :layout => "no_tabs"
   end
 
   def create
@@ -18,7 +19,6 @@ class MessagesControllerBase < ApplicationController
   end
 
   def edit
-    render :layout => "no_tabs"
   end
 
   def update

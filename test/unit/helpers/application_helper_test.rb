@@ -55,4 +55,61 @@ HTML
       assert_equal expected, actual
     end
   end
+
+  context 'rails_msg' do
+    setup do
+      class << self
+        include Haml::Helpers
+        def alert; "You've been alerted!" end
+        def notice; "You've been noticed!" end
+      end
+      init_haml_helpers
+    end
+
+    should 'raise argument error when parameter cannot be handled' do
+      e = assert_raise ArgumentError do
+        rails_msg(:bogus)
+      end
+      assert_equal 'Can only handle alert and notice messages.', e.message
+    end
+
+    should 'return alert wrapped in a div tag' do
+      actual = rails_msg(:alert)
+
+      expected =<<HTML
+<div id='alert'>
+  You've been alerted!
+</div>
+HTML
+
+      assert_equal expected, actual
+    end
+
+    should 'return notice wrapped in a div tag' do
+      actual = rails_msg(:notice)
+
+      expected =<<HTML
+<div id='notice'>
+  You've been noticed!
+</div>
+HTML
+
+      assert_equal expected, actual
+    end
+
+    should 'return nothing when there are no alerts' do
+      class << self
+        def alert; nil end
+      end
+      assert_equal '', rails_msg(:alert)
+    end
+
+    should 'return nothing when there are no notices' do
+      class << self
+        def notice; nil end
+      end
+      assert_equal '', rails_msg(:notice)
+    end
+  end
+
 end
