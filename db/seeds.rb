@@ -27,22 +27,9 @@ jill = User.create({
 })
 
 for i in 0...10
-  case i % 4
-  when 0
-    importance = Importance::LOW
-  when 1
-    importance = Importance::MEDIUM
-  when 2
-    importance = Importance::HIGH
-  when 3
-    importance = Importance::SUPER_HIGH
-  else
-    importance = Importance::LOW
-  end
-
   Message.create({
     text: "This is message number #{i + 1}.",
-    importance: importance,
+    importance: Importance[i%4],
     user: jack
   })
 
@@ -51,23 +38,10 @@ end
 for i in 0...20
   date = Date.today + 10 - i
 
-  case i % 4
-  when 0
-    importance = Importance::LOW
-  when 1
-    importance = Importance::MEDIUM
-  when 2
-    importance = Importance::HIGH
-  when 3
-    importance = Importance::SUPER_HIGH
-  else
-    importance = Importance::LOW
-  end
-
   Message.create({
     title: "We have something to do on #{date}",
     text: "This is going to be an amazing event. Event number #{i + 1}",
-    importance: importance,
+    importance: Importance[i%4],
     is_event: true,
     user: jill,
     start_at: date
