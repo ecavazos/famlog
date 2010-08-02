@@ -27,6 +27,10 @@ class User
     false
   end
 
+  def fullname
+    "#{first_name} #{last_name}"
+  end
+
   class << self
     # find user by email or username
     def find_for_database_authentication(conditions)

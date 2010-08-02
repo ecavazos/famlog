@@ -6,9 +6,9 @@
       %ul#hdr-util
         - if current_user
           %li
-            = link_to 'Home', root_path
+            = link_to 'Me', edit_user_registration_path(current_user.username)
           %li
-            = link_to 'Profile', edit_user_registration_path(current_user.username)
+            = link_to 'Family', family_path
           %li
             = link_to 'Help', help_path
           %li
