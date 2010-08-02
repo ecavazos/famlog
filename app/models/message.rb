@@ -17,8 +17,8 @@ class Message
   field :importance, :default => Importance::LOW
 
   # relationships
-  belongs_to_related :user
-  embeds_many :replies
+  referenced_in :user
+  embeds_many   :replies
 
   before_save :build_keywords
 

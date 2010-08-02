@@ -6,6 +6,6 @@ class Reply
 
   validates_presence_of :text
 
-  belongs_to_related :user
-  embedded_in :message, :inverse_of => :replies
+  referenced_in :user
+  embedded_in   :message, :inverse_of => :replies
 end

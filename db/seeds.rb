@@ -2,53 +2,76 @@ Mongoid.database.collections.each do |c|
   c.drop unless c.name == 'system.indexes'
 end
 
-jack = User.create({
-  username: "jack",
-  email: "jack@famlog.com",
-  first_name: "Jack",
-  last_name: "Move",
-  password: "1234",
-  password_confirmation: "1234"
+move_fam = Family.create({
+  name: 'Move'
 })
 
-puts "Added #{jack.email}"
+jack = User.create({
+  username: 'jack',
+  email: 'jack@famlog.com',
+  first_name: 'Jack',
+  last_name: 'Move',
+  password: '1234',
+  password_confirmation: '1234',
+  family: move_fam
+})
 
 jill = User.create({
-  username: "jill",
-  email: "jill@famlog.com",
-  first_name: "Jill",
-  last_name: "Move",
-  password: "1234",
-  password_confirmation: "1234"
+  username: 'jill',
+  email: 'jill@famlog.com',
+  first_name: 'Jill',
+  last_name: 'Move',
+  password: '1234',
+  password_confirmation: '1234',
+  family: move_fam
 })
 
-puts "Added #{jill.email}"
+for i in 0...10
+  case i % 4
+  when 0
+    importance = Importance::LOW
+  when 1
+    importance = Importance::MEDIUM
+  when 2
+    importance = Importance::HIGH
+  when 3
+    importance = Importance::SUPER_HIGH
+  else
+    importance = Importance::LOW
+  end
 
-puts 'Adding messages ...'
-
-for i in 0...15
   Message.create({
     text: "This is message number #{i + 1}.",
+    importance: importance,
     user: jack
   })
 
-  puts "Added message #{i+1}"
 end
 
 for i in 0...20
   date = Date.today + 10 - i
 
-  importance = i < 4 ? Importance::SUPER_HIGH : Importance::MEDIUM
+  case i % 4
+  when 0
+    importance = Importance::LOW
+  when 1
+    importance = Importance::MEDIUM
+  when 2
+    importance = Importance::HIGH
+  when 3
+    importance = Importance::SUPER_HIGH
+  else
+    importance = Importance::LOW
+  end
 
   Message.create({
     title: "We have something to do on #{date}",
-    text: "Don't miss this event. This is event number #{i + 1}",
+    text: "This is going to be an amazing event. Event number #{i + 1}",
     importance: importance,
     is_event: true,
     user: jill,
     start_at: date
   })
 
-  puts "Added event #{i+1}"
 end
 

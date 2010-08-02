@@ -14,8 +14,9 @@ class User
   validates_presence_of :username, :first_name, :last_name
 
   # relationships
-  has_many_related :messages
-  has_many_related :replies
+  referenced_in   :family
+  references_many :messages
+  references_many :replies
 
   named_scope :family_members, lambda { |user| where(:email.ne => user.email) }
 
