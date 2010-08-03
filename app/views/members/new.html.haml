@@ -1,0 +1,24 @@
+%h2 New Family member
+
+= form_for @user, :url => family_members_path do |f|
+  - if @user.errors.any?
+    #errors
+      %ul
+        - @user.errors.full_messages.each do |msg|
+          %li= msg
+  %p
+    = f.label :username
+    = f.text_field :username
+  %p
+    = f.label :first_name
+    = f.text_field :first_name
+  %p
+    = f.label :last_name
+    = f.text_field :last_name
+  %p
+    = f.label :email
+    = f.text_field :email
+  %p
+    = f.submit "Submit", :class => "submit"
+    or
+    = link_to "Cancel", :back, :class => "cancel"

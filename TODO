@@ -1,11 +1,10 @@
 TODO
 ====
 
+* Clean up common sass
 * Clean up tabs.js
 * Add system emails for app errors
 * Sort by importance (this may not be correct)
-
-* Looked into DJ/Beanstalkd (for mailer)
 * Differentiate the messages of the current user from other messages
 * Allow messages and events to be targeted (@ user)
 * Add pagination for all tabs
@@ -15,6 +14,7 @@ TODO
   * add/edit members
 * Scripts to create admin user on deploy
   * screens to add more users to family
+* Looked into DJ/Beanstalkd (for mailer)
 
 Done
 ====

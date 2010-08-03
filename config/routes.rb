@@ -8,7 +8,9 @@ Famlog::Application.routes.draw do |map|
     resources :replies
   end
 
-  resource :family
+  resource :family do
+    resources :members
+  end
 
   match '/help' => 'home#help', :as => :help
   match ':controller(/:action(/:id(.:format)))'
