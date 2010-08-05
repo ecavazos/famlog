@@ -1,5 +1,7 @@
 module FunctionalHelpers
   def authenticate_user_mock
+    # TODO: I want this to only be called once per
+    # test fixture but currently it's called for every test
     @user = Factory.build(:user)
     @user.username = 'chum chum'
     @controller.stubs(:current_user).returns(@user)

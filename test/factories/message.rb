@@ -1,10 +1,15 @@
-Factory.define :message do |m|
-  m.title "Test Message"
-  m.created_at Time.now
+Factory.define :message do |x|
+  x.title "Test Message"
+  x.created_at Time.now
 end
 
-Factory.define :user do |u|
-  u.username   "jack"
-  u.first_name "Jack"
-  u.last_name  "Move"
+Factory.define :user do |x|
+  x.username   "jack"
+  x.first_name "Jack"
+  x.last_name  "Move"
+  x.association :family
+end
+
+Factory.define :family do |x|
+  x.name "Move"
 end
