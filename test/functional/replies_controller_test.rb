@@ -7,7 +7,7 @@ class RepliesControllerTest < ActionController::TestCase
   setup do
     authenticate_user_mock
     @message = Factory.create(:message)
-    @message.user = @user
+    @message.user = @current_user
     @message.save
     Message.expects(:find).with(@message.id).returns(@message)
   end
@@ -39,7 +39,7 @@ class RepliesControllerTest < ActionController::TestCase
       end
 
       should 'set the current user on new reply' do
-        assert_equal @user, assigns(:message).replies.first.user
+        assert_equal @current_user, assigns(:message).replies.first.user
       end
 
       should assign_to :message
@@ -58,7 +58,7 @@ class RepliesControllerTest < ActionController::TestCase
 
   context 'destroy' do
     setup do
-      @reply = @message.replies.create(:text => 'blah', :user => @user)
+      @reply = @message.replies.create(:text => 'blah', :user => @current_user)
     end
 
     context 'when called by owner' do

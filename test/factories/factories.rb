@@ -10,6 +10,13 @@ Factory.define :user do |x|
   x.association :family
 end
 
+Factory.define :gank, :class => :user do |x|
+  x.username   "gank"
+  x.first_name "Gank"
+  x.last_name  "Move"
+  x.association :family
+end
+
 Factory.define :family do |x|
   x.name "Move"
 end

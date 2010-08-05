@@ -30,7 +30,7 @@ class MessagesControllerTest < ActionController::TestCase
       end
 
       should 'set the current user on new message' do
-        assert_equal @user, assigns(:message).user
+        assert_equal @current_user, assigns(:message).user
       end
 
       should 'not be an event' do
@@ -57,7 +57,7 @@ class MessagesControllerTest < ActionController::TestCase
   context 'edit' do
     setup do
       @message = Factory.build(:message)
-      @message.user = @user
+      @message.user = @current_user
       Message.expects(:find).with(2).returns(@message)
       get :edit, { :id => 2 }
     end
@@ -72,7 +72,7 @@ class MessagesControllerTest < ActionController::TestCase
     setup do
       @params = { 'title' => 'bar' }
       @message = Factory.build(:message)
-      @message.user = @user
+      @message.user = @current_user
       Message.expects(:find).with(4).returns(@message)
     end
 
@@ -108,7 +108,7 @@ class MessagesControllerTest < ActionController::TestCase
   context 'destroy' do
     setup do
       @message = Factory.build(:message)
-      @message.user = @user
+      @message.user = @current_user
       Message.expects(:find).with(4).returns(@message)
       delete :destroy, :id => 4
     end
